@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Sounds.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CrossingGuardJoe</a> &gt; <a href="index.source.html" class="el_package">com.CrossingGuardJoe.controller</a> &gt; <span class="el_source">Sounds.java</span></div><h1>Sounds.java</h1><pre class="source lang-java linenums">package com.CrossingGuardJoe.controller;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
+import java.io.InputStream;
+
+public class Sounds {
+    private final Clip sound;
+
+<span class="nc" id="L12">    public enum SFX {</span>
+<span class="nc" id="L13">        MENUBGM, GAMEBGM, CUSTOMIZEBGM, INSTRUCTIONSBGM,</span>
+<span class="nc" id="L14">        SELECT, ENTER, FLIPPAGE,</span>
+<span class="nc" id="L15">        LEVELUP, JOEPASS1, JOEPASS2, JOESTOP, JOEHIT, KIDWALK1, KIDSTOP1, KIDSTOP2, KIDHIT, KIDSCORE, CARBREAK,</span>
+<span class="nc" id="L16">        GAMEOVER, VICTORYBGM;</span>
+    }
+
+<span class="nc" id="L19">    public Sounds(String sound) {</span>
+<span class="nc" id="L20">        this.sound = loadSound(sound);</span>
+<span class="nc" id="L21">    }</span>
+
+    private Clip loadSound(String sound) {
+        try {
+<span class="nc" id="L25">            InputStream audioInputStream = getClass().getClassLoader().getResourceAsStream(sound);</span>
+<span class="nc" id="L26">            Clip clip = AudioSystem.getClip();</span>
+<span class="nc" id="L27">            AudioInputStream ais = AudioSystem.getAudioInputStream(audioInputStream);</span>
+<span class="nc" id="L28">            clip.open(ais);</span>
+<span class="nc" id="L29">            return clip;</span>
+<span class="nc" id="L30">        } catch (Exception e) {</span>
+<span class="nc" id="L31">            e.printStackTrace();</span>
+<span class="nc" id="L32">            return null;</span>
+        }
+    }
+
+    public void play(float volume) {
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        if (!sound.isRunning()) {</span>
+<span class="nc" id="L38">            setVolume(sound, volume);</span>
+<span class="nc" id="L39">            sound.setFramePosition(0);</span>
+<span class="nc" id="L40">            sound.start();</span>
+        }
+<span class="nc" id="L42">    }</span>
+
+    public void pause() {
+<span class="nc" id="L45">        sound.stop();</span>
+<span class="nc" id="L46">    }</span>
+
+    public void stop() {
+<span class="nc" id="L49">        sound.setFramePosition(0);</span>
+<span class="nc" id="L50">        sound.stop();</span>
+<span class="nc" id="L51">    }</span>
+
+    public void loop(float volume) {
+<span class="nc" id="L54">        setVolume(sound, volume);</span>
+<span class="nc" id="L55">        sound.loop(Clip.LOOP_CONTINUOUSLY);</span>
+<span class="nc" id="L56">    }</span>
+
+    public static void setVolume(Clip clip, float volume) {
+<span class="nc bnc" id="L59" title="All 2 branches missed.">        if (clip.isControlSupported(FloatControl.Type.MASTER_GAIN)) {</span>
+<span class="nc" id="L60">            FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);</span>
+<span class="nc" id="L61">            float dB = (float) (Math.log(volume) / Math.log(10.0) * 20.0);</span>
+<span class="nc" id="L62">            gainControl.setValue(dB);</span>
+        }
+<span class="nc" id="L64">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -1,0 +1,4 @@
+com\CrossingGuardJoe\model\menu\InstructionsMenuTest.class
+com\CrossingGuardJoe\model\menu\MenuTest.class
+com\CrossingGuardJoe\gui\LanternaGUITest.class
+com\CrossingGuardJoe\states\GameStateTest.class
