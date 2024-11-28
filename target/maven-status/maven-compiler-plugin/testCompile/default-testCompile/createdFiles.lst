@@ -1,4 +1,16 @@
 com\CrossingGuardJoe\model\menu\InstructionsMenuTest.class
+com\CrossingGuardJoe\model\game\elements\KidTest.class
+com\CrossingGuardJoe\model\menu\StatsMenuTest.class
+com\CrossingGuardJoe\model\menu\CustomizeMenuTest.class
 com\CrossingGuardJoe\model\menu\MenuTest.class
+com\CrossingGuardJoe\model\game\elements\CarTest.class
+com\CrossingGuardJoe\model\game\AuxCarCheckTest.class
+com\CrossingGuardJoe\model\game\RoadTest.class
+com\CrossingGuardJoe\model\game\elements\JoeTest.class
+com\CrossingGuardJoe\model\game\RoadBuilderTest.class
+com\CrossingGuardJoe\model\menu\ColorPaletteMenuTest.class
+com\CrossingGuardJoe\model\menu\PauseMenuTest.class
+com\CrossingGuardJoe\model\menu\GameOverMenuTest.class
 com\CrossingGuardJoe\gui\LanternaGUITest.class
+com\CrossingGuardJoe\model\game\elements\ElementTest.class
 com\CrossingGuardJoe\states\GameStateTest.class
