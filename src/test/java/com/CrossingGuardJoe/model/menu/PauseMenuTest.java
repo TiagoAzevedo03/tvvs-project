@@ -1,5 +1,3 @@
-// File: src/test/java/com/CrossingGuardJoe/model/menu/PauseMenuTest.java
-
 package com.CrossingGuardJoe.model.menu;
 
 import com.CrossingGuardJoe.model.Position;

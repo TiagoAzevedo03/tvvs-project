@@ -8,10 +8,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.awt.FontFormatException;
 
 import static org.mockito.Mockito.*;
+import static org.junit.Assert.*;
 
 public class LanternaGUITest {
     private LanternaGUI lanternaGUI;
@@ -55,6 +54,6 @@ public class LanternaGUITest {
     @Test
     public void testAddColorMapping() {
         lanternaGUI.addColorMapping('a', 'b');
-        // Verify the behavior of addColorMapping if needed
+        assertEquals('b', lanternaGUI.getMappedCharacter('a'));
     }
 }

@@ -28,7 +28,7 @@ public class GameTest {
 
     @Test
     public void testSetState() {
-        State newState = new MenuState(new Menu());
+        State<Menu> newState = new MenuState(new Menu());
         game.setState(newState);
         assertEquals(newState, game.getCurrentState());
     }

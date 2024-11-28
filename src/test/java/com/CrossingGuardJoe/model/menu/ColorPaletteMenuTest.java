@@ -1,8 +1,5 @@
-// File: src/test/java/com/CrossingGuardJoe/model/menu/ColorPaletteMenuTest.java
-
 package com.CrossingGuardJoe.model.menu;
 
-import com.CrossingGuardJoe.controller.Sounds;
 import com.CrossingGuardJoe.controller.SoundsController;
 import com.CrossingGuardJoe.viewer.Color;
 import org.junit.Before;
@@ -15,12 +12,11 @@ import static org.mockito.Mockito.*;
 
 public class ColorPaletteMenuTest {
     private ColorPaletteMenu colorPaletteMenu;
-    private SoundsController soundsController;
 
     @Before
     public void setUp() {
         colorPaletteMenu = new ColorPaletteMenu();
-        soundsController = mock(SoundsController.class);
+        mock(SoundsController.class);
     }
 
     @Test

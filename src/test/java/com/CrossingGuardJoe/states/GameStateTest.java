@@ -1,7 +1,9 @@
 package com.CrossingGuardJoe.states;
 
+import com.CrossingGuardJoe.controller.Controller;
 import com.CrossingGuardJoe.controller.game.RoadController;
 import com.CrossingGuardJoe.model.game.Road;
+import com.CrossingGuardJoe.viewer.Viewer;
 import com.CrossingGuardJoe.viewer.game.GameViewer;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,16 +22,30 @@ public class GameStateTest {
 
     @Test
     public void testGetController() {
-        assertTrue(gameState.getController() instanceof RoadController);
+        Controller<Road> controller = gameState.getController();
+        assertNotNull(controller);
+        assertTrue(controller instanceof RoadController);
     }
 
     @Test
     public void testGetViewer() {
-        assertTrue(gameState.getViewer() instanceof GameViewer);
+        Viewer<Road> viewer = gameState.getViewer();
+        assertNotNull(viewer);
+        assertTrue(viewer instanceof GameViewer);
     }
 
     @Test
     public void testGetModel() {
         assertEquals(road, gameState.getModel());
+    }
+
+    @Test
+    public void testGetControllerNotNull() {
+        assertNotNull(gameState.getController());
+    }
+
+    @Test
+    public void testGetViewerNotNull() {
+        assertNotNull(gameState.getViewer());
     }
 }

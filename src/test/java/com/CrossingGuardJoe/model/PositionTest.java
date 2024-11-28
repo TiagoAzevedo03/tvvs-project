@@ -39,8 +39,8 @@ public class PositionTest {
     public void testEquals() {
         Position samePosition = new Position(5, 10);
         Position differentPosition = new Position(10, 20);
-        assertTrue(position.equals(samePosition));
-        assertFalse(position.equals(differentPosition));
+        assertEquals(position, samePosition);
+        assertNotEquals(position, differentPosition);
     }
 
     @Test
