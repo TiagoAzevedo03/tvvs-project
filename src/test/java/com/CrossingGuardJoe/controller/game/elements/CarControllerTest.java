@@ -8,7 +8,6 @@ import com.CrossingGuardJoe.Game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -22,15 +21,11 @@ class CarControllerTest {
     private Car car;
 
     @BeforeEach
-    void setUp() throws NoSuchFieldException, IllegalAccessException {
+    void setUp() {
         road = mock(Road.class);
         game = mock(Game.class);
         car = mock(Car.class);
         carController = new CarController(road);
-
-        Field lastUpdateTimeField = CarController.class.getDeclaredField("lastUpdateTime");
-        lastUpdateTimeField.setAccessible(true);
-        lastUpdateTimeField.set(carController, System.currentTimeMillis() - 2);
     }
 
     @Test

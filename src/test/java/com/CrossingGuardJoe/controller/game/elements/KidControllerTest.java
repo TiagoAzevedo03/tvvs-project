@@ -9,7 +9,6 @@ import com.CrossingGuardJoe.Game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -22,7 +21,7 @@ class KidControllerTest {
     private Car car;
 
     @BeforeEach
-    void setUp() throws NoSuchFieldException, IllegalAccessException {
+    void setUp() {
         Road road = mock(Road.class);
         mock(Game.class);
         Joe joe = mock(Joe.class);
@@ -33,10 +32,6 @@ class KidControllerTest {
         when(road.getJoe()).thenReturn(joe);
         when(road.getKids()).thenReturn(new ArrayList<>(Collections.singletonList(kid)));
         when(road.getCars()).thenReturn(new ArrayList<>(Collections.singletonList(car)));
-
-        Field lastUpdateTimeField = KidController.class.getDeclaredField("lastUpdateTime");
-        lastUpdateTimeField.setAccessible(true);
-        lastUpdateTimeField.set(kidController, System.currentTimeMillis() - 2);
     }
 
 

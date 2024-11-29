@@ -33,9 +33,18 @@ public class JoeTest {
     }
 
     @Test
-    public void testRemoveHeart() {
+    public void testRemoveHeartWhenHeartsGreaterThanZero() {
         joe.removeHeart();
         assertEquals(9, joe.getHearts());
+    }
+
+    @Test
+    public void testRemoveHeartWhenHeartsIsZero() {
+        for (int i = 0; i < 10; i++) {
+            joe.removeHeart();
+        }
+        joe.removeHeart();
+        assertEquals(0, joe.getHearts());
     }
 
     @Test
