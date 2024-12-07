@@ -56,4 +56,20 @@ public class LanternaGUITest {
         lanternaGUI.addColorMapping('a', 'b');
         assertEquals('b', lanternaGUI.getMappedCharacter('a'));
     }
+
+    @Test
+    public void testClear() {
+        lanternaGUI.clearScreen();
+        verify(graphics).fillRectangle(any(), any(TerminalSize.class), eq(' '));
+    }
+
+    @Test
+    public void testGetScreenSize() {
+        TerminalSize size = new TerminalSize(80, 24);
+        when(screen.getTerminalSize()).thenReturn(size);
+
+        TerminalSize screenSize = screen.getTerminalSize();
+
+        assertEquals(size, screenSize);
+    }
 }

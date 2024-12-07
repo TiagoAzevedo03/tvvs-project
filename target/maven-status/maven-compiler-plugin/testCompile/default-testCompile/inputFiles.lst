@@ -3,8 +3,12 @@ C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\c
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\controller\game\elements\CarControllerTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\controller\game\elements\JoeControllerTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\controller\game\elements\KidControllerTest.java
+C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\controller\game\RoadControllerTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\controller\menu\CustomizeMenuControllerTest.java
+C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\controller\menu\GameOverMenuControllerTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\controller\menu\InstructionsMenuControllerTest.java
+C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\controller\menu\MenuControllerTest.java
+C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\controller\menu\PauseMenuControllerTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\controller\menu\StatsMenuControllerTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\GameTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\gui\LanternaGUITest.java
@@ -24,6 +28,12 @@ C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\c
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\model\menu\StatsMenuTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\model\PositionTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\states\GameStateTest.java
+C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\states\menu\CustomizeMenuStateTest.java
+C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\states\menu\GameOverStateTest.java
+C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\states\menu\InstructionsMenuStateTest.java
+C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\states\menu\MenuStateTest.java
+C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\states\menu\PauseMenuStateTest.java
+C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\states\menu\StatsMenuStateTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\viewer\ColorCustomizeTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\viewer\ColorTest.java
 C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\src\test\java\com\CrossingGuardJoe\viewer\game\elements\CarViewTest.java
