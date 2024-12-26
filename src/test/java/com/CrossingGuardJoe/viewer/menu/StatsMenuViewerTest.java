@@ -36,4 +36,40 @@ class StatsMenuViewerTest {
         statsMenuViewer.drawTitle(gui);
         verify(gui).drawText(new Position(207, 100), "Game stats", "#FFFFFF");
     }
+
+    @Test
+    void testDrawInformationCurrentLevel10() {
+        StatsMenu statsMenu = mock(StatsMenu.class);
+        when(statsMenu.getCurrentScore()).thenReturn(1000);
+        when(statsMenu.getCurrentLevel()).thenReturn(10);
+        when(statsMenu.getHighestScore()).thenReturn(2000);
+        when(statsMenu.getHighestLevel()).thenReturn(5);
+
+        statsMenuViewer = new StatsMenuViewer(statsMenu);
+        statsMenuViewer.drawInformation(gui);
+
+        verify(gui).drawText(new Position(275, 210), 1000, "#FFFFFF");
+        verify(gui).drawText(new Position(275, 250), 9, "#FFFFFF");
+        verify(gui).drawText(new Position(275, 300), 2000, "#FFFFFF");
+        verify(gui).drawText(new Position(275, 340), 5, "#FFFFFF");
+        verify(gui).drawImage(new Position(4, 4), ToolImages.getKeyEscImage());
+    }
+
+    @Test
+    void testDrawInformationHighestLevel10() {
+        StatsMenu statsMenu = mock(StatsMenu.class);
+        when(statsMenu.getCurrentScore()).thenReturn(1000);
+        when(statsMenu.getCurrentLevel()).thenReturn(5);
+        when(statsMenu.getHighestScore()).thenReturn(2000);
+        when(statsMenu.getHighestLevel()).thenReturn(10);
+
+        statsMenuViewer = new StatsMenuViewer(statsMenu);
+        statsMenuViewer.drawInformation(gui);
+
+        verify(gui).drawText(new Position(275, 210), 1000, "#FFFFFF");
+        verify(gui).drawText(new Position(275, 250), 5, "#FFFFFF");
+        verify(gui).drawText(new Position(275, 300), 2000, "#FFFFFF");
+        verify(gui).drawText(new Position(275, 340), 9, "#FFFFFF");
+        verify(gui).drawImage(new Position(4, 4), ToolImages.getKeyEscImage());
+    }
 }

@@ -42,4 +42,24 @@ class PauseMenuViewerTest {
         pauseMenuViewer.drawTitle(gui);
         verify(gui).drawText(new Position(207, 100), "Game paused", "#FFFFFF");
     }
+
+    @Test
+    void testDrawElementsOptionNotSelected() {
+        Option option = mock(Option.class);
+        when(pauseMenu.getNumberOptions()).thenReturn(1);
+        when(pauseMenu.getOption(0)).thenReturn(option);
+        when(option.position()).thenReturn(new Position(100, 100));
+        when(option.name()).thenReturn("Option");
+        when(pauseMenu.isSelectedOption(0)).thenReturn(false);
+
+        pauseMenuViewer.drawElements(gui);
+
+        verify(gui).drawText(new Position(100, 100), "Option", "#FFFFFF");
+    }
+
+    @Test
+    void testDrawInformation() {
+        pauseMenuViewer.drawInformation(gui);
+        verifyNoInteractions(gui);
+    }
 }

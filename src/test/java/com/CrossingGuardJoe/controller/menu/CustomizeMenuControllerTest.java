@@ -125,4 +125,19 @@ class CustomizeMenuControllerTest {
 
         verify(customizeMenu).setColorPaletteSelected(false);
     }
+
+    @Test
+    void testNextActionDefaultCase() throws IOException {
+        when(customizeMenu.isColorPaletteSelected()).thenReturn(false);
+
+        customizeMenuController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
+
+        // Verify that no interactions occurred with customizeMenu or game
+        verify(customizeMenu, never()).navigateLeft();
+        verify(customizeMenu, never()).navigateRight();
+        verify(customizeMenu, never()).navigateUp();
+        verify(customizeMenu, never()).navigateDown();
+        verify(customizeMenu, never()).setColorPaletteSelected(anyBoolean());
+        verify(game, never()).popState();
+    }
 }

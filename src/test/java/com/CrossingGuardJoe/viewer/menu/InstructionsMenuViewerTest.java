@@ -146,4 +146,14 @@ class InstructionsMenuViewerTest {
         verify(gui).drawImage(new Position(185, 230), HUDImages.getScoreBarSliceImage());
         verify(gui).drawText(new Position(275, 240), 2590, "#FFFFFF");
     }
+
+    @Test
+    void testDrawInformationLastPage() {
+        when(instructionsMenu.getTotalPages()).thenReturn(5);
+        when(instructionsMenu.getCurrentPage()).thenReturn(5);
+
+        instructionsMenuViewer.drawInformation(gui);
+
+        verify(gui).drawText(new Position(440, 474), 5, "#D30000");
+    }
 }

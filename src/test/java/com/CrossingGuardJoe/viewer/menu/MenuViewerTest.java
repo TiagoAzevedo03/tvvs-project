@@ -43,4 +43,24 @@ class MenuViewerTest {
         menuViewer.drawTitle(gui);
         verify(gui).drawImage(new Position(130, 50), LogoImages.getLogoGameImage());
     }
+
+    @Test
+    void testDrawElementsOptionNotSelected() {
+        Option option = mock(Option.class);
+        when(menu.getNumberOptions()).thenReturn(1);
+        when(menu.getOption(0)).thenReturn(option);
+        when(option.position()).thenReturn(new Position(100, 100));
+        when(option.name()).thenReturn("Option");
+        when(menu.isSelectedOption(0)).thenReturn(false);
+
+        menuViewer.drawElements(gui);
+
+        verify(gui).drawText(new Position(100, 100), "Option", "#FFFFFF");
+    }
+
+    @Test
+    void testDrawInformation() {
+        menuViewer.drawInformation(gui);
+        verifyNoInteractions(gui);
+    }
 }
