@@ -17,28 +17,28 @@ import com.CrossingGuardJoe.model.game.elements.Kid;
 
     public static boolean isInRangeJoeKid(Joe joe, Kid kid) {
 <span class="fc bfc" id="L19" title="All 2 branches covered.">        return joe.getPosition().getX() &lt;= kid.getPosition().getX() + JOE_AT_KID_RIGHT &amp;&amp;</span>
-<span class="pc bpc" id="L20" title="1 of 2 branches missed.">                joe.getPosition().getX() &gt;= kid.getPosition().getX() - JOE_AT_KID_LEFT;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">                joe.getPosition().getX() &gt;= kid.getPosition().getX() - JOE_AT_KID_LEFT;</span>
     }
 
     public static boolean isInRangeCarKid(Car car, Kid kid) {
 <span class="fc bfc" id="L24" title="All 2 branches covered.">        return car.getPosition().getX() &lt;= kid.getPosition().getX() + KID_AT_CAR_LEFT &amp;&amp;</span>
-<span class="pc bpc" id="L25" title="1 of 2 branches missed.">                car.getPosition().getX() &gt;= kid.getPosition().getX() - KID_AT_CAR_RIGHT &amp;&amp;</span>
-<span class="pc bpc" id="L26" title="1 of 2 branches missed.">                car.getPosition().getY() &lt;= kid.getPosition().getY() + CAR_FRONT &amp;&amp;</span>
-<span class="pc bpc" id="L27" title="1 of 2 branches missed.">                car.getPosition().getY() &gt;= kid.getPosition().getY() - CAR_REAR;</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">                car.getPosition().getX() &gt;= kid.getPosition().getX() - KID_AT_CAR_RIGHT &amp;&amp;</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">                car.getPosition().getY() &lt;= kid.getPosition().getY() + CAR_FRONT &amp;&amp;</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">                car.getPosition().getY() &gt;= kid.getPosition().getY() - CAR_REAR;</span>
     }
 
     public static boolean isInRangeLeftCarJoe(Car car, Joe joe) {
 <span class="fc bfc" id="L31" title="All 2 branches covered.">        return car.getPosition().getX() &lt;= joe.getPosition().getX() + CAR_MIDDLE &amp;&amp;</span>
-<span class="pc bpc" id="L32" title="1 of 2 branches missed.">                car.getPosition().getX() &gt;= joe.getPosition().getX() - JOE_AT_CAR_LEFTSIDE &amp;&amp;</span>
-<span class="pc bpc" id="L33" title="1 of 2 branches missed.">                car.getPosition().getY() &lt;= joe.getPosition().getY() + CAR_FRONT &amp;&amp;</span>
-<span class="pc bpc" id="L34" title="1 of 2 branches missed.">                car.getPosition().getY() &gt;= joe.getPosition().getY() - CAR_REAR;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">                car.getPosition().getX() &gt;= joe.getPosition().getX() - JOE_AT_CAR_LEFTSIDE &amp;&amp;</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">                car.getPosition().getY() &lt;= joe.getPosition().getY() + CAR_FRONT &amp;&amp;</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">                car.getPosition().getY() &gt;= joe.getPosition().getY() - CAR_REAR;</span>
     }
 
     public static boolean isInRangeRightCarJoe(Car car, Joe joe) {
 <span class="fc bfc" id="L38" title="All 2 branches covered.">        return car.getPosition().getX() &lt; joe.getPosition().getX() + CAR_MIDDLE &amp;&amp;</span>
-<span class="pc bpc" id="L39" title="1 of 2 branches missed.">                car.getPosition().getX() &gt;= joe.getPosition().getX() - JOE_AT_CAR_RIGHTSIDE &amp;&amp;</span>
-<span class="pc bpc" id="L40" title="1 of 2 branches missed.">                car.getPosition().getY() &lt;= joe.getPosition().getY() + CAR_FRONT &amp;&amp;</span>
-<span class="pc bpc" id="L41" title="1 of 2 branches missed.">                car.getPosition().getY() &gt;= joe.getPosition().getY() - CAR_REAR;</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">                car.getPosition().getX() &gt;= joe.getPosition().getX() - JOE_AT_CAR_RIGHTSIDE &amp;&amp;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">                car.getPosition().getY() &lt;= joe.getPosition().getY() + CAR_FRONT &amp;&amp;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">                car.getPosition().getY() &gt;= joe.getPosition().getY() - CAR_REAR;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

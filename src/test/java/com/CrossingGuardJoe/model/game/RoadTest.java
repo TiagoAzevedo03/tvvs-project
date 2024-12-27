@@ -40,11 +40,15 @@ public class RoadTest {
 
     @Test
     public void testLevelUp() {
-        road.levelUp();
-        assertEquals(2, road.getCurrentLevel());
+        // Increment level from 1 to 5
+        for (int i = 1; i < 5; i++) {
+            road.levelUp();
+        }
+        assertEquals(5, road.getCurrentLevel());
         assertFalse(road.isGameEnded());
 
-        for (int i = 2; i < 10; i++) {
+        // Increment level from 5 to 10
+        for (int i = 5; i < 10; i++) {
             road.levelUp();
         }
         assertEquals(10, road.getCurrentLevel());

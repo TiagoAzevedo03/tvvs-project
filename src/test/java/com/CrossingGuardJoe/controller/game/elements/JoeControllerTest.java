@@ -1,7 +1,5 @@
 package com.CrossingGuardJoe.controller.game.elements;
 
-import com.CrossingGuardJoe.controller.Sounds;
-import com.CrossingGuardJoe.controller.SoundsController;
 import com.CrossingGuardJoe.gui.GUI;
 import com.CrossingGuardJoe.model.Position;
 import com.CrossingGuardJoe.model.game.Road;
@@ -12,10 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Method;
-import java.util.Collections;
 
-import static com.CrossingGuardJoe.controller.game.AuxCheckRange.isInRangeLeftCarJoe;
-import static com.CrossingGuardJoe.controller.game.AuxCheckRange.isInRangeRightCarJoe;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
@@ -24,11 +19,10 @@ class JoeControllerTest {
 
     private JoeController joeController;
     private Joe joe;
-    private Road road;
 
     @BeforeEach
     void setUp() {
-        road = mock(Road.class);
+        Road road = mock(Road.class);
         joe = mock(Joe.class);
         joeController = new JoeController(road);
 
@@ -152,5 +146,29 @@ class JoeControllerTest {
         verify(joe).startRaisingPassSign();
 
         joeController.nextAction(game, GUI.ACTION.NONE, 0);
+    }
+
+    @Test
+    void testCarInRangeLeftCarJoe() {
+        Car car = mock(Car.class);
+        Game game = mock(Game.class);
+
+        when(car.getPosition()).thenReturn(new Position(5, 10));
+
+        joeController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
+
+        verify(joe).stopWalking();
+    }
+
+    @Test
+    void testCarInRangeRightCarJoe() {
+        Car car = mock(Car.class);
+        Game game = mock(Game.class);
+
+        when(car.getPosition()).thenReturn(new Position(15, 10));
+
+        joeController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
+
+        verify(joe).stopWalking();
     }
 }

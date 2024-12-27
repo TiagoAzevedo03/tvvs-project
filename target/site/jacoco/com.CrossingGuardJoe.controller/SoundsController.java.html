@@ -52,13 +52,13 @@ public class SoundsController {
     }
 
     public void play(SFX sfx) {
-<span class="pc bpc" id="L55" title="10 of 21 branches missed.">        switch (sfx) {</span>
-<span class="fc" id="L56">            case MENUBGM -&gt; menuBgm.loop(0.2f);</span>
+<span class="pc bpc" id="L55" title="16 of 21 branches missed.">        switch (sfx) {</span>
+<span class="nc" id="L56">            case MENUBGM -&gt; menuBgm.loop(0.2f);</span>
 <span class="fc" id="L57">            case GAMEBGM -&gt; gameBgm.loop(0.15f);</span>
-<span class="fc" id="L58">            case CUSTOMIZEBGM -&gt; customizeBgm.loop(1f);</span>
-<span class="fc" id="L59">            case INSTRUCTIONSBGM -&gt; instructionsBgm.loop(0.5f);</span>
-<span class="fc" id="L60">            case SELECT -&gt; select.play(defaultVolume);</span>
-<span class="fc" id="L61">            case ENTER -&gt; enter.play(defaultVolume);</span>
+<span class="nc" id="L58">            case CUSTOMIZEBGM -&gt; customizeBgm.loop(1f);</span>
+<span class="nc" id="L59">            case INSTRUCTIONSBGM -&gt; instructionsBgm.loop(0.5f);</span>
+<span class="nc" id="L60">            case SELECT -&gt; select.play(defaultVolume);</span>
+<span class="nc" id="L61">            case ENTER -&gt; enter.play(defaultVolume);</span>
 <span class="nc" id="L62">            case FLIPPAGE -&gt; flipPage.play(0.7f);</span>
 <span class="nc" id="L63">            case LEVELUP -&gt; levelUp.play(1f);</span>
 <span class="fc" id="L64">            case JOEPASS1 -&gt; joePass1.play(defaultVolume);</span>
@@ -71,30 +71,30 @@ public class SoundsController {
 <span class="nc" id="L71">            case KIDHIT -&gt; kidHit.play(defaultVolume);</span>
 <span class="nc" id="L72">            case KIDSCORE -&gt; kidScore.play(0.8f);</span>
 <span class="nc" id="L73">            case CARBREAK -&gt; carBreak.play(defaultVolume);</span>
-<span class="fc" id="L74">            case GAMEOVER -&gt; gameOver.play(1f);</span>
+<span class="nc" id="L74">            case GAMEOVER -&gt; gameOver.play(1f);</span>
 <span class="nc" id="L75">            case VICTORYBGM -&gt; victoryBgm.loop(1f);</span>
         }
 <span class="fc" id="L77">    }</span>
 
     public void pause(SFX sfx) {
-<span class="pc bpc" id="L80" title="2 of 3 branches missed.">        switch (sfx) {</span>
-<span class="fc" id="L81">            case GAMEBGM -&gt; gameBgm.pause();</span>
+<span class="nc bnc" id="L80" title="All 3 branches missed.">        switch (sfx) {</span>
+<span class="nc" id="L81">            case GAMEBGM -&gt; gameBgm.pause();</span>
 <span class="nc" id="L82">            case VICTORYBGM -&gt; victoryBgm.pause();</span>
             default -&gt; {}
         }
-<span class="fc" id="L85">    }</span>
+<span class="nc" id="L85">    }</span>
 
     public void stop(SFX sfx) {
-<span class="pc bpc" id="L88" title="1 of 7 branches missed.">        switch(sfx) {</span>
-<span class="fc" id="L89">            case MENUBGM -&gt; menuBgm.stop();</span>
-<span class="fc" id="L90">            case GAMEBGM -&gt; gameBgm.stop();</span>
-<span class="fc" id="L91">            case CUSTOMIZEBGM -&gt; customizeBgm.stop();</span>
-<span class="fc" id="L92">            case INSTRUCTIONSBGM -&gt; instructionsBgm.stop();</span>
-<span class="fc" id="L93">            case CARBREAK -&gt; carBreak.stop();</span>
-<span class="fc" id="L94">            case VICTORYBGM -&gt; victoryBgm.stop();</span>
+<span class="nc bnc" id="L88" title="All 7 branches missed.">        switch(sfx) {</span>
+<span class="nc" id="L89">            case MENUBGM -&gt; menuBgm.stop();</span>
+<span class="nc" id="L90">            case GAMEBGM -&gt; gameBgm.stop();</span>
+<span class="nc" id="L91">            case CUSTOMIZEBGM -&gt; customizeBgm.stop();</span>
+<span class="nc" id="L92">            case INSTRUCTIONSBGM -&gt; instructionsBgm.stop();</span>
+<span class="nc" id="L93">            case CARBREAK -&gt; carBreak.stop();</span>
+<span class="nc" id="L94">            case VICTORYBGM -&gt; victoryBgm.stop();</span>
             default -&gt; {}
         }
-<span class="fc" id="L97">    }</span>
+<span class="nc" id="L97">    }</span>
 
     public static void playRandom(SFX sfx1, SFX sfx2) {
 <span class="fc" id="L100">        Random random = new Random();</span>

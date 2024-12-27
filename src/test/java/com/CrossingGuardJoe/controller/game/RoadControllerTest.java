@@ -8,8 +8,6 @@ import com.CrossingGuardJoe.gui.GUI;
 import com.CrossingGuardJoe.model.Position;
 import com.CrossingGuardJoe.model.game.Road;
 import com.CrossingGuardJoe.model.game.elements.Joe;
-import com.CrossingGuardJoe.model.menu.GameOverMenu;
-import com.CrossingGuardJoe.model.menu.PauseMenu;
 import com.CrossingGuardJoe.states.menu.GameOverState;
 import com.CrossingGuardJoe.states.menu.PauseMenuState;
 import org.junit.jupiter.api.BeforeEach;
@@ -125,5 +123,31 @@ class RoadControllerTest {
         verify(carController).nextAction(game, GUI.ACTION.NONE, currentTime);
         verify(game).popState();
         verify(game).setState(any(GameOverState.class));
+    }
+
+    @Test
+    void testNextActionUpdateHighestScoreAndLevel() throws IOException {
+        long currentTime = System.currentTimeMillis();
+        Joe joe = road.getJoe();
+        when(joe.getScore()).thenReturn(200);
+        when(game.getHighestScore()).thenReturn(100);
+        when(road.getCurrentLevel()).thenReturn(5);
+        when(game.getHighestLevel()).thenReturn(3);
+
+        roadController.nextAction(game, GUI.ACTION.NONE, currentTime);
+
+        verify(game).setHighestScore(200);
+        verify(game).setHighestLevel(5);
+    }
+
+    @Test
+    void testNextActionGameEnded() throws IOException {
+        long currentTime = System.currentTimeMillis();
+        when(road.isGameEnded()).thenReturn(true);
+
+        roadController.nextAction(game, GUI.ACTION.NONE, currentTime);
+
+        verify(game, times(2)).popState();
+        verify(game, times(2)).setState(any(GameOverState.class));
     }
 }
