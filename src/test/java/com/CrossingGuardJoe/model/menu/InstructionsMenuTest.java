@@ -34,4 +34,29 @@ public class InstructionsMenuTest {
     public void testGetTotalPages() {
         assertEquals(5, instructionsMenu.getTotalPages());
     }
+
+    @Test
+    public void testNavigateRight() {
+        instructionsMenu.navigateRight();
+        assertEquals(2, instructionsMenu.getCurrentPage());
+    }
+
+    @Test
+    public void testNavigateRightAtLastPage() {
+        for (int i = 1; i < instructionsMenu.getTotalPages(); i++) {
+            instructionsMenu.navigateRight();
+        }
+        assertEquals(5, instructionsMenu.getCurrentPage());
+        instructionsMenu.navigateRight();
+        assertEquals(5, instructionsMenu.getCurrentPage());
+    }
+
+    @Test
+    public void testNavigateLeft() {
+        instructionsMenu.navigateRight();
+        assertEquals(2, instructionsMenu.getCurrentPage());
+
+        instructionsMenu.navigateLeft();
+        assertEquals(1, instructionsMenu.getCurrentPage());
+    }
 }

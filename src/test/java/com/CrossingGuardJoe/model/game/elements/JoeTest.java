@@ -4,13 +4,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 public class JoeTest {
     private Joe joe;
 
     @Before
     public void setUp() {
-        joe = new Joe(5, 10);
+        joe = spy(new Joe(5, 10));
     }
 
     @Test
@@ -119,5 +120,23 @@ public class JoeTest {
         joe.addScore(10);
         joe.countHitPoints();
         assertEquals(8, joe.getScore());
+    }
+
+    @Test
+    public void testCountHitPointsScoreGreaterThanZero() {
+        when(joe.getScore()).thenReturn(5);
+
+        joe.countHitPoints();
+
+        verify(joe).addScore(-2);
+    }
+
+    @Test
+    public void testCountHitPointsScoreZeroOrLess() {
+        when(joe.getScore()).thenReturn(0);
+
+        joe.countHitPoints();
+
+        verify(joe, never()).addScore(-2);
     }
 }

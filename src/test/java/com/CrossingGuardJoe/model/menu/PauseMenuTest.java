@@ -1,6 +1,5 @@
 package com.CrossingGuardJoe.model.menu;
 
-import com.CrossingGuardJoe.model.Position;
 import com.CrossingGuardJoe.model.game.Road;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,6 +29,8 @@ public class PauseMenuTest {
         assertTrue(pauseMenu.isSelectedOption(0));
         pauseMenu.navigateDown();
         assertTrue(pauseMenu.isSelectedOption(1));
+        pauseMenu.navigateUp();
+        assertFalse(pauseMenu.isSelectedOption(1));
     }
 
     @Test

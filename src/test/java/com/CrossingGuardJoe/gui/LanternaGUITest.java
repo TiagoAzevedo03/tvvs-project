@@ -1,8 +1,12 @@
 package com.CrossingGuardJoe.gui;
 
 import com.CrossingGuardJoe.model.Position;
+import com.CrossingGuardJoe.viewer.Color;
 import com.googlecode.lanterna.TerminalSize;
+import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
+import com.googlecode.lanterna.input.KeyStroke;
+import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
 import org.junit.Before;
 import org.junit.Test;
@@ -71,5 +75,59 @@ public class LanternaGUITest {
         TerminalSize screenSize = screen.getTerminalSize();
 
         assertEquals(size, screenSize);
+    }
+
+    @Test
+    public void testGetNextAction() throws IOException {
+        KeyStroke keyStroke = mock(KeyStroke.class);
+
+        when(screen.pollInput()).thenReturn(keyStroke);
+
+        when(keyStroke.getKeyType()).thenReturn(KeyType.ArrowLeft);
+        assertEquals(LanternaGUI.ACTION.LEFT, lanternaGUI.getNextAction());
+
+        when(keyStroke.getKeyType()).thenReturn(KeyType.ArrowRight);
+        assertEquals(LanternaGUI.ACTION.RIGHT, lanternaGUI.getNextAction());
+
+        when(keyStroke.getKeyType()).thenReturn(KeyType.ArrowUp);
+        assertEquals(LanternaGUI.ACTION.UP, lanternaGUI.getNextAction());
+
+        when(keyStroke.getKeyType()).thenReturn(KeyType.ArrowDown);
+        assertEquals(LanternaGUI.ACTION.DOWN, lanternaGUI.getNextAction());
+
+        when(keyStroke.getKeyType()).thenReturn(KeyType.Enter);
+        assertEquals(LanternaGUI.ACTION.SELECT, lanternaGUI.getNextAction());
+
+        when(keyStroke.getKeyType()).thenReturn(KeyType.Escape);
+        assertEquals(LanternaGUI.ACTION.ESC, lanternaGUI.getNextAction());
+
+        when(keyStroke.getKeyType()).thenReturn(KeyType.EOF);
+        assertEquals(LanternaGUI.ACTION.QUIT, lanternaGUI.getNextAction());
+
+        when(keyStroke.getKeyType()).thenReturn(KeyType.Character);
+        assertEquals(LanternaGUI.ACTION.NONE, lanternaGUI.getNextAction());
+
+        when(screen.pollInput()).thenReturn(null);
+        assertEquals(LanternaGUI.ACTION.NONE, lanternaGUI.getNextAction());
+    }
+
+    @Test
+    public void testSetColorValidCharacter() {
+        char character = '<';
+        Color color = Color.getColor(character);
+        String colorHexCode = color.getColorHexCode();
+
+        lanternaGUI.setColor(character);
+
+        verify(graphics).setBackgroundColor(TextColor.Factory.fromString(colorHexCode));
+    }
+
+    @Test
+    public void testSetColorInvalidCharacter() {
+        char character = 'Z';
+
+        lanternaGUI.setColor(character);
+
+        verify(graphics, never()).setBackgroundColor(any(TextColor.class));
     }
 }
