@@ -1,15 +1,15 @@
 package com.CrossingGuardJoe.model.menu;
 
 import com.CrossingGuardJoe.model.Position;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MenuTest {
     private Menu menu;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         menu = new Menu();
     }
@@ -45,6 +45,7 @@ public class MenuTest {
 
     @Test
     public void testIsSelectedOption() {
+        assertFalse(menu.isSelectedOption(1));
         assertTrue(menu.isSelectedOption(0));
         menu.navigateDown();
         assertTrue(menu.isSelectedOption(1));

@@ -1,16 +1,16 @@
 package com.CrossingGuardJoe.model.menu;
 
 import com.CrossingGuardJoe.model.game.Road;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class GameOverMenuTest {
     private GameOverMenu gameOverMenu;
     private Road road;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         road = new Road();
         gameOverMenu = new GameOverMenu(true, road);
@@ -38,6 +38,7 @@ public class GameOverMenuTest {
 
     @Test
     public void testIsSelectedOption() {
+        assertFalse(gameOverMenu.isSelectedOption(1));
         assertTrue(gameOverMenu.isSelectedOption(0));
         gameOverMenu.navigateDown();
         assertTrue(gameOverMenu.isSelectedOption(1));

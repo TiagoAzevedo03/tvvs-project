@@ -19,26 +19,26 @@ public class InstructionsMenu implements MenuNavigator {
 
     @Override
     public void navigateRight() {
-<span class="nc bnc" id="L22" title="All 2 branches missed.">        if (currentPage &lt; LAST_PAGE) {</span>
-<span class="nc" id="L23">            SoundsController.getInstance().play(Sounds.SFX.FLIPPAGE);</span>
-<span class="nc" id="L24">            currentPage++;</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (currentPage &lt; LAST_PAGE) {</span>
+<span class="fc" id="L23">            SoundsController.getInstance().play(Sounds.SFX.FLIPPAGE);</span>
+<span class="fc" id="L24">            currentPage++;</span>
         }
-<span class="nc" id="L26">    }</span>
+<span class="fc" id="L26">    }</span>
 
     @Override
     public void navigateLeft() {
-<span class="nc bnc" id="L30" title="All 2 branches missed.">        if (currentPage &gt; 1) {</span>
-<span class="nc" id="L31">            SoundsController.getInstance().play(Sounds.SFX.FLIPPAGE);</span>
-<span class="nc" id="L32">            currentPage--;</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (currentPage &gt; 1) {</span>
+<span class="fc" id="L31">            SoundsController.getInstance().play(Sounds.SFX.FLIPPAGE);</span>
+<span class="fc" id="L32">            currentPage--;</span>
         }
-<span class="nc" id="L34">    }</span>
+<span class="fc" id="L34">    }</span>
 
     public int getCurrentPage() {
-<span class="nc" id="L37">        return currentPage;</span>
+<span class="fc" id="L37">        return currentPage;</span>
     }
 
     public int getTotalPages() {
-<span class="nc" id="L41">        return LAST_PAGE;</span>
+<span class="fc" id="L41">        return LAST_PAGE;</span>
     }
 
 }

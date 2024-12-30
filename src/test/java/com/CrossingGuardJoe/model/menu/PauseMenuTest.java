@@ -1,16 +1,15 @@
 package com.CrossingGuardJoe.model.menu;
 
 import com.CrossingGuardJoe.model.game.Road;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 public class PauseMenuTest {
     private PauseMenu pauseMenu;
     private Road road;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         road = new Road();
         pauseMenu = new PauseMenu(road);

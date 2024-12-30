@@ -21,36 +21,36 @@ public class PauseMenu implements MenuNavigator{
 <span class="fc" id="L21">    }</span>
 
     public Road getCurrentGame() {
-<span class="nc" id="L24">        return this.currentGame;</span>
+<span class="fc" id="L24">        return this.currentGame;</span>
     }
 
     @Override
     public void navigateUp() {
-<span class="nc" id="L29">        optionSelected = (optionSelected - 1 + options.size()) % options.size();</span>
-<span class="nc" id="L30">    }</span>
+<span class="fc" id="L29">        optionSelected = (optionSelected - 1 + options.size()) % options.size();</span>
+<span class="fc" id="L30">    }</span>
 
     @Override
     public void navigateDown() {
-<span class="nc" id="L34">        optionSelected = (optionSelected + 1) % options.size();</span>
-<span class="nc" id="L35">    }</span>
+<span class="fc" id="L34">        optionSelected = (optionSelected + 1) % options.size();</span>
+<span class="fc" id="L35">    }</span>
 
     public Option getOption(int i) {
-<span class="nc" id="L38">        return options.get(i);</span>
+<span class="fc" id="L38">        return options.get(i);</span>
     }
 
     public int getNumberOptions() {
-<span class="nc" id="L42">        return options.size();</span>
+<span class="fc" id="L42">        return options.size();</span>
     }
 
     public boolean isSelectedOption(int index) {
-<span class="nc bnc" id="L46" title="All 2 branches missed.">        return optionSelected == index;</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        return optionSelected == index;</span>
     }
 
-<span class="nc" id="L49">    public boolean isSelectedResume() { return isSelectedOption(0); }</span>
+<span class="fc" id="L49">    public boolean isSelectedResume() { return isSelectedOption(0); }</span>
 
-<span class="nc" id="L51">    public boolean isSelectedStats() { return isSelectedOption(1); }</span>
+<span class="fc" id="L51">    public boolean isSelectedStats() { return isSelectedOption(1); }</span>
 
-<span class="nc" id="L53">    public boolean isSelectedExit() { return isSelectedOption(2); }</span>
+<span class="fc" id="L53">    public boolean isSelectedExit() { return isSelectedOption(2); }</span>
 
     @Override
     public void navigateRight() {

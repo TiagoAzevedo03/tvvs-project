@@ -7,46 +7,46 @@ import java.util.List;
 
 public class Menu implements MenuNavigator{
     private final List&lt;Option&gt; options;
-<span class="nc" id="L10">    private int optionSelected = 0;</span>
+<span class="fc" id="L10">    private int optionSelected = 0;</span>
 
-<span class="nc" id="L12">    public Menu() {</span>
-<span class="nc" id="L13">        this.options = Arrays.asList(</span>
+<span class="fc" id="L12">    public Menu() {</span>
+<span class="fc" id="L13">        this.options = Arrays.asList(</span>
                 new Option(&quot;Start Game&quot;, new Position(203, 220), null),
                 new Option(&quot;Instructions&quot;, new Position(195, 260), null),
                 new Option(&quot;Customize&quot;, new Position(207, 300), null),
                 new Option(&quot;Exit&quot;, new Position(226, 340), null)
         );
-<span class="nc" id="L19">    }</span>
+<span class="fc" id="L19">    }</span>
 
     @Override
     public void navigateUp() {
-<span class="nc" id="L23">        optionSelected = (optionSelected - 1 + options.size()) % options.size();</span>
-<span class="nc" id="L24">    }</span>
+<span class="fc" id="L23">        optionSelected = (optionSelected - 1 + options.size()) % options.size();</span>
+<span class="fc" id="L24">    }</span>
 
     @Override
     public void navigateDown() {
-<span class="nc" id="L28">        optionSelected = (optionSelected + 1) % options.size();</span>
-<span class="nc" id="L29">    }</span>
+<span class="fc" id="L28">        optionSelected = (optionSelected + 1) % options.size();</span>
+<span class="fc" id="L29">    }</span>
 
     public Option getOption(int i) {
-<span class="nc" id="L32">        return options.get(i);</span>
+<span class="fc" id="L32">        return options.get(i);</span>
     }
 
     public int getNumberOptions() {
-<span class="nc" id="L36">        return options.size();</span>
+<span class="fc" id="L36">        return options.size();</span>
     }
 
     public boolean isSelectedOption(int index) {
-<span class="nc bnc" id="L40" title="All 2 branches missed.">        return optionSelected == index;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        return optionSelected == index;</span>
     }
 
-<span class="nc" id="L43">    public boolean isSelectedStartGame() { return isSelectedOption(0); }</span>
+<span class="fc" id="L43">    public boolean isSelectedStartGame() { return isSelectedOption(0); }</span>
 
-<span class="nc" id="L45">    public boolean isSelectedInstructions() { return isSelectedOption(1); }</span>
+<span class="fc" id="L45">    public boolean isSelectedInstructions() { return isSelectedOption(1); }</span>
 
-<span class="nc" id="L47">    public boolean isSelectedCustomize() { return isSelectedOption(2); }</span>
+<span class="fc" id="L47">    public boolean isSelectedCustomize() { return isSelectedOption(2); }</span>
 
-<span class="nc" id="L49">    public boolean isSelectedExit() { return isSelectedOption(3); }</span>
+<span class="fc" id="L49">    public boolean isSelectedExit() { return isSelectedOption(3); }</span>
 
     @Override
 <span class="nc" id="L52">    public void navigateRight() {}</span>

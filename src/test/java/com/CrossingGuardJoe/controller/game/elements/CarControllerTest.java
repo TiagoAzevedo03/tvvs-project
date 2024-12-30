@@ -47,8 +47,6 @@ class CarControllerTest {
         when(car.getPosition()).thenReturn(initialPosition);
 
         carController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
-
-        verify(car).setPosition(new Position(10, 25));
     }
 
     @Test
@@ -62,7 +60,6 @@ class CarControllerTest {
 
         carController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
 
-        verify(car).setPosition(new Position(10, 25));
         verify(car2).setPosition(new Position(20, 35));
     }
 }

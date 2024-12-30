@@ -2,18 +2,17 @@ package com.CrossingGuardJoe.model.menu;
 
 import com.CrossingGuardJoe.controller.SoundsController;
 import com.CrossingGuardJoe.viewer.Color;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
-
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 public class ColorPaletteMenuTest {
     private ColorPaletteMenu colorPaletteMenu;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         colorPaletteMenu = new ColorPaletteMenu();
         mock(SoundsController.class);

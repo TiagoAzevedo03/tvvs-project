@@ -28,20 +28,20 @@ public class LanternaGUI implements GUI {
     private Screen screen;
     private final int width;
     private final int height;
-<span class="nc" id="L31">    private final ColorCustomize colorCustomize = ColorCustomize.getInstance();</span>
+<span class="fc" id="L31">    private final ColorCustomize colorCustomize = ColorCustomize.getInstance();</span>
 
-<span class="nc" id="L33">    public LanternaGUI(int width, int height) {</span>
-<span class="nc" id="L34">        this.width = width;</span>
-<span class="nc" id="L35">        this.height = height;</span>
-<span class="nc" id="L36">    }</span>
+<span class="fc" id="L33">    public LanternaGUI(int width, int height) {</span>
+<span class="fc" id="L34">        this.width = width;</span>
+<span class="fc" id="L35">        this.height = height;</span>
+<span class="fc" id="L36">    }</span>
 
     public void setGraphics(TextGraphics graphics) {
-<span class="nc" id="L39">        this.graphics = graphics;</span>
-<span class="nc" id="L40">    }</span>
+<span class="fc" id="L39">        this.graphics = graphics;</span>
+<span class="fc" id="L40">    }</span>
 
     public void setScreen(Screen screen) {
-<span class="nc" id="L43">        this.screen = screen;</span>
-<span class="nc" id="L44">    }</span>
+<span class="fc" id="L43">        this.screen = screen;</span>
+<span class="fc" id="L44">    }</span>
 
     public void createTerminal() throws IOException, URISyntaxException, FontFormatException {
 <span class="nc" id="L47">        AWTTerminalFontConfiguration fontConfig = loadSquareFont();</span>
@@ -78,41 +78,41 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void clearScreen() {
-<span class="nc" id="L81">        this.graphics.setBackgroundColor(TextColor.Factory.fromString(&quot;#7F7976&quot;));</span>
-<span class="nc" id="L82">        fillRectangle(new Position(0,0), width, height);</span>
-<span class="nc" id="L83">    }</span>
+<span class="fc" id="L81">        this.graphics.setBackgroundColor(TextColor.Factory.fromString(&quot;#7F7976&quot;));</span>
+<span class="fc" id="L82">        fillRectangle(new Position(0,0), width, height);</span>
+<span class="fc" id="L83">    }</span>
 
     @Override
     public void refreshScreen() throws IOException {
-<span class="nc" id="L87">        this.screen.refresh();</span>
-<span class="nc" id="L88">    }</span>
+<span class="fc" id="L87">        this.screen.refresh();</span>
+<span class="fc" id="L88">    }</span>
 
     @Override
     public void closeScreen() throws IOException {
-<span class="nc" id="L92">        this.screen.close();</span>
-<span class="nc" id="L93">    }</span>
+<span class="fc" id="L92">        this.screen.close();</span>
+<span class="fc" id="L93">    }</span>
 
     @Override
     public void setBackgroundColor(String colorHexCode) {
-<span class="nc" id="L97">        this.graphics.setBackgroundColor(TextColor.Factory.fromString(colorHexCode));</span>
-<span class="nc" id="L98">        fillRectangle(new Position(0,0), width, height);</span>
-<span class="nc" id="L99">    }</span>
+<span class="fc" id="L97">        this.graphics.setBackgroundColor(TextColor.Factory.fromString(colorHexCode));</span>
+<span class="fc" id="L98">        fillRectangle(new Position(0,0), width, height);</span>
+<span class="fc" id="L99">    }</span>
 
     @Override
     public void fillRectangle(Position initialPosition, int rectangleWidth, int rectangleHeight) {
-<span class="nc" id="L103">        this.graphics.fillRectangle(new TerminalPosition(initialPosition.getX(), initialPosition.getY()),</span>
+<span class="fc" id="L103">        this.graphics.fillRectangle(new TerminalPosition(initialPosition.getX(), initialPosition.getY()),</span>
                 new TerminalSize(rectangleWidth, rectangleHeight),
                 ' ');
-<span class="nc" id="L106">    }</span>
+<span class="fc" id="L106">    }</span>
 
     @Override
     public void drawImage(Position position, String[] image) {
-<span class="nc" id="L110">        int yPos = position.getY();</span>
-<span class="nc bnc" id="L111" title="All 2 branches missed.">        for (String imageLine : image) {</span>
-<span class="nc" id="L112">            drawLine(position.getX(), yPos, imageLine);</span>
-<span class="nc" id="L113">            yPos++;</span>
+<span class="fc" id="L110">        int yPos = position.getY();</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">        for (String imageLine : image) {</span>
+<span class="fc" id="L112">            drawLine(position.getX(), yPos, imageLine);</span>
+<span class="fc" id="L113">            yPos++;</span>
         }
-<span class="nc" id="L115">    }</span>
+<span class="fc" id="L115">    }</span>
 
     @Override
     public void drawText(Position position, Object text, String colorHexCode) {
@@ -124,8 +124,8 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void setColorHexaCode(String hexCode) {
-<span class="nc" id="L127">        graphics.setBackgroundColor(TextColor.Factory.fromString(hexCode));</span>
-<span class="nc" id="L128">    }</span>
+<span class="fc" id="L127">        graphics.setBackgroundColor(TextColor.Factory.fromString(hexCode));</span>
+<span class="fc" id="L128">    }</span>
 
     @Override
     public void addColorMapping(char oldCharacter, char newCharacter) {
@@ -133,76 +133,76 @@ public class LanternaGUI implements GUI {
 <span class="nc" id="L133">    }</span>
 
     public void drawImageCustomColor(Position position, String[] image, String colorHexCode) {
-<span class="nc" id="L136">        int yPos = position.getY();</span>
-<span class="nc bnc" id="L137" title="All 2 branches missed.">        for (String imageLine : image) {</span>
-<span class="nc" id="L138">            drawLineCustomColor(position.getX(), yPos, imageLine, colorHexCode);</span>
-<span class="nc" id="L139">            yPos++;</span>
+<span class="fc" id="L136">        int yPos = position.getY();</span>
+<span class="fc bfc" id="L137" title="All 2 branches covered.">        for (String imageLine : image) {</span>
+<span class="fc" id="L138">            drawLineCustomColor(position.getX(), yPos, imageLine, colorHexCode);</span>
+<span class="fc" id="L139">            yPos++;</span>
         }
-<span class="nc" id="L141">    }</span>
+<span class="fc" id="L141">    }</span>
 
     public void setColor(char character) {
-<span class="nc" id="L144">        Color color = Color.getColor(character);</span>
-<span class="nc bnc" id="L145" title="All 2 branches missed.">        if (color != null) {</span>
+<span class="fc" id="L144">        Color color = Color.getColor(character);</span>
+<span class="pc bpc" id="L145" title="1 of 2 branches missed.">        if (color != null) {</span>
 <span class="nc" id="L146">            graphics.setBackgroundColor(TextColor.Factory.fromString(color.getColorHexCode()));</span>
         }
-<span class="nc" id="L148">    }</span>
+<span class="fc" id="L148">    }</span>
 
     public void drawLine(int x, int y, String imageLine) {
-<span class="nc" id="L151">        int xPos = x;</span>
-<span class="nc bnc" id="L152" title="All 2 branches missed.">        for (int i = 0; i &lt; imageLine.length(); i++) {</span>
-<span class="nc" id="L153">            char character = imageLine.charAt(i);</span>
-<span class="nc bnc" id="L154" title="All 2 branches missed.">            if (character != ' ') {</span>
-<span class="nc" id="L155">                char colorCharacter = getMappedCharacter(character);</span>
-<span class="nc" id="L156">                setColor(colorCharacter);</span>
-<span class="nc" id="L157">                fillRectangle(new Position(x + xPos, y), 1, 1);</span>
+<span class="fc" id="L151">        int xPos = x;</span>
+<span class="fc bfc" id="L152" title="All 2 branches covered.">        for (int i = 0; i &lt; imageLine.length(); i++) {</span>
+<span class="fc" id="L153">            char character = imageLine.charAt(i);</span>
+<span class="pc bpc" id="L154" title="1 of 2 branches missed.">            if (character != ' ') {</span>
+<span class="fc" id="L155">                char colorCharacter = getMappedCharacter(character);</span>
+<span class="fc" id="L156">                setColor(colorCharacter);</span>
+<span class="fc" id="L157">                fillRectangle(new Position(x + xPos, y), 1, 1);</span>
             }
-<span class="nc" id="L159">            xPos++;</span>
+<span class="fc" id="L159">            xPos++;</span>
         }
-<span class="nc" id="L161">    }</span>
+<span class="fc" id="L161">    }</span>
 
     public void drawLineCustomColor(int x, int y, String imageLine, String colorHexCode) {
-<span class="nc" id="L164">        int xPos = x;</span>
-<span class="nc bnc" id="L165" title="All 2 branches missed.">        for (int i = 0; i &lt; imageLine.length(); i++) {</span>
-<span class="nc" id="L166">            char character = imageLine.charAt(i);</span>
-<span class="nc bnc" id="L167" title="All 2 branches missed.">            if (character != ' ') {</span>
-<span class="nc" id="L168">                setColorHexaCode(colorHexCode);</span>
-<span class="nc" id="L169">                fillRectangle(new Position(x + xPos, y), 1, 1);</span>
+<span class="fc" id="L164">        int xPos = x;</span>
+<span class="fc bfc" id="L165" title="All 2 branches covered.">        for (int i = 0; i &lt; imageLine.length(); i++) {</span>
+<span class="fc" id="L166">            char character = imageLine.charAt(i);</span>
+<span class="pc bpc" id="L167" title="1 of 2 branches missed.">            if (character != ' ') {</span>
+<span class="fc" id="L168">                setColorHexaCode(colorHexCode);</span>
+<span class="fc" id="L169">                fillRectangle(new Position(x + xPos, y), 1, 1);</span>
             }
-<span class="nc" id="L171">            xPos++;</span>
+<span class="fc" id="L171">            xPos++;</span>
         }
-<span class="nc" id="L173">    }</span>
+<span class="fc" id="L173">    }</span>
 
     public char getMappedCharacter(char character) {
-<span class="nc" id="L176">        return colorCustomize.getMappedCharacter(character);</span>
+<span class="fc" id="L176">        return colorCustomize.getMappedCharacter(character);</span>
     }
 
     @Override
     public ACTION getNextAction() throws IOException {
-<span class="nc" id="L181">        KeyStroke keyStroke = screen.pollInput();</span>
+<span class="fc" id="L181">        KeyStroke keyStroke = screen.pollInput();</span>
 
-<span class="nc bnc" id="L183" title="All 2 branches missed.">        if (keyStroke != null) {</span>
-<span class="nc" id="L184">            KeyType keyType = keyStroke.getKeyType();</span>
-<span class="nc bnc" id="L185" title="All 8 branches missed.">            switch (keyType) {</span>
+<span class="fc bfc" id="L183" title="All 2 branches covered.">        if (keyStroke != null) {</span>
+<span class="fc" id="L184">            KeyType keyType = keyStroke.getKeyType();</span>
+<span class="pc bpc" id="L185" title="1 of 8 branches missed.">            switch (keyType) {</span>
                 case ArrowLeft:
-<span class="nc" id="L187">                    return ACTION.LEFT;</span>
+<span class="fc" id="L187">                    return ACTION.LEFT;</span>
                 case ArrowRight:
-<span class="nc" id="L189">                    return ACTION.RIGHT;</span>
+<span class="fc" id="L189">                    return ACTION.RIGHT;</span>
                 case ArrowUp:
-<span class="nc" id="L191">                    return ACTION.UP;</span>
+<span class="fc" id="L191">                    return ACTION.UP;</span>
                 case ArrowDown:
-<span class="nc" id="L193">                    return ACTION.DOWN;</span>
+<span class="fc" id="L193">                    return ACTION.DOWN;</span>
                 case Enter:
-<span class="nc" id="L195">                    return ACTION.SELECT;</span>
+<span class="fc" id="L195">                    return ACTION.SELECT;</span>
                 case Escape:
-<span class="nc" id="L197">                    return ACTION.ESC;</span>
+<span class="fc" id="L197">                    return ACTION.ESC;</span>
                 case EOF:
-<span class="nc" id="L199">                    return ACTION.QUIT;</span>
+<span class="fc" id="L199">                    return ACTION.QUIT;</span>
                 default:
                     break;
             }
         }
 
-<span class="nc" id="L205">        return ACTION.NONE;</span>
+<span class="fc" id="L205">        return ACTION.NONE;</span>
     }
 
 }

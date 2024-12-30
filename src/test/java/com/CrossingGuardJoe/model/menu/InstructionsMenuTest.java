@@ -2,17 +2,17 @@ package com.CrossingGuardJoe.model.menu;
 
 import com.CrossingGuardJoe.controller.Sounds;
 import com.CrossingGuardJoe.controller.SoundsController;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class InstructionsMenuTest {
     private InstructionsMenu instructionsMenu;
     private SoundsController soundsController;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         instructionsMenu = new InstructionsMenu();
         soundsController = mock(SoundsController.class);

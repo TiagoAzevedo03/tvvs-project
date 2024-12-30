@@ -1,15 +1,15 @@
 package com.CrossingGuardJoe.model.game.elements;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class JoeTest {
     private Joe joe;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         joe = spy(new Joe(5, 10));
     }

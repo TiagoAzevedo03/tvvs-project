@@ -23,40 +23,40 @@ public class GameOverMenu implements MenuNavigator {
 
     @Override
     public void navigateUp() {
-<span class="nc" id="L26">        optionSelected = (optionSelected - 1 + options.size()) % options.size();</span>
-<span class="nc" id="L27">    }</span>
+<span class="fc" id="L26">        optionSelected = (optionSelected - 1 + options.size()) % options.size();</span>
+<span class="fc" id="L27">    }</span>
 
     @Override
     public void navigateDown() {
-<span class="nc" id="L31">        optionSelected = (optionSelected + 1) % options.size();</span>
-<span class="nc" id="L32">    }</span>
+<span class="fc" id="L31">        optionSelected = (optionSelected + 1) % options.size();</span>
+<span class="fc" id="L32">    }</span>
 
     public Option getOption(int i) {
-<span class="nc" id="L35">        return options.get(i);</span>
+<span class="fc" id="L35">        return options.get(i);</span>
     }
 
     public int getNumberOptions() {
-<span class="nc" id="L39">        return options.size();</span>
+<span class="fc" id="L39">        return options.size();</span>
     }
 
     public boolean isSelectedOption(int index) {
-<span class="nc bnc" id="L43" title="All 2 branches missed.">        return optionSelected == index;</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        return optionSelected == index;</span>
     }
 
-<span class="nc" id="L46">    public boolean isSelectedStats() { return isSelectedOption(0); }</span>
+<span class="fc" id="L46">    public boolean isSelectedStats() { return isSelectedOption(0); }</span>
 
-<span class="nc" id="L48">    public boolean isSelectedExit() { return isSelectedOption(1); }</span>
+<span class="fc" id="L48">    public boolean isSelectedExit() { return isSelectedOption(1); }</span>
 
     public boolean isWin() {
-<span class="nc" id="L51">        return isWin;</span>
+<span class="fc" id="L51">        return isWin;</span>
     }
 
     public Road getCurrentGame() {
-<span class="nc" id="L55">        return currentGame;</span>
+<span class="fc" id="L55">        return currentGame;</span>
     }
 
     public int getOptionSelected() {
-<span class="nc" id="L59">        return this.optionSelected;</span>
+<span class="fc" id="L59">        return this.optionSelected;</span>
     }
 
     @Override

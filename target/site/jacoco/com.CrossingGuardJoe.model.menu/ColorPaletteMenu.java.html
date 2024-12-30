@@ -18,7 +18,7 @@ public class ColorPaletteMenu implements MenuNavigator{
 <span class="fc" id="L18">    }</span>
 
     public List&lt;Color&gt; getColorPalette() {
-<span class="nc" id="L21">        return colorPalette;</span>
+<span class="fc" id="L21">        return colorPalette;</span>
     }
 
     @Override
@@ -29,21 +29,21 @@ public class ColorPaletteMenu implements MenuNavigator{
 
     @Override
     public void navigateRight() {
-<span class="nc" id="L32">        SoundsController.getInstance().play(Sounds.SFX.SELECT);</span>
-<span class="nc" id="L33">        selectedColorIndex = (selectedColorIndex + 1) % colorPalette.size();</span>
-<span class="nc" id="L34">    }</span>
+<span class="fc" id="L32">        SoundsController.getInstance().play(Sounds.SFX.SELECT);</span>
+<span class="fc" id="L33">        selectedColorIndex = (selectedColorIndex + 1) % colorPalette.size();</span>
+<span class="fc" id="L34">    }</span>
 
     public boolean isColorSelected(int index) {
-<span class="nc bnc" id="L37" title="All 2 branches missed.">        return this.selectedColorIndex == index;</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        return this.selectedColorIndex == index;</span>
     }
 
     public int getSelectedColorIndex() {
-<span class="nc" id="L41">        return selectedColorIndex;</span>
+<span class="fc" id="L41">        return selectedColorIndex;</span>
     }
 
     public void resetSelectedColorIndex() {
-<span class="nc" id="L45">        this.selectedColorIndex = 0;</span>
-<span class="nc" id="L46">    }</span>
+<span class="fc" id="L45">        this.selectedColorIndex = 0;</span>
+<span class="fc" id="L46">    }</span>
 
     @Override
 <span class="nc" id="L49">    public void navigateUp() {}</span>

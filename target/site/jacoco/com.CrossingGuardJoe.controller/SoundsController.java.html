@@ -52,7 +52,7 @@ public class SoundsController {
     }
 
     public void play(SFX sfx) {
-<span class="pc bpc" id="L55" title="16 of 21 branches missed.">        switch (sfx) {</span>
+<span class="pc bpc" id="L55" title="17 of 21 branches missed.">        switch (sfx) {</span>
 <span class="nc" id="L56">            case MENUBGM -&gt; menuBgm.loop(0.2f);</span>
 <span class="fc" id="L57">            case GAMEBGM -&gt; gameBgm.loop(0.15f);</span>
 <span class="nc" id="L58">            case CUSTOMIZEBGM -&gt; customizeBgm.loop(1f);</span>
@@ -62,7 +62,7 @@ public class SoundsController {
 <span class="nc" id="L62">            case FLIPPAGE -&gt; flipPage.play(0.7f);</span>
 <span class="nc" id="L63">            case LEVELUP -&gt; levelUp.play(1f);</span>
 <span class="fc" id="L64">            case JOEPASS1 -&gt; joePass1.play(defaultVolume);</span>
-<span class="fc" id="L65">            case JOEPASS2 -&gt; joePass2.play(defaultVolume);</span>
+<span class="nc" id="L65">            case JOEPASS2 -&gt; joePass2.play(defaultVolume);</span>
 <span class="fc" id="L66">            case JOESTOP -&gt; joeStop.play(defaultVolume);</span>
 <span class="fc" id="L67">            case JOEHIT -&gt; joeHit.play(defaultVolume);</span>
 <span class="nc" id="L68">            case KIDWALK1 -&gt; kidWalk1.play(defaultVolume);</span>
@@ -98,10 +98,10 @@ public class SoundsController {
 
     public static void playRandom(SFX sfx1, SFX sfx2) {
 <span class="fc" id="L100">        Random random = new Random();</span>
-<span class="fc bfc" id="L101" title="All 2 branches covered.">        if (random.nextBoolean()) {</span>
+<span class="pc bpc" id="L101" title="1 of 2 branches missed.">        if (random.nextBoolean()) {</span>
 <span class="fc" id="L102">            getInstance().play(sfx1);</span>
         } else {
-<span class="fc" id="L104">            getInstance().play(sfx2);</span>
+<span class="nc" id="L104">            getInstance().play(sfx2);</span>
         }
 <span class="fc" id="L106">    }</span>
 }

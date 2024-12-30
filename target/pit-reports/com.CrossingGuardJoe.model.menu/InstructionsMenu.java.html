@@ -329,27 +329,27 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@31aee6d9_22'/>
 22
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_22'>2</a>
 <span>
 
-1. navigateRight : negated conditional &rarr; NO_COVERAGE<br/>
+1. navigateRight : negated conditional &rarr; KILLED<br/>
 
-2. navigateRight : changed conditional boundary &rarr; NO_COVERAGE<br/>
+2. navigateRight : changed conditional boundary &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>        if (currentPage &#60; LAST_PAGE) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        if (currentPage &#60; LAST_PAGE) {</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@31aee6d9_23'/>
 23
 </td>
@@ -358,30 +358,30 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_23'>1</a>
 <span>
 
-1. navigateRight : removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; NO_COVERAGE<br/>
+1. navigateRight : removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; SURVIVED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            SoundsController.getInstance().play(Sounds.SFX.FLIPPAGE);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>            SoundsController.getInstance().play(Sounds.SFX.FLIPPAGE);</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@31aee6d9_24'/>
 24
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_24'>1</a>
 <span>
 
-1. navigateRight : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
+1. navigateRight : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            currentPage++;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            currentPage++;</span></pre></td></tr>
 
 
 <tr>
@@ -400,7 +400,7 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@31aee6d9_26'/>
 26
 </td>
@@ -411,7 +411,7 @@
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
 
 
 <tr>
@@ -480,7 +480,7 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@31aee6d9_31'/>
 31
 </td>
@@ -489,30 +489,30 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_31'>1</a>
 <span>
 
-1. navigateLeft : removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; NO_COVERAGE<br/>
+1. navigateLeft : removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; SURVIVED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            SoundsController.getInstance().play(Sounds.SFX.FLIPPAGE);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>            SoundsController.getInstance().play(Sounds.SFX.FLIPPAGE);</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@31aee6d9_32'/>
 32
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_32'>1</a>
 <span>
 
-1. navigateLeft : Replaced integer subtraction with addition &rarr; NO_COVERAGE<br/>
+1. navigateLeft : Replaced integer subtraction with addition &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            currentPage--;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            currentPage--;</span></pre></td></tr>
 
 
 <tr>
@@ -712,8 +712,8 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_22'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateRight<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
-</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>navigateRight<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateRight<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateRight()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>navigateRight<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateRightAtLastPage()]</span></span> changed conditional boundary &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -725,8 +725,13 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_23'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateRight<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; NO_COVERAGE</span>
-</div> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateRight<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.menu.InstructionsMenu,-method=navigateRight,-methodDesc=()V],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.menu.InstructionsMenu,-method=navigateRight,-methodDesc=()V],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.menu.InstructionsMenu,-method=navigateRight,-methodDesc=()V],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateRight()]</li> <li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateLeft()]</li> <li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateRightAtLastPage()]</li> 
+</ul>
+</div></div> 
 </td>
 </tr>
 
@@ -737,7 +742,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_24'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateRight<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateRight<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateRight()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -749,8 +754,8 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_30'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateLeft<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.testNavigateLeftAtFirstPage(com.CrossingGuardJoe.model.menu.InstructionsMenuTest)</span></span> negated conditional &rarr; KILLED</span>
-</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>navigateLeft<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.testNavigateLeftAtFirstPage(com.CrossingGuardJoe.model.menu.InstructionsMenuTest)</span></span> changed conditional boundary &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateLeft<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateLeft()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>navigateLeft<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateLeftAtFirstPage()]</span></span> changed conditional boundary &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -762,8 +767,13 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_31'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateLeft<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; NO_COVERAGE</span>
-</div> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateLeft<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.menu.InstructionsMenu,-method=navigateLeft,-methodDesc=()V],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.menu.InstructionsMenu,-method=navigateLeft,-methodDesc=()V],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.menu.InstructionsMenu,-method=navigateLeft,-methodDesc=()V],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateLeft()]</li> 
+</ul>
+</div></div> 
 </td>
 </tr>
 
@@ -774,7 +784,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_32'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateLeft<br/><b>Killed by : </b>none</span></span> Replaced integer subtraction with addition &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>navigateLeft<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateLeft()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -786,7 +796,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_37'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCurrentPage<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.testNavigateLeftAtFirstPage(com.CrossingGuardJoe.model.menu.InstructionsMenuTest)</span></span> replaced int return with 0 for com/CrossingGuardJoe/model/menu/InstructionsMenu::getCurrentPage &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCurrentPage<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testInitialPage()]</span></span> replaced int return with 0 for com/CrossingGuardJoe/model/menu/InstructionsMenu::getCurrentPage &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -798,7 +808,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@31aee6d9_41'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getTotalPages<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.testGetTotalPages(com.CrossingGuardJoe.model.menu.InstructionsMenuTest)</span></span> replaced int return with 0 for com/CrossingGuardJoe/model/menu/InstructionsMenu::getTotalPages &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getTotalPages<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testGetTotalPages()]</span></span> replaced int return with 0 for com/CrossingGuardJoe/model/menu/InstructionsMenu::getTotalPages &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -835,7 +845,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.testGetTotalPages(com.CrossingGuardJoe.model.menu.InstructionsMenuTest) (0 ms)</li><li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.testNavigateLeftAtFirstPage(com.CrossingGuardJoe.model.menu.InstructionsMenuTest) (0 ms)</li><li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.testInitialPage(com.CrossingGuardJoe.model.menu.InstructionsMenuTest) (0 ms)</li>
+<li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testGetTotalPages()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateRightAtLastPage()] (2 ms)</li><li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testInitialPage()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateRight()] (1 ms)</li><li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateLeft()] (1 ms)</li><li>com.CrossingGuardJoe.model.menu.InstructionsMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.InstructionsMenuTest]/[method:testNavigateLeftAtFirstPage()] (4 ms)</li>
 </ul>
 
 <br/>
