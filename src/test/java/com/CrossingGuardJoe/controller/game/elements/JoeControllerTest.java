@@ -1,5 +1,6 @@
 package com.CrossingGuardJoe.controller.game.elements;
 
+import com.CrossingGuardJoe.controller.game.AuxCheckRange;
 import com.CrossingGuardJoe.gui.GUI;
 import com.CrossingGuardJoe.model.Position;
 import com.CrossingGuardJoe.model.game.Road;
@@ -8,8 +9,11 @@ import com.CrossingGuardJoe.model.game.elements.Joe;
 import com.CrossingGuardJoe.Game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockedStatic;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -170,5 +174,85 @@ class JoeControllerTest {
         joeController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
 
         verify(joe).stopWalking();
+    }
+
+    @Test
+    void testCheckCollisionsCarInRangeLeft() {
+        List<Car> cars = new ArrayList<>();
+        Car car = mock(Car.class);
+        cars.add(car);
+        Joe joe = mock(Joe.class);
+        Road road = mock(Road.class);
+
+        when(road.getCars()).thenReturn(cars);
+        when(road.getJoe()).thenReturn(joe);
+        when(car.getPosition()).thenReturn(new Position(5, 10));
+        when(joe.getPosition()).thenReturn(new Position(10, 10));
+
+        joeController = spy(new JoeController(road));
+
+        try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
+            utilities.when(() -> AuxCheckRange.isInRangeLeftCarJoe(car, joe)).thenReturn(true);
+            utilities.when(() -> AuxCheckRange.isInRangeRightCarJoe(car, joe)).thenReturn(false);
+
+            joeController.checkCollisions();
+
+            verify(joe).isHitLeft();
+            verify(joeController).moveJoeLeftHit();
+        }
+    }
+
+    @Test
+    void testCheckCollisionsCarInRangeRight() {
+        List<Car> cars = new ArrayList<>();
+        Car car = mock(Car.class);
+        cars.add(car);
+        Joe joe = mock(Joe.class);
+        Road road = mock(Road.class);
+
+        when(road.getCars()).thenReturn(cars);
+        when(road.getJoe()).thenReturn(joe);
+        when(car.getPosition()).thenReturn(new Position(15, 10));
+        when(joe.getPosition()).thenReturn(new Position(10, 10));
+
+        joeController = spy(new JoeController(road));
+
+        try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
+            utilities.when(() -> AuxCheckRange.isInRangeLeftCarJoe(car, joe)).thenReturn(false);
+            utilities.when(() -> AuxCheckRange.isInRangeRightCarJoe(car, joe)).thenReturn(true);
+
+            joeController.checkCollisions();
+
+            verify(joe).isHitRight();
+            verify(joeController).moveJoeRightHit();
+        }
+    }
+
+    @Test
+    void testCheckCollisionsNoCarsInRange() {
+        List<Car> cars = new ArrayList<>();
+        Car car = mock(Car.class);
+        cars.add(car);
+        Joe joe = mock(Joe.class);
+        Road road = mock(Road.class);
+
+        when(road.getCars()).thenReturn(cars);
+        when(road.getJoe()).thenReturn(joe);
+        when(car.getPosition()).thenReturn(new Position(20, 10));
+        when(joe.getPosition()).thenReturn(new Position(10, 10));
+
+        joeController = spy(new JoeController(road));
+
+        try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
+            utilities.when(() -> AuxCheckRange.isInRangeLeftCarJoe(car, joe)).thenReturn(false);
+            utilities.when(() -> AuxCheckRange.isInRangeRightCarJoe(car, joe)).thenReturn(false);
+
+            joeController.checkCollisions();
+
+            verify(joe, never()).isHitLeft();
+            verify(joe, never()).isHitRight();
+            verify(joeController, never()).moveJoeLeftHit();
+            verify(joeController, never()).moveJoeRightHit();
+        }
     }
 }

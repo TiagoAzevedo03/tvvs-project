@@ -53,7 +53,7 @@ public class KidController extends GameController {
 <span class="fc bfc" id="L53" title="All 2 branches covered.">        if (passOrStop == 'p') {</span>
 <span class="fc" id="L54">            kid.setWalking();</span>
 <span class="fc" id="L55">            kid.setPosition(position);</span>
-<span class="pc bpc" id="L56" title="1 of 2 branches missed.">        } else if (passOrStop == 's') {</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">        } else if (passOrStop == 's') {</span>
 <span class="fc" id="L57">            kid.setNotWalking();</span>
         }
 <span class="fc" id="L59">    }</span>
@@ -65,21 +65,21 @@ public class KidController extends GameController {
 
     public boolean inMinDistance(Kid kid) {
 <span class="fc" id="L67">        List&lt;Kid&gt; kids = getModel().getKids();</span>
-<span class="pc bpc" id="L68" title="1 of 2 branches missed.">        if (!isFirstKid(kid)) {</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">        if (!isFirstKid(kid)) {</span>
 <span class="fc" id="L69">            Kid kidInFront = kids.get(kids.indexOf(kid) - 1);</span>
-<span class="pc bpc" id="L70" title="1 of 2 branches missed.">            if (!kidInFront.getIsHit()) {</span>
-<span class="pc bpc" id="L71" title="1 of 2 branches missed.">                return kid.getPosition().getX() - kidInFront.getPosition().getX() &lt;= MIN_KID_DISTANCE + 1;</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">            if (!kidInFront.getIsHit()) {</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">                return kid.getPosition().getX() - kidInFront.getPosition().getX() &lt;= MIN_KID_DISTANCE + 1;</span>
             }
         }
-<span class="nc" id="L74">        return false;</span>
+<span class="fc" id="L74">        return false;</span>
     }
 
     public boolean canContinueWalk(Kid kid) {
-<span class="pc bpc" id="L78" title="2 of 4 branches missed.">        if (!isFirstKid(kid) &amp;&amp; inMinDistance(kid)) {</span>
+<span class="fc bfc" id="L78" title="All 4 branches covered.">        if (!isFirstKid(kid) &amp;&amp; inMinDistance(kid)) {</span>
 <span class="fc" id="L79">            stopKid(kid);</span>
 <span class="fc" id="L80">            return false;</span>
         }
-<span class="nc" id="L82">        return true;</span>
+<span class="fc" id="L82">        return true;</span>
     }
 
     public void repositionQueue() {
@@ -112,25 +112,25 @@ public class KidController extends GameController {
 <span class="fc" id="L112">        boolean joeInRange = false;</span>
 
 <span class="fc bfc" id="L114" title="All 2 branches covered.">        for (Kid kid : kids) {</span>
-<span class="pc bpc" id="L115" title="3 of 4 branches missed.">            if (isInRangeJoeKid(joe, kid) &amp;&amp; kid.getPosition().getX() &gt; PASS_POINT) {</span>
-<span class="nc" id="L116">                joeInRange = true;</span>
-<span class="nc" id="L117">                selectedKid = kid;</span>
+<span class="fc bfc" id="L115" title="All 4 branches covered.">            if (isInRangeJoeKid(joe, kid) &amp;&amp; kid.getPosition().getX() &gt; PASS_POINT) {</span>
+<span class="fc" id="L116">                joeInRange = true;</span>
+<span class="fc" id="L117">                selectedKid = kid;</span>
             }
 <span class="fc" id="L119">            kid.setNotSelected();</span>
 <span class="fc" id="L120">        }</span>
 
-<span class="pc bpc" id="L122" title="1 of 2 branches missed.">        if (joeInRange) {</span>
-<span class="nc" id="L123">            selectedKid.setSelected();</span>
+<span class="fc bfc" id="L122" title="All 2 branches covered.">        if (joeInRange) {</span>
+<span class="fc" id="L123">            selectedKid.setSelected();</span>
         }
 
-<span class="pc bpc" id="L126" title="5 of 8 branches missed.">        if (action == GUI.ACTION.DOWN &amp;&amp; joeInRange &amp;&amp; !selectedKid.getIsHit() &amp;&amp; canContinueWalk(selectedKid)) {</span>
-<span class="nc" id="L127">            selectedKid.setWalking();</span>
-<span class="nc" id="L128">            SoundsController.getInstance().play(Sounds.SFX.KIDWALK1);</span>
-<span class="nc bnc" id="L129" title="All 2 branches missed.">            if (!sentKids.contains(selectedKid)) {</span>
-<span class="nc" id="L130">                sentKids.add(selectedKid);</span>
-<span class="nc" id="L131">                nextKidToMoveInQueueIndex = kids.indexOf(selectedKid) + 1;</span>
+<span class="fc bfc" id="L126" title="All 8 branches covered.">        if (action == GUI.ACTION.DOWN &amp;&amp; joeInRange &amp;&amp; !selectedKid.getIsHit() &amp;&amp; canContinueWalk(selectedKid)) {</span>
+<span class="fc" id="L127">            selectedKid.setWalking();</span>
+<span class="fc" id="L128">            SoundsController.getInstance().play(Sounds.SFX.KIDWALK1);</span>
+<span class="pc bpc" id="L129" title="1 of 2 branches missed.">            if (!sentKids.contains(selectedKid)) {</span>
+<span class="fc" id="L130">                sentKids.add(selectedKid);</span>
+<span class="fc" id="L131">                nextKidToMoveInQueueIndex = kids.indexOf(selectedKid) + 1;</span>
 
-<span class="nc bnc" id="L133" title="All 2 branches missed.">                for (int i = nextKidToMoveInQueueIndex; i &lt; kids.size(); i++) {</span>
+<span class="pc bpc" id="L133" title="1 of 2 branches missed.">                for (int i = nextKidToMoveInQueueIndex; i &lt; kids.size(); i++) {</span>
 <span class="nc" id="L134">                    Kid kid = kids.get(i);</span>
 <span class="nc" id="L135">                    stopKid(kid);</span>
 <span class="nc" id="L136">                    kid.addMovesInQueueLeft(MIN_KID_DISTANCE / KID_STEP);</span>
@@ -138,21 +138,21 @@ public class KidController extends GameController {
             }
         }
 
-<span class="pc bpc" id="L141" title="3 of 6 branches missed.">        if (action == GUI.ACTION.UP &amp;&amp; joeInRange &amp;&amp; selectedKid.getWalkingState()) {</span>
-<span class="nc" id="L142">            selectedKid.setNotWalking();</span>
-<span class="nc" id="L143">            SoundsController.playRandom(Sounds.SFX.KIDSTOP1, Sounds.SFX.KIDSTOP2);</span>
+<span class="fc bfc" id="L141" title="All 6 branches covered.">        if (action == GUI.ACTION.UP &amp;&amp; joeInRange &amp;&amp; selectedKid.getWalkingState()) {</span>
+<span class="fc" id="L142">            selectedKid.setNotWalking();</span>
+<span class="fc" id="L143">            SoundsController.playRandom(Sounds.SFX.KIDSTOP1, Sounds.SFX.KIDSTOP2);</span>
         }
 
-<span class="pc bpc" id="L146" title="2 of 4 branches missed.">        if (time - lastUpdateTime &gt; KID_SPEED &amp;&amp; !kids.isEmpty()) {</span>
+<span class="fc bfc" id="L146" title="All 4 branches covered.">        if (time - lastUpdateTime &gt; KID_SPEED &amp;&amp; !kids.isEmpty()) {</span>
 <span class="fc" id="L147">            repositionQueue();</span>
-<span class="pc bpc" id="L148" title="1 of 2 branches missed.">            for (Kid kid : sentKids) {</span>
-<span class="nc bnc" id="L149" title="All 4 branches missed.">                if (kid.getWalkingState() &amp;&amp; canContinueWalk(kid)) {</span>
+<span class="fc bfc" id="L148" title="All 2 branches covered.">            for (Kid kid : sentKids) {</span>
+<span class="pc bpc" id="L149" title="3 of 4 branches missed.">                if (kid.getWalkingState() &amp;&amp; canContinueWalk(kid)) {</span>
 <span class="nc" id="L150">                    moveKid(kid);</span>
                 }
-<span class="nc bnc" id="L152" title="All 6 branches missed.">                if (isInRangeJoeKid(joe, kid) &amp;&amp; joe.getIsRaisingStopSign() &amp;&amp; kid.getPosition().getX() &gt; PASS_POINT) {</span>
+<span class="pc bpc" id="L152" title="4 of 6 branches missed.">                if (isInRangeJoeKid(joe, kid) &amp;&amp; joe.getIsRaisingStopSign() &amp;&amp; kid.getPosition().getX() &gt; PASS_POINT) {</span>
 <span class="nc" id="L153">                    stopKid(kid);</span>
                 }
-<span class="nc" id="L155">            }</span>
+<span class="fc" id="L155">            }</span>
 <span class="fc" id="L156">            lastUpdateTime = time;</span>
         }
 
@@ -181,7 +181,7 @@ public class KidController extends GameController {
 <span class="fc" id="L181">    }</span>
 
     private void checkDeathCount(Kid kid) {
-<span class="pc bpc" id="L184" title="1 of 2 branches missed.">        if (!kid.getDeathCounted()) {</span>
+<span class="fc bfc" id="L184" title="All 2 branches covered.">        if (!kid.getDeathCounted()) {</span>
 <span class="fc" id="L185">            SoundsController.getInstance().play(Sounds.SFX.CARBREAK);</span>
 <span class="fc" id="L186">            SoundsController.getInstance().play(Sounds.SFX.KIDHIT);</span>
 <span class="fc" id="L187">            joe.removeHeart();</span>
@@ -191,18 +191,18 @@ public class KidController extends GameController {
 
     public void checkPoints() {
 <span class="fc bfc" id="L193" title="All 2 branches covered.">        for (Kid kid : getModel().getKids()) {</span>
-<span class="pc bpc" id="L194" title="3 of 4 branches missed.">            if (kid.getPosition().getX() &lt; MIN_Y_DISTANCE &amp;&amp; !kid.getPass()) {</span>
-<span class="nc" id="L195">                kid.setPass();</span>
-<span class="nc" id="L196">                joe.addScore(kid.getPoints());</span>
-<span class="nc" id="L197">                SoundsController.getInstance().play(Sounds.SFX.KIDSCORE);</span>
+<span class="fc bfc" id="L194" title="All 4 branches covered.">            if (kid.getPosition().getX() &lt; MIN_Y_DISTANCE &amp;&amp; !kid.getPass()) {</span>
+<span class="fc" id="L195">                kid.setPass();</span>
+<span class="fc" id="L196">                joe.addScore(kid.getPoints());</span>
+<span class="fc" id="L197">                SoundsController.getInstance().play(Sounds.SFX.KIDSCORE);</span>
             }
 <span class="fc" id="L199">        }</span>
 <span class="fc" id="L200">    }</span>
 
     public void checkCountToNextLevel() {
 <span class="fc bfc" id="L203" title="All 2 branches covered.">        for (Kid kid : getModel().getKids()) {</span>
-<span class="pc bpc" id="L204" title="1 of 2 branches missed.">            if (!kid.getCounted()) {</span>
-<span class="pc bpc" id="L205" title="3 of 6 branches missed.">                if (kid.getPass() || (kid.getDeathCounted() &amp;&amp; kid.getPosition().getY() &gt;= MAX_Y_DISTANCE)) {</span>
+<span class="fc bfc" id="L204" title="All 2 branches covered.">            if (!kid.getCounted()) {</span>
+<span class="pc bpc" id="L205" title="1 of 6 branches missed.">                if (kid.getPass() || (kid.getDeathCounted() &amp;&amp; kid.getPosition().getY() &gt;= MAX_Y_DISTANCE)) {</span>
 <span class="fc" id="L206">                    countKidsToNextLevel++;</span>
 <span class="fc" id="L207">                    kid.setCountToNextLevel();</span>
                 }
@@ -225,13 +225,13 @@ public class KidController extends GameController {
     }
 
     private void checkLevelUp() {
-<span class="pc bpc" id="L228" title="1 of 2 branches missed.">        if (countKidsToNextLevel == getModel().getKids().size()) {</span>
-<span class="nc" id="L229">            countKidsToNextLevel = 0;</span>
-<span class="nc" id="L230">            sentKids.clear();</span>
-<span class="nc" id="L231">            getModel().levelUp();</span>
-<span class="nc" id="L232">            SoundsController.getInstance().play(Sounds.SFX.LEVELUP);</span>
-<span class="nc" id="L233">            getModel().setKidsNextLevel(nextLevelNumberKids(getModel().getCurrentLevel()));</span>
-<span class="nc" id="L234">            nextKidToMoveInQueueIndex = 0;</span>
+<span class="fc bfc" id="L228" title="All 2 branches covered.">        if (countKidsToNextLevel == getModel().getKids().size()) {</span>
+<span class="fc" id="L229">            countKidsToNextLevel = 0;</span>
+<span class="fc" id="L230">            sentKids.clear();</span>
+<span class="fc" id="L231">            getModel().levelUp();</span>
+<span class="fc" id="L232">            SoundsController.getInstance().play(Sounds.SFX.LEVELUP);</span>
+<span class="fc" id="L233">            getModel().setKidsNextLevel(nextLevelNumberKids(getModel().getCurrentLevel()));</span>
+<span class="fc" id="L234">            nextKidToMoveInQueueIndex = 0;</span>
         }
 <span class="fc" id="L236">    }</span>
 }

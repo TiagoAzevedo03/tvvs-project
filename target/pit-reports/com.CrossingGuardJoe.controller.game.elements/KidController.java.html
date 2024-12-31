@@ -1110,23 +1110,23 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_71'/>
 71
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_71'>4</a>
 <span>
 
-1. inMinDistance : replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::inMinDistance &rarr; SURVIVED<br/>
+1. inMinDistance : Replaced integer subtraction with addition &rarr; KILLED<br/>
 
-2. inMinDistance : Replaced integer subtraction with addition &rarr; KILLED<br/>
+2. inMinDistance : negated conditional &rarr; KILLED<br/>
 
-3. inMinDistance : negated conditional &rarr; KILLED<br/>
+3. inMinDistance : replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::inMinDistance &rarr; KILLED<br/>
 
 4. inMinDistance : changed conditional boundary &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>                return kid.getPosition().getX() - kidInFront.getPosition().getX() &#60;= MIN_KID_DISTANCE + 1;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>                return kid.getPosition().getX() - kidInFront.getPosition().getX() &#60;= MIN_KID_DISTANCE + 1;</span></pre></td></tr>
 
 
 <tr>
@@ -1160,21 +1160,21 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_74'/>
 74
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_74'>1</a>
 <span>
 
-1. inMinDistance : replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::inMinDistance &rarr; NO_COVERAGE<br/>
+1. inMinDistance : replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::inMinDistance &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>        return false;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return false;</span></pre></td></tr>
 
 
 <tr>
@@ -1294,21 +1294,21 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_82'/>
 82
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_82'>1</a>
 <span>
 
-1. canContinueWalk : replaced boolean return with false for com/CrossingGuardJoe/controller/game/elements/KidController::canContinueWalk &rarr; NO_COVERAGE<br/>
+1. canContinueWalk : replaced boolean return with false for com/CrossingGuardJoe/controller/game/elements/KidController::canContinueWalk &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>        return true;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return true;</span></pre></td></tr>
 
 
 <tr>
@@ -1829,9 +1829,9 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_115'>3</a>
 <span>
 
-1. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
+1. nextAction : changed conditional boundary &rarr; SURVIVED<br/>
 
-2. nextAction : changed conditional boundary &rarr; NO_COVERAGE<br/>
+2. nextAction : negated conditional &rarr; KILLED<br/>
 
 3. nextAction : negated conditional &rarr; KILLED<br/>
 
@@ -1842,7 +1842,7 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_116'/>
 116
 </td>
@@ -1853,11 +1853,11 @@
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>                joeInRange = true;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>                joeInRange = true;</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_117'/>
 117
 </td>
@@ -1868,7 +1868,7 @@
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>                selectedKid = kid;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>                selectedKid = kid;</span></pre></td></tr>
 
 
 <tr>
@@ -1891,17 +1891,17 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_119'/>
 119
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_119'>1</a>
 <span>
 
-1. nextAction : removed call to com/CrossingGuardJoe/model/game/elements/Kid::setNotSelected &rarr; SURVIVED<br/>
+1. nextAction : removed call to com/CrossingGuardJoe/model/game/elements/Kid::setNotSelected &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>            kid.setNotSelected();</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            kid.setNotSelected();</span></pre></td></tr>
 
 
 <tr>
@@ -1953,21 +1953,21 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_123'/>
 123
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_123'>1</a>
 <span>
 
-1. nextAction : removed call to com/CrossingGuardJoe/model/game/elements/Kid::setSelected &rarr; NO_COVERAGE<br/>
+1. nextAction : removed call to com/CrossingGuardJoe/model/game/elements/Kid::setSelected &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            selectedKid.setSelected();</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            selectedKid.setSelected();</span></pre></td></tr>
 
 
 <tr>
@@ -2005,63 +2005,63 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_126'/>
 126
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_126'>4</a>
 <span>
 
-1. nextAction : negated conditional &rarr; SURVIVED<br/>
+1. nextAction : negated conditional &rarr; KILLED<br/>
 
-2. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
+2. nextAction : negated conditional &rarr; KILLED<br/>
 
-3. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
+3. nextAction : negated conditional &rarr; KILLED<br/>
 
 4. nextAction : negated conditional &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        if (action == GUI.ACTION.DOWN &#38;&#38; joeInRange &#38;&#38; !selectedKid.getIsHit() &#38;&#38; canContinueWalk(selectedKid)) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        if (action == GUI.ACTION.DOWN &#38;&#38; joeInRange &#38;&#38; !selectedKid.getIsHit() &#38;&#38; canContinueWalk(selectedKid)) {</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_127'/>
 127
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_127'>1</a>
 <span>
 
-1. nextAction : removed call to com/CrossingGuardJoe/model/game/elements/Kid::setWalking &rarr; NO_COVERAGE<br/>
+1. nextAction : removed call to com/CrossingGuardJoe/model/game/elements/Kid::setWalking &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            selectedKid.setWalking();</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            selectedKid.setWalking();</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_128'/>
 128
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_128'>1</a>
 <span>
 
-1. nextAction : removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; NO_COVERAGE<br/>
+1. nextAction : removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            SoundsController.getInstance().play(Sounds.SFX.KIDWALK1);</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            SoundsController.getInstance().play(Sounds.SFX.KIDWALK1);</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_129'/>
 129
 </td>
@@ -2070,16 +2070,16 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_129'>1</a>
 <span>
 
-1. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
+1. nextAction : negated conditional &rarr; SURVIVED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            if (!sentKids.contains(selectedKid)) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>            if (!sentKids.contains(selectedKid)) {</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_130'/>
 130
 </td>
@@ -2090,25 +2090,25 @@
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>                sentKids.add(selectedKid);</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>                sentKids.add(selectedKid);</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_131'/>
 131
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_131'>1</a>
 <span>
 
-1. nextAction : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
+1. nextAction : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>                nextKidToMoveInQueueIndex = kids.indexOf(selectedKid) + 1;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>                nextKidToMoveInQueueIndex = kids.indexOf(selectedKid) + 1;</span></pre></td></tr>
 
 
 <tr>
@@ -2127,23 +2127,23 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_133'/>
 133
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_133'>2</a>
 <span>
 
-1. nextAction : changed conditional boundary &rarr; NO_COVERAGE<br/>
+1. nextAction : changed conditional boundary &rarr; KILLED<br/>
 
-2. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
+2. nextAction : negated conditional &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>                for (int i = nextKidToMoveInQueueIndex; i &#60; kids.size(); i++) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>                for (int i = nextKidToMoveInQueueIndex; i &#60; kids.size(); i++) {</span></pre></td></tr>
 
 
 <tr>
@@ -2267,9 +2267,9 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_141'>3</a>
 <span>
 
-1. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
+1. nextAction : negated conditional &rarr; SURVIVED<br/>
 
-2. nextAction : negated conditional &rarr; SURVIVED<br/>
+2. nextAction : negated conditional &rarr; KILLED<br/>
 
 3. nextAction : negated conditional &rarr; KILLED<br/>
 
@@ -2280,7 +2280,7 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_142'/>
 142
 </td>
@@ -2289,16 +2289,16 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_142'>1</a>
 <span>
 
-1. nextAction : removed call to com/CrossingGuardJoe/model/game/elements/Kid::setNotWalking &rarr; NO_COVERAGE<br/>
+1. nextAction : removed call to com/CrossingGuardJoe/model/game/elements/Kid::setNotWalking &rarr; SURVIVED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            selectedKid.setNotWalking();</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>            selectedKid.setNotWalking();</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_143'/>
 143
 </td>
@@ -2307,12 +2307,12 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_143'>1</a>
 <span>
 
-1. nextAction : removed call to com/CrossingGuardJoe/controller/SoundsController::playRandom &rarr; NO_COVERAGE<br/>
+1. nextAction : removed call to com/CrossingGuardJoe/controller/SoundsController::playRandom &rarr; SURVIVED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            SoundsController.playRandom(Sounds.SFX.KIDSTOP1, Sounds.SFX.KIDSTOP2);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>            SoundsController.playRandom(Sounds.SFX.KIDSTOP1, Sounds.SFX.KIDSTOP2);</span></pre></td></tr>
 
 
 <tr>
@@ -2355,11 +2355,11 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_146'>4</a>
 <span>
 
-1. nextAction : Replaced long subtraction with addition &rarr; SURVIVED<br/>
+1. nextAction : changed conditional boundary &rarr; SURVIVED<br/>
 
-2. nextAction : changed conditional boundary &rarr; SURVIVED<br/>
+2. nextAction : negated conditional &rarr; KILLED<br/>
 
-3. nextAction : negated conditional &rarr; KILLED<br/>
+3. nextAction : Replaced long subtraction with addition &rarr; KILLED<br/>
 
 4. nextAction : negated conditional &rarr; KILLED<br/>
 
@@ -2403,7 +2403,7 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_149'/>
 149
 </td>
@@ -2414,12 +2414,12 @@
 
 1. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
 
-2. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
+2. nextAction : negated conditional &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>                if (kid.getWalkingState() &#38;&#38; canContinueWalk(kid)) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>                if (kid.getWalkingState() &#38;&#38; canContinueWalk(kid)) {</span></pre></td></tr>
 
 
 <tr>
@@ -2456,7 +2456,7 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_152'/>
 152
 </td>
@@ -2467,16 +2467,16 @@
 
 1. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
 
-2. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
+2. nextAction : negated conditional &rarr; SURVIVED<br/>
 
 3. nextAction : changed conditional boundary &rarr; NO_COVERAGE<br/>
 
-4. nextAction : negated conditional &rarr; NO_COVERAGE<br/>
+4. nextAction : negated conditional &rarr; SURVIVED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>                if (isInRangeJoeKid(joe, kid) &#38;&#38; joe.getIsRaisingStopSign() &#38;&#38; kid.getPosition().getX() &#62; PASS_POINT) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>                if (isInRangeJoeKid(joe, kid) &#38;&#38; joe.getIsRaisingStopSign() &#38;&#38; kid.getPosition().getX() &#62; PASS_POINT) {</span></pre></td></tr>
 
 
 <tr>
@@ -2513,7 +2513,7 @@
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_155'/>
 155
 </td>
@@ -2524,7 +2524,7 @@
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>            }</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            }</span></pre></td></tr>
 
 
 <tr>
@@ -3144,25 +3144,25 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_194'/>
 194
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_194'>3</a>
 <span>
 
-1. checkPoints : changed conditional boundary &rarr; SURVIVED<br/>
+1. checkPoints : changed conditional boundary &rarr; KILLED<br/>
 
-2. checkPoints : negated conditional &rarr; NO_COVERAGE<br/>
+2. checkPoints : negated conditional &rarr; KILLED<br/>
 
-3. checkPoints : negated conditional &rarr; SURVIVED<br/>
+3. checkPoints : negated conditional &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>            if (kid.getPosition().getX() &#60; MIN_Y_DISTANCE &#38;&#38; !kid.getPass()) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            if (kid.getPosition().getX() &#60; MIN_Y_DISTANCE &#38;&#38; !kid.getPass()) {</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_195'/>
 195
 </td>
@@ -3171,16 +3171,16 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_195'>1</a>
 <span>
 
-1. checkPoints : removed call to com/CrossingGuardJoe/model/game/elements/Kid::setPass &rarr; NO_COVERAGE<br/>
+1. checkPoints : removed call to com/CrossingGuardJoe/model/game/elements/Kid::setPass &rarr; SURVIVED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>                kid.setPass();</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>                kid.setPass();</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_196'/>
 196
 </td>
@@ -3189,16 +3189,16 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_196'>1</a>
 <span>
 
-1. checkPoints : removed call to com/CrossingGuardJoe/model/game/elements/Joe::addScore &rarr; NO_COVERAGE<br/>
+1. checkPoints : removed call to com/CrossingGuardJoe/model/game/elements/Joe::addScore &rarr; SURVIVED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>                joe.addScore(kid.getPoints());</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>                joe.addScore(kid.getPoints());</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_197'/>
 197
 </td>
@@ -3207,12 +3207,12 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_197'>1</a>
 <span>
 
-1. checkPoints : removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; NO_COVERAGE<br/>
+1. checkPoints : removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; SURVIVED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>                SoundsController.getInstance().play(Sounds.SFX.KIDSCORE);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>                SoundsController.getInstance().play(Sounds.SFX.KIDSCORE);</span></pre></td></tr>
 
 
 <tr>
@@ -3333,11 +3333,11 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_205'>4</a>
 <span>
 
-1. checkCountToNextLevel : negated conditional &rarr; SURVIVED<br/>
+1. checkCountToNextLevel : changed conditional boundary &rarr; SURVIVED<br/>
 
-2. checkCountToNextLevel : negated conditional &rarr; NO_COVERAGE<br/>
+2. checkCountToNextLevel : negated conditional &rarr; KILLED<br/>
 
-3. checkCountToNextLevel : changed conditional boundary &rarr; NO_COVERAGE<br/>
+3. checkCountToNextLevel : negated conditional &rarr; KILLED<br/>
 
 4. checkCountToNextLevel : negated conditional &rarr; KILLED<br/>
 
@@ -3691,21 +3691,21 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_228'/>
 228
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_228'>1</a>
 <span>
 
-1. checkLevelUp : negated conditional &rarr; SURVIVED<br/>
+1. checkLevelUp : negated conditional &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        if (countKidsToNextLevel == getModel().getKids().size()) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        if (countKidsToNextLevel == getModel().getKids().size()) {</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_229'/>
 229
 </td>
@@ -3716,11 +3716,11 @@
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>            countKidsToNextLevel = 0;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            countKidsToNextLevel = 0;</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_230'/>
 230
 </td>
@@ -3729,70 +3729,70 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_230'>1</a>
 <span>
 
-1. checkLevelUp : removed call to java/util/List::clear &rarr; NO_COVERAGE<br/>
+1. checkLevelUp : removed call to java/util/List::clear &rarr; SURVIVED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            sentKids.clear();</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>            sentKids.clear();</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_231'/>
 231
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_231'>1</a>
 <span>
 
-1. checkLevelUp : removed call to com/CrossingGuardJoe/model/game/Road::levelUp &rarr; NO_COVERAGE<br/>
+1. checkLevelUp : removed call to com/CrossingGuardJoe/model/game/Road::levelUp &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            getModel().levelUp();</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            getModel().levelUp();</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_232'/>
 232
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_232'>1</a>
 <span>
 
-1. checkLevelUp : removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; NO_COVERAGE<br/>
+1. checkLevelUp : removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            SoundsController.getInstance().play(Sounds.SFX.LEVELUP);</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            SoundsController.getInstance().play(Sounds.SFX.LEVELUP);</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_233'/>
 233
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_233'>1</a>
 <span>
 
-1. checkLevelUp : removed call to com/CrossingGuardJoe/model/game/Road::setKidsNextLevel &rarr; NO_COVERAGE<br/>
+1. checkLevelUp : removed call to com/CrossingGuardJoe/model/game/Road::setKidsNextLevel &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class='survived'>            getModel().setKidsNextLevel(nextLevelNumberKids(getModel().getCurrentLevel()));</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            getModel().setKidsNextLevel(nextLevelNumberKids(getModel().getCurrentLevel()));</span></pre></td></tr>
 
 
 <tr>
-<td class='uncovered'>
+<td class='covered'>
 <a name='org.pitest.mutationtest.report.html.SourceFile@259f0fdb_234'/>
 234
 </td>
@@ -3803,7 +3803,7 @@
 </span>
 </span>
 </td>
-<td class='uncovered'><pre><span  class=''>            nextKidToMoveInQueueIndex = 0;</span></pre></td></tr>
+<td class='covered'><pre><span  class=''>            nextKidToMoveInQueueIndex = 0;</span></pre></td></tr>
 
 
 <tr>
@@ -3915,7 +3915,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_53'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>KidAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testStopKid()]</span></span> negated conditional &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>KidAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testKidActionInvalid()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -3927,7 +3927,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_54'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>KidAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testKidAction()]</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setWalking &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>KidAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testMoveKid()]</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setWalking &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -3939,7 +3939,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_55'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>KidAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testKidAction()]</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setPosition &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>KidAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testMoveKid()]</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setPosition &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -3951,7 +3951,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_56'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>KidAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testStopKid()]</span></span> negated conditional &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>KidAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testKidActionInvalid()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -3975,8 +3975,8 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_63'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isFirstKid<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistance()]</span></span> negated conditional &rarr; KILLED</span>
-</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isFirstKid<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistance()]</span></span> replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::isFirstKid &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isFirstKid<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistanceFirstKid()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isFirstKid<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistanceLessThanOrEqualToMinDistance()]</span></span> replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::isFirstKid &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -3988,7 +3988,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_68'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistance()]</span></span> negated conditional &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistanceFirstKid()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4000,7 +4000,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_69'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistance()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkKidInFrontIsHit()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4012,7 +4012,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_70'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistance()]</span></span> negated conditional &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkKidInFrontIsHit()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4024,15 +4024,10 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_71'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistance()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</span>
-</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistance()]</span></span> negated conditional &rarr; KILLED</span>
-</div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::inMinDistance &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=inMinDistance,-methodDesc=(Lcom/CrossingGuardJoe/model/game/elements/Kid;)Z],-indexes=[48],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=inMinDistance,-methodDesc=(Lcom/CrossingGuardJoe/model/game/elements/Kid;)Z],-indexes=[48],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=inMinDistance,-methodDesc=(Lcom/CrossingGuardJoe/model/game/elements/Kid;)Z],-indexes=[48],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistance()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalk()]</li> 
-</ul>
-</div></div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistance()]</span></span> changed conditional boundary &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistanceLessThanOrEqualToMinDistance()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkGreaterThanMinDistance()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkGreaterThanMinDistance()]</span></span> replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::inMinDistance &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistanceLessThanOrEqualToMinDistance()]</span></span> changed conditional boundary &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4044,7 +4039,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_74'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::inMinDistance &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inMinDistance<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistanceFirstKid()]</span></span> replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::inMinDistance &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4056,8 +4051,8 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_78'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>canContinueWalk<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalk()]</span></span> negated conditional &rarr; KILLED</span>
-</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>canContinueWalk<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalk()]</span></span> negated conditional &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>canContinueWalk<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkKidInFrontIsHit()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>canContinueWalk<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkLessThanOrEqualToMinDistance()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4073,7 +4068,7 @@
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=canContinueWalk,-methodDesc=(Lcom/CrossingGuardJoe/model/game/elements/Kid;)Z],-indexes=[15],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=canContinueWalk,-methodDesc=(Lcom/CrossingGuardJoe/model/game/elements/Kid;)Z],-indexes=[15],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=canContinueWalk,-methodDesc=(Lcom/CrossingGuardJoe/model/game/elements/Kid;)Z],-indexes=[15],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalk()]</li> 
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkLessThanOrEqualToMinDistance()]</li> 
 </ul>
 </div></div> 
 </td>
@@ -4086,7 +4081,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_80'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>canContinueWalk<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalk()]</span></span> replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::canContinueWalk &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>canContinueWalk<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkLessThanOrEqualToMinDistance()]</span></span> replaced boolean return with true for com/CrossingGuardJoe/controller/game/elements/KidController::canContinueWalk &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4098,7 +4093,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_82'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>canContinueWalk<br/><b>Killed by : </b>none</span></span> replaced boolean return with false for com/CrossingGuardJoe/controller/game/elements/KidController::canContinueWalk &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>canContinueWalk<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkFirstKid()]</span></span> replaced boolean return with false for com/CrossingGuardJoe/controller/game/elements/KidController::canContinueWalk &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4200,7 +4195,7 @@
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=repositionQueue,-methodDesc=()V],-indexes=[80],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=repositionQueue,-methodDesc=()V],-indexes=[80],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=repositionQueue,-methodDesc=()V],-indexes=[80],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testRepositionQueueNoMovesLeft()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testRepositionQueueWithMovesLeft()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testRepositionQueueNoMovesLeft()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testRepositionQueueWithMovesLeft()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionLessThanOrEqualToPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeNotInRangeAndWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionLessThanOrEqualToPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRange()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCannotContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndNotWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeNotInRangeNotHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeedAndKidsNotEmpty()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCannotContinueWalk()]</li> 
 </ul>
 </div></div> 
 </td>
@@ -4213,9 +4208,14 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_115'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
-</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; NO_COVERAGE</span>
-</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</span></span> negated conditional &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[37],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[37],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[37],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionLessThanOrEqualToPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCannotContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndNotWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeHitCanContinueWalk()]</li> 
+</ul>
+</div></div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4227,13 +4227,8 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_119'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setNotSelected &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
-</ul>
-</div></div> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionLessThanOrEqualToPassPoint()]</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setNotSelected &rarr; KILLED</span>
+</div> 
 </td>
 </tr>
 
@@ -4244,7 +4239,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_122'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</span></span> negated conditional &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidsListEmpty()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4256,7 +4251,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_123'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setSelected &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setSelected &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4268,15 +4263,10 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_126'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[70],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[70],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[70],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
-</ul>
-</div></div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</span></span> negated conditional &rarr; KILLED</span>
-</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
-</div> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4288,7 +4278,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_127'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setWalking &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setWalking &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4300,7 +4290,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_128'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4312,8 +4302,13 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_129'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
-</div> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[99],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[99],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[99],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</li> 
+</ul>
+</div></div> 
 </td>
 </tr>
 
@@ -4324,7 +4319,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_131'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4336,8 +4331,8 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_133'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; NO_COVERAGE</span>
-</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4373,14 +4368,14 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_141'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
-</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[155],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[155],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[155],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[161],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[161],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[161],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndNotWalking()]</li> 
 </ul>
-</div></div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</span></span> negated conditional &rarr; KILLED</span>
+</div></div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeNotInRangeAndWalking()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4392,8 +4387,13 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_142'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setNotWalking &rarr; NO_COVERAGE</span>
-</div> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setNotWalking &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[166],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[166],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[166],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndWalking()]</li> 
+</ul>
+</div></div> 
 </td>
 </tr>
 
@@ -4404,8 +4404,13 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_143'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::playRandom &rarr; NO_COVERAGE</span>
-</div> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::playRandom &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[171],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[171],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[171],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndWalking()]</li> 
+</ul>
+</div></div> 
 </td>
 </tr>
 
@@ -4416,20 +4421,15 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_146'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</span></span> negated conditional &rarr; KILLED</span>
-</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> Replaced long subtraction with addition &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[178],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[178],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[178],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
-</ul>
-</div></div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidsListEmpty()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeLessThanOrEqualToKidSpeed()]</span></span> Replaced long subtraction with addition &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[182],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[182],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[182],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidsListEmpty()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionLessThanOrEqualToPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeNotInRangeAndWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionLessThanOrEqualToPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRange()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCannotContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeLessThanOrEqualToKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndNotWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeNotInRangeNotHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeedAndKidsNotEmpty()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCannotContinueWalk()]</li> 
 </ul>
-</div></div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</span></span> negated conditional &rarr; KILLED</span>
+</div></div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4441,7 +4441,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_147'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</span></span> removed call to com/CrossingGuardJoe/controller/game/elements/KidController::repositionQueue &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</span></span> removed call to com/CrossingGuardJoe/controller/game/elements/KidController::repositionQueue &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4453,7 +4453,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_149'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</span></span> negated conditional &rarr; KILLED</span>
 </div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
 </div> 
 </td>
@@ -4479,10 +4479,20 @@
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_152'/> 
 
 <p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
-</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
-</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; NO_COVERAGE</span>
-</div> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
-</div> 
+</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[226],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[226],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[226],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</li> 
+</ul>
+</div></div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; NO_COVERAGE</span>
+</div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[230],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[230],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[230],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</li> 
+</ul>
+</div></div> 
 </td>
 </tr>
 
@@ -4509,7 +4519,7 @@
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[255],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[255],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[255],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidsListEmpty()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionLessThanOrEqualToPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeNotInRangeAndWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionLessThanOrEqualToPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRange()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCannotContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeLessThanOrEqualToKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndNotWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeNotInRangeNotHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeedAndKidsNotEmpty()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCannotContinueWalk()]</li> 
 </ul>
 </div></div> 
 </td>
@@ -4522,7 +4532,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_160'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</span></span> removed call to com/CrossingGuardJoe/controller/game/elements/KidController::checkPoints &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</span></span> removed call to com/CrossingGuardJoe/controller/game/elements/KidController::checkPoints &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4534,7 +4544,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_161'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</span></span> removed call to com/CrossingGuardJoe/controller/game/elements/KidController::checkCountToNextLevel &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextAction<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</span></span> removed call to com/CrossingGuardJoe/controller/game/elements/KidController::checkCountToNextLevel &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4550,7 +4560,7 @@
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[267],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[267],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=nextAction,-methodDesc=(Lcom/CrossingGuardJoe/Game;Lcom/CrossingGuardJoe/gui/GUI$ACTION;J)V],-indexes=[267],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidsListEmpty()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionLessThanOrEqualToPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeNotInRangeAndWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionLessThanOrEqualToPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRange()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCannotContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeLessThanOrEqualToKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndNotWalking()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeNotInRangeNotHitCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeedAndKidsNotEmpty()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCannotContinueWalk()]</li> 
 </ul>
 </div></div> 
 </td>
@@ -4603,7 +4613,7 @@
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCollisions,-methodDesc=()V],-indexes=[67],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCollisions,-methodDesc=()V],-indexes=[67],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCollisions,-methodDesc=()V],-indexes=[67],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCollisions()]</li> 
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCollisions()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeLessThanOrEqualToKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCanContinueWalk()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeedAndKidsNotEmpty()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCannotContinueWalk()]</li> 
 </ul>
 </div></div> 
 </td>
@@ -4628,7 +4638,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_184'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkDeathCount<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckDeathCount()]</span></span> negated conditional &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkDeathCount<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckDeathCountAlreadyCounted()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4688,20 +4698,10 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_194'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[23],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[23],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[23],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPoints()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
-</ul>
-</div></div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
-</div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[23],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[23],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[23],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPoints()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
-</ul>
-</div></div> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPointsKidNotPassedAndXNonNegative()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPointsKidPassed()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPointsKidNotPassedAndXNonNegative()]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
 </td>
 </tr>
 
@@ -4712,8 +4712,13 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_195'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setPass &rarr; NO_COVERAGE</span>
-</div> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setPass &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPoints()]</li> 
+</ul>
+</div></div> 
 </td>
 </tr>
 
@@ -4724,8 +4729,13 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_196'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Joe::addScore &rarr; NO_COVERAGE</span>
-</div> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Joe::addScore &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[37],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[37],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[37],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPoints()]</li> 
+</ul>
+</div></div> 
 </td>
 </tr>
 
@@ -4736,8 +4746,13 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_197'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; NO_COVERAGE</span>
-</div> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkPoints<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[42],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[42],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkPoints,-methodDesc=()V],-indexes=[42],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPoints()]</li> 
+</ul>
+</div></div> 
 </td>
 </tr>
 
@@ -4748,7 +4763,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_204'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevel()]</span></span> negated conditional &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidPassed()]</span></span> negated conditional &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4760,16 +4775,16 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_205'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCountToNextLevel,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCountToNextLevel,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCountToNextLevel,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidNotPassedAndNotDead()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidNotPassedAndNotDead()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidDeadAndBeyondMaxY()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCountToNextLevel,-methodDesc=()V],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCountToNextLevel,-methodDesc=()V],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCountToNextLevel,-methodDesc=()V],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidDeadAndBeyondMaxY()]</li> 
 </ul>
-</div></div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevel()]</span></span> negated conditional &rarr; KILLED</span>
-</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
-</div> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; NO_COVERAGE</span>
-</div> 
+</div></div> 
 </td>
 </tr>
 
@@ -4784,7 +4799,7 @@
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCountToNextLevel,-methodDesc=()V],-indexes=[43],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCountToNextLevel,-methodDesc=()V],-indexes=[43],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkCountToNextLevel,-methodDesc=()V],-indexes=[43],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevel()]</li> 
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidPassed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidDeadAndBeyondMaxY()]</li> 
 </ul>
 </div></div> 
 </td>
@@ -4797,7 +4812,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_207'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevel()]</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setCountToNextLevel &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkCountToNextLevel<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidPassed()]</span></span> removed call to com/CrossingGuardJoe/model/game/elements/Kid::setCountToNextLevel &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4821,13 +4836,8 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_228'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkLevelUp<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkLevelUp,-methodDesc=()V],-indexes=[10],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkLevelUp,-methodDesc=()V],-indexes=[10],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkLevelUp,-methodDesc=()V],-indexes=[10],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()]</li> 
-</ul>
-</div></div> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkLevelUp<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckLevelUp()]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
 </td>
 </tr>
 
@@ -4838,8 +4848,13 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_230'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkLevelUp<br/><b>Killed by : </b>none</span></span> removed call to java/util/List::clear &rarr; NO_COVERAGE</span>
-</div> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkLevelUp<br/><b>Killed by : </b>none</span></span> removed call to java/util/List::clear &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkLevelUp,-methodDesc=()V],-indexes=[20],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkLevelUp,-methodDesc=()V],-indexes=[20],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.controller.game.elements.KidController,-method=checkLevelUp,-methodDesc=()V],-indexes=[20],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckLevelUp()]</li> <li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidsListEmpty()]</li> 
+</ul>
+</div></div> 
 </td>
 </tr>
 
@@ -4850,7 +4865,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_231'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkLevelUp<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/Road::levelUp &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkLevelUp<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckLevelUp()]</span></span> removed call to com/CrossingGuardJoe/model/game/Road::levelUp &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4862,7 +4877,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_232'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkLevelUp<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkLevelUp<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckLevelUp()]</span></span> removed call to com/CrossingGuardJoe/controller/SoundsController::play &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4874,7 +4889,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@259f0fdb_233'/> 
 
-<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkLevelUp<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/model/game/Road::setKidsNextLevel &rarr; NO_COVERAGE</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>checkLevelUp<br/><b>Killed by : </b>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckLevelUp()]</span></span> removed call to com/CrossingGuardJoe/model/game/Road::setKidsNextLevel &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -4911,7 +4926,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()] (6 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()] (9 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()] (14 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testRepositionQueueNoMovesLeft()] (2 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testRepositionQueueWithMovesLeft()] (8 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalk()] (4 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testStopKid()] (2 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testMoveKidAfterHit()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCollisions()] (7 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testKidAction()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevel()] (5 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistance()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckDeathCount()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testMoveKid()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testIsFirstKid()] (56 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextLevelNumberKids()] (5 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPoints()] (5 ms)</li>
+<li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidsListEmpty()] (5 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionLessThanOrEqualToPassPoint()] (6 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRangePositionGreaterThanPassPoint()] (6 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeNotInRangeAndWalking()] (6 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionGreaterThanPassPoint()] (6 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangePositionLessThanOrEqualToPassPoint()] (7 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidNotInRange()] (7 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidInRangeJoeRaisingStopSignPositionGreaterThanPassPoint()] (7 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndWalking()] (7 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeed()] (6 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCanContinueWalk()] (6 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUp()] (8 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeNotHitCannotContinueWalk()] (7 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeLessThanOrEqualToKidSpeed()] (7 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionUpJoeInRangeAndNotWalking()] (10 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeInRangeHitCanContinueWalk()] (9 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDownJoeNotInRangeNotHitCanContinueWalk()] (9 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionDown()] (10 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCanContinueWalk()] (8 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionTimeGreaterThanKidSpeedAndKidsNotEmpty()] (15 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextActionKidWalkingAndCannotContinueWalk()] (24 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testRepositionQueueNoMovesLeft()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testRepositionQueueWithMovesLeft()] (7 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkKidInFrontIsHit()] (4 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkGreaterThanMinDistance()] (4 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkLessThanOrEqualToMinDistance()] (6 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testStopKid()] (2 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPoints()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testMoveKidAfterHit()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCollisions()] (6 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testKidActionInvalid()] (2 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testKidActionStop()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidPassed()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidDeadAndBeyondMaxY()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistanceKidInFrontIsHit()] (4 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistanceGreaterThanMinDistance()] (5 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistanceLessThanOrEqualToMinDistance()] (6 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckDeathCount()] (7 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckLevelUp()] (5 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testMoveKid()] (4 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testKidActionPass()] (9 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckCountToNextLevelKidNotPassedAndNotDead()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testKidGetCountedFalse()] (4 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckDeathCountAlreadyCounted()] (4 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testInMinDistanceFirstKid()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCanContinueWalkFirstKid()] (4 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testIsFirstKid()] (90 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testNextLevelNumberKids()] (2 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckLevelUpNotReady()] (7 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPointsKidNotPassedAndXNonNegative()] (3 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPointsKidPassed()] (4 ms)</li><li>com.CrossingGuardJoe.controller.game.elements.KidControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.game.elements.KidControllerTest]/[method:testCheckPointsKidPassedAndXNonNegative()] (4 ms)</li>
 </ul>
 
 <br/>
