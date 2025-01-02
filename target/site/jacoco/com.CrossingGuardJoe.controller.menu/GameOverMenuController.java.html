@@ -18,7 +18,7 @@ public class GameOverMenuController extends Controller&lt;GameOverMenu&gt; {
 
     @Override
     public void nextAction(Game game, GUI.ACTION action, long time) throws IOException {
-<span class="pc bpc" id="L21" title="1 of 4 branches missed.">        switch (action) {</span>
+<span class="fc bfc" id="L21" title="All 4 branches covered.">        switch (action) {</span>
             case UP:
 <span class="fc" id="L23">                SoundsController.getInstance().play(Sounds.SFX.SELECT);</span>
 <span class="fc" id="L24">                getModel().navigateUp();</span>
@@ -29,17 +29,17 @@ public class GameOverMenuController extends Controller&lt;GameOverMenu&gt; {
 <span class="fc" id="L29">                break;</span>
             case SELECT:
 <span class="fc" id="L31">                SoundsController.getInstance().play(Sounds.SFX.ENTER);</span>
-<span class="pc bpc" id="L32" title="1 of 2 branches missed.">                if (getModel().isSelectedStats()) {</span>
-<span class="nc" id="L33">                    game.setState(new StatsMenuState(new StatsMenu(</span>
-<span class="nc" id="L34">                                    getModel().getCurrentGame().getJoe().getScore(),</span>
-<span class="nc" id="L35">                                    getModel().getCurrentGame().getCurrentLevel(),</span>
-<span class="nc" id="L36">                                    game.getHighestScore(),</span>
-<span class="nc" id="L37">                                    game.getHighestLevel()</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">                if (getModel().isSelectedStats()) {</span>
+<span class="fc" id="L33">                    game.setState(new StatsMenuState(new StatsMenu(</span>
+<span class="fc" id="L34">                                    getModel().getCurrentGame().getJoe().getScore(),</span>
+<span class="fc" id="L35">                                    getModel().getCurrentGame().getCurrentLevel(),</span>
+<span class="fc" id="L36">                                    game.getHighestScore(),</span>
+<span class="fc" id="L37">                                    game.getHighestLevel()</span>
                                     )
                             )
                     );
                 }
-<span class="pc bpc" id="L42" title="1 of 2 branches missed.">                if (getModel().isSelectedExit()) {</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">                if (getModel().isSelectedExit()) {</span>
 <span class="fc" id="L43">                    SoundsController.getInstance().stop(Sounds.SFX.VICTORYBGM);</span>
 <span class="fc" id="L44">                    game.popState();</span>
 <span class="fc" id="L45">                    SoundsController.getInstance().play(Sounds.SFX.MENUBGM);</span>

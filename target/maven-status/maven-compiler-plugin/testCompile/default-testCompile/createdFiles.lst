@@ -44,6 +44,7 @@ com\CrossingGuardJoe\states\GameStateTest.class
 com\CrossingGuardJoe\model\menu\InstructionsMenuTest.class
 com\CrossingGuardJoe\controller\game\AuxCheckRangeTest.class
 com\CrossingGuardJoe\model\game\elements\KidTest.class
+com\CrossingGuardJoe\controller\SoundsControllerTest.class
 com\CrossingGuardJoe\viewer\game\elements\KidViewTest.class
 com\CrossingGuardJoe\viewer\images\defined\KidImagesTest.class
 com\CrossingGuardJoe\viewer\menu\PauseMenuViewerTest.class

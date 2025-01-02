@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class MenuControllerTest {
@@ -65,5 +66,13 @@ class MenuControllerTest {
         menuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
 
         verify(game).setState(any(CustomizeMenuState.class));
+    }
+
+    @Test
+    void testNextActionDefaultCase() throws IOException {
+        menuController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
+
+        verifyNoInteractions(menu);
+        verifyNoInteractions(game);
     }
 }

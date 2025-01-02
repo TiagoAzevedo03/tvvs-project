@@ -90,11 +90,11 @@ public class KidController extends GameController {
 <span class="fc" id="L90">            int movesLeft = kidToMoveInQueue.getMovesInQueueLeft();</span>
 
 <span class="fc bfc" id="L92" title="All 2 branches covered.">            if (movesLeft &gt; 0) {</span>
-<span class="pc bpc" id="L93" title="1 of 2 branches missed.">                if (canContinueWalk(kidToMoveInQueue)) {</span>
+<span class="fc bfc" id="L93" title="All 2 branches covered.">                if (canContinueWalk(kidToMoveInQueue)) {</span>
 <span class="fc" id="L94">                    moveKid(kidToMoveInQueue);</span>
 <span class="fc" id="L95">                    kidMovedInQueue = true;</span>
                 }
-<span class="pc bpc" id="L97" title="1 of 2 branches missed.">                if (kidMovedInQueue) {</span>
+<span class="fc bfc" id="L97" title="All 2 branches covered.">                if (kidMovedInQueue) {</span>
 <span class="fc" id="L98">                    kidToMoveInQueue.addMovesInQueueLeft(-1);</span>
 <span class="fc" id="L99">                    kidMovedInQueue = false;</span>
                 }

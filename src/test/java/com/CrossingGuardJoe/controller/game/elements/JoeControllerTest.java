@@ -15,8 +15,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class JoeControllerTest {
@@ -110,6 +109,19 @@ class JoeControllerTest {
         joeController.JoeAction(position, 'l');
         verify(joe).setPosition(position);
         verify(joe).startWalkingToLeft();
+    }
+
+    @Test
+    void testJoeActionDefaultCase() {
+        Position position = new Position(60, 10);
+
+        joeController.JoeAction(position, 'x');
+
+        verify(joe, never()).startRaisingPassSign();
+        verify(joe, never()).startRaisingStopSign();
+        verify(joe, never()).setPosition(any(Position.class));
+        verify(joe, never()).startWalkingToLeft();
+        verify(joe, never()).startWalkingToRight();
     }
 
     @Test

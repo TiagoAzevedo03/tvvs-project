@@ -45,4 +45,12 @@ class InstructionsMenuControllerTest {
 
         verify(game).popState();
     }
+
+    @Test
+    void testNextActionDefaultCase() throws IOException {
+        instructionsMenuController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
+
+        verifyNoInteractions(instructionsMenu);
+        verifyNoInteractions(game);
+    }
 }

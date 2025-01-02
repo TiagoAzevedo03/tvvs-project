@@ -968,4 +968,41 @@ class KidControllerTest {
             kidController.nextAction(game, GUI.ACTION.NONE, currentTime);
         }
     }
+
+    @Test
+    void testRepositionQueueCannotContinueWalk() {
+        List<Kid> kids = new ArrayList<>();
+        kids.add(kid);
+        kids.add(kid2);
+
+        when(road.getKids()).thenReturn(kids);
+        when(kid.getMovesInQueueLeft()).thenReturn(2);
+        when(kid2.getMovesInQueueLeft()).thenReturn(0);
+        doReturn(false).when(kidController).canContinueWalk(kid);
+
+        kidController.repositionQueue();
+
+        verify(kidController, never()).moveKid(kid);
+    }
+
+    @Test
+    void testRepositionQueueKidNotMovedInQueue() throws Exception {
+        List<Kid> kids = new ArrayList<>();
+        kids.add(kid);
+        kids.add(kid2);
+
+        Position position = mock(Position.class);
+        when(kid.getPosition()).thenReturn(position);
+        when(kid2.getPosition()).thenReturn(position);
+
+        when(road.getKids()).thenReturn(kids);
+        when(kid.getMovesInQueueLeft()).thenReturn(2);
+        when(kid2.getMovesInQueueLeft()).thenReturn(0);
+
+        Field kidMovedInQueueField = KidController.class.getDeclaredField("kidMovedInQueue");
+        kidMovedInQueueField.setAccessible(true);
+        kidMovedInQueueField.set(kidController, false);
+
+        kidController.repositionQueue();
+    }
 }

@@ -16,7 +16,6 @@ import java.net.URISyntaxException;
 import java.awt.FontFormatException;
 
 public class GameTest {
-
     private Game game;
 
     @BeforeEach
@@ -65,48 +64,11 @@ public class GameTest {
     void testRun() throws Exception {
         Game game = spy(new Game());
         State state = mock(State.class);
-
         doReturn(state).doReturn(state).doReturn(null).when(game).getCurrentState();
         doNothing().when(state).step(any(Game.class), any(GUI.class), anyLong());
-
         Method method = Game.class.getDeclaredMethod("run");
         method.setAccessible(true);
         method.invoke(game);
-
         verify(state, atLeastOnce()).step(any(Game.class), any(GUI.class), anyLong());
     }
-
-    @Test
-    void testRunWhenSleepTimeNotGreaterThanZero() throws Exception {
-        Game game = spy(new Game());
-        State state = mock(State.class);
-
-        doReturn(state).doReturn(state).doReturn(null).when(game).getCurrentState();
-        doNothing().when(state).step(any(Game.class), any(GUI.class), anyLong());
-
-        Method method = Game.class.getDeclaredMethod("run");
-        method.setAccessible(true);
-
-        class CustomSystem {
-            private final long[] times = {1000L, 1010L};
-            private int index = 0;
-
-            long currentTimeMillis() {
-                return times[index++];
-            }
-        }
-
-        CustomSystem customSystem = new CustomSystem();
-
-        long startTime = customSystem.currentTimeMillis();
-        long elapsedTime = customSystem.currentTimeMillis() - startTime;
-        long sleepTime = 1 - elapsedTime;
-
-        method.invoke(game);
-
-        if (sleepTime <= 0) {
-            verify(state, atLeastOnce()).step(any(Game.class), any(GUI.class), anyLong());
-        }
-    }
-
 }

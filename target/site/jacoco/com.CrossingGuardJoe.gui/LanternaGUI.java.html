@@ -151,7 +151,7 @@ public class LanternaGUI implements GUI {
 <span class="fc" id="L151">        int xPos = x;</span>
 <span class="fc bfc" id="L152" title="All 2 branches covered.">        for (int i = 0; i &lt; imageLine.length(); i++) {</span>
 <span class="fc" id="L153">            char character = imageLine.charAt(i);</span>
-<span class="pc bpc" id="L154" title="1 of 2 branches missed.">            if (character != ' ') {</span>
+<span class="fc bfc" id="L154" title="All 2 branches covered.">            if (character != ' ') {</span>
 <span class="fc" id="L155">                char colorCharacter = getMappedCharacter(character);</span>
 <span class="fc" id="L156">                setColor(colorCharacter);</span>
 <span class="fc" id="L157">                fillRectangle(new Position(x + xPos, y), 1, 1);</span>
@@ -164,7 +164,7 @@ public class LanternaGUI implements GUI {
 <span class="fc" id="L164">        int xPos = x;</span>
 <span class="fc bfc" id="L165" title="All 2 branches covered.">        for (int i = 0; i &lt; imageLine.length(); i++) {</span>
 <span class="fc" id="L166">            char character = imageLine.charAt(i);</span>
-<span class="pc bpc" id="L167" title="1 of 2 branches missed.">            if (character != ' ') {</span>
+<span class="fc bfc" id="L167" title="All 2 branches covered.">            if (character != ' ') {</span>
 <span class="fc" id="L168">                setColorHexaCode(colorHexCode);</span>
 <span class="fc" id="L169">                fillRectangle(new Position(x + xPos, y), 1, 1);</span>
             }
@@ -182,7 +182,7 @@ public class LanternaGUI implements GUI {
 
 <span class="fc bfc" id="L183" title="All 2 branches covered.">        if (keyStroke != null) {</span>
 <span class="fc" id="L184">            KeyType keyType = keyStroke.getKeyType();</span>
-<span class="pc bpc" id="L185" title="1 of 8 branches missed.">            switch (keyType) {</span>
+<span class="fc bfc" id="L185" title="All 8 branches covered.">            switch (keyType) {</span>
                 case ArrowLeft:
 <span class="fc" id="L187">                    return ACTION.LEFT;</span>
                 case ArrowRight:

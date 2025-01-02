@@ -112,6 +112,17 @@ class LanternaGUITest {
     }
 
     @Test
+    void testGetNextActionDefaultCase() throws IOException {
+        KeyStroke mockKeyStroke = mock(KeyStroke.class);
+
+        when(mockScreen.pollInput()).thenReturn(mockKeyStroke);
+        when(mockKeyStroke.getKeyType()).thenReturn(KeyType.Character);
+
+        GUI.ACTION action = lanternaGUI.getNextAction();
+        assertEquals(GUI.ACTION.NONE, action);
+    }
+
+    @Test
     void testDrawImageCustomColor() {
         Position position = new Position(1, 1);
         String[] image = {"XX", "YY"};
@@ -121,5 +132,28 @@ class LanternaGUITest {
 
         verify(mockGraphics, times(4)).setBackgroundColor(TextColor.Factory.fromString(colorHexCode));
         verify(mockGraphics, times(4)).fillRectangle(any(), eq(new com.googlecode.lanterna.TerminalSize(1, 1)), eq(' '));
+    }
+
+    @Test
+    void testDrawLineWithSpaceCharacter() {
+        int x = 0;
+        int y = 0;
+        String imageLine = "     ";
+
+        lanternaGUI.drawLine(x, y, imageLine);
+
+        verify(mockGraphics, never()).setCharacter(anyInt(), anyInt(), any());
+    }
+
+    @Test
+    void testDrawLineCustomColorWithSpaceCharacter() {
+        int x = 0;
+        int y = 5;
+        String imageLine = "     ";
+        String colorHexCode = "#FF0000";
+
+        lanternaGUI.drawLineCustomColor(x, y, imageLine, colorHexCode);
+
+        verify(mockGraphics, never()).setCharacter(anyInt(), anyInt(), any());
     }
 }

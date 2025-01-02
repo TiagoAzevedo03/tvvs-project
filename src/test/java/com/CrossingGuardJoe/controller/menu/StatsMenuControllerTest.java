@@ -28,4 +28,11 @@ class StatsMenuControllerTest {
 
         verify(game).popState();
     }
+
+    @Test
+    void testNextActionDefaultCase() throws IOException {
+        statsMenuController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
+
+        verifyNoInteractions(game);
+    }
 }
