@@ -156,4 +156,24 @@ class InstructionsMenuViewerTest {
 
         verify(gui).drawText(new Position(440, 474), 5, "#D30000");
     }
+
+    @Test
+    void testDrawElementsInvalidPage() {
+        when(instructionsMenu.getCurrentPage()).thenReturn(6);
+
+        instructionsMenuViewer.drawElements(gui);
+
+        verify(gui).drawText(new Position(202, 17), "Instructions", "#FFFFFF");
+        verify(gui, times(2)).drawImage(new Position(4, 4), ToolImages.getKeyEscImage());
+        verify(gui).drawText(new Position(400, 474), "Page", "#FFFFFF");
+        verify(gui).drawText(new Position(454, 474), "of", "#FFFFFF");
+        verify(gui).drawText(new Position(440, 474), 6, "#FFFFFF");
+        verify(gui).drawImage(new Position(20, 50), Shape.RectangleFilledGenerator(920, 410, 'K', 2, '$'));
+
+        verify(gui, never()).drawText(new Position(50, 100), "you are Joe", "#FFFFFF");
+        verify(gui, never()).drawText(new Position(50, 100), "you will help", "#FFFFFF");
+        verify(gui, never()).drawText(new Position(50, 100), "be careful", "#FFFFFF");
+        verify(gui, never()).drawText(new Position(50, 100), "if you lose a kid", "#FFFFFF");
+        verify(gui, never()).drawText(new Position(50, 100), "try to get", "#FFFFFF");
+    }
 }

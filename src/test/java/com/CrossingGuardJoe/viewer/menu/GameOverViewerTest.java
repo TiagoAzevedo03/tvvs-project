@@ -37,7 +37,7 @@ class GameOverViewerTest {
     }
 
     @Test
-    void testDrawInformation() {
+    void testDrawInformationLevelTen() {
         Road currentGame = mock(Road.class);
         Joe joe = mock(Joe.class);
         when(joe.getScore()).thenReturn(1000);
@@ -52,6 +52,24 @@ class GameOverViewerTest {
         verify(gui).drawText(new Position(210, 165), "score", "#FFFFFF");
         verify(gui).drawText(new Position(210, 195), "level", "#FFFFFF");
         verify(gui).drawText(new Position(275, 195), 9, "#D30000");
+    }
+
+    @Test
+    void testDrawInformationNotLevelTen() {
+        Road currentGame = mock(Road.class);
+        Joe joe = mock(Joe.class);
+        when(joe.getScore()).thenReturn(1000);
+        when(currentGame.getJoe()).thenReturn(joe);
+        when(currentGame.getCurrentLevel()).thenReturn(5);
+
+        when(gameOverMenu.getCurrentGame()).thenReturn(currentGame);
+
+        gameOverViewer.drawInformation(gui);
+
+        verify(gui).drawImage(new Position(170, 154), Shape.RectangleFilledGenerator(305, 70, 'K', 2, '$'));
+        verify(gui).drawText(new Position(210, 165), "score", "#FFFFFF");
+        verify(gui).drawText(new Position(210, 195), "level", "#FFFFFF");
+        verify(gui).drawText(new Position(275, 195), 5, "#FFFFFF");
     }
 
     @Test
@@ -81,5 +99,34 @@ class GameOverViewerTest {
 
         verify(gui).drawText(new Position(50, 50), "Option 1", "#FFFFFF");
         verify(gui).drawImage(new Position(35, 50), ToolImages.getArrowRightImage());
+    }
+
+    @Test
+    void testDrawElementsOptionNotSelected() {
+        Road currentGame = mock(Road.class);
+        Joe joe = mock(Joe.class);
+        when(joe.getScore()).thenReturn(1000);
+        when(currentGame.getJoe()).thenReturn(joe);
+        when(currentGame.getCurrentLevel()).thenReturn(10);
+
+        when(gameOverMenu.getCurrentGame()).thenReturn(currentGame);
+
+        Option option1 = mock(Option.class);
+        when(option1.position()).thenReturn(new Position(50, 50));
+        when(option1.name()).thenReturn("Option 1");
+
+        when(gameOverMenu.getNumberOptions()).thenReturn(1);
+        when(gameOverMenu.getOption(0)).thenReturn(option1);
+        when(gameOverMenu.isSelectedOption(0)).thenReturn(false);
+
+        gameOverViewer.drawElements(gui);
+
+        verify(gui).drawImage(new Position(170, 154), Shape.RectangleFilledGenerator(305, 70, 'K', 2, '$'));
+        verify(gui).drawText(new Position(210, 165), "score", "#FFFFFF");
+        verify(gui).drawText(new Position(210, 195), "level", "#FFFFFF");
+        verify(gui).drawText(new Position(275, 195), 9, "#D30000");
+
+        verify(gui).drawText(new Position(50, 50), "Option 1", "#FFFFFF");
+        verify(gui, never()).drawImage(new Position(35, 50), ToolImages.getArrowRightImage());
     }
 }

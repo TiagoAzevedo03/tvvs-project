@@ -13,71 +13,71 @@ import java.util.Stack;
 public class Game {
     private final LanternaGUI gui;
     private final Stack&lt;State&gt; stateStack;
-<span class="nc" id="L16">    private int highestScore = 0;</span>
-<span class="nc" id="L17">    private int highestLevel = 0;</span>
+<span class="fc" id="L16">    private int highestScore = 0;</span>
+<span class="fc" id="L17">    private int highestLevel = 0;</span>
 
-<span class="nc" id="L19">    public Game() throws IOException, URISyntaxException, FontFormatException {</span>
-<span class="nc" id="L20">        gui = new LanternaGUI(1000, 500);</span>
-<span class="nc" id="L21">        gui.createTerminal();</span>
-<span class="nc" id="L22">        stateStack = new Stack&lt;&gt;();</span>
-<span class="nc" id="L23">        stateStack.push(new MenuState(new Menu()));</span>
-<span class="nc" id="L24">    }</span>
+<span class="fc" id="L19">    public Game() throws IOException, URISyntaxException, FontFormatException {</span>
+<span class="fc" id="L20">        gui = new LanternaGUI(1000, 500);</span>
+<span class="fc" id="L21">        gui.createTerminal();</span>
+<span class="fc" id="L22">        stateStack = new Stack&lt;&gt;();</span>
+<span class="fc" id="L23">        stateStack.push(new MenuState(new Menu()));</span>
+<span class="fc" id="L24">    }</span>
 
     public static void main(String[] args) throws IOException, FontFormatException, URISyntaxException {
 <span class="nc" id="L27">        new Game().run();</span>
 <span class="nc" id="L28">    }</span>
 
     public void setState(State state) {
-<span class="nc" id="L31">        this.stateStack.push(state);</span>
-<span class="nc" id="L32">    }</span>
+<span class="fc" id="L31">        this.stateStack.push(state);</span>
+<span class="fc" id="L32">    }</span>
 
     public void popState() {
-<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (!stateStack.isEmpty()) {</span>
-<span class="nc" id="L36">            stateStack.pop();</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (!stateStack.isEmpty()) {</span>
+<span class="fc" id="L36">            stateStack.pop();</span>
         }
-<span class="nc" id="L38">    }</span>
+<span class="fc" id="L38">    }</span>
 
     public State getCurrentState() {
-<span class="nc bnc" id="L41" title="All 2 branches missed.">        if (!stateStack.isEmpty()){</span>
-<span class="nc" id="L42">            return stateStack.peek();</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        if (!stateStack.isEmpty()){</span>
+<span class="fc" id="L42">            return stateStack.peek();</span>
         }
-<span class="nc" id="L44">        return null;</span>
+<span class="fc" id="L44">        return null;</span>
     }
 
     private void run() throws IOException {
-<span class="nc" id="L48">        int FPS = 100;</span>
-<span class="nc" id="L49">        int frameTime = 100 / FPS;</span>
+<span class="fc" id="L48">        int FPS = 100;</span>
+<span class="fc" id="L49">        int frameTime = 100 / FPS;</span>
 
-<span class="nc bnc" id="L51" title="All 2 branches missed.">        while (getCurrentState() != null) {</span>
-<span class="nc" id="L52">            long startTime = System.currentTimeMillis();</span>
-<span class="nc" id="L53">            getCurrentState().step(this, gui, startTime);</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        while (getCurrentState() != null) {</span>
+<span class="fc" id="L52">            long startTime = System.currentTimeMillis();</span>
+<span class="fc" id="L53">            getCurrentState().step(this, gui, startTime);</span>
 
-<span class="nc" id="L55">            long elapsedTime = System.currentTimeMillis() - startTime;</span>
-<span class="nc" id="L56">            long sleepTime = frameTime - elapsedTime;</span>
+<span class="fc" id="L55">            long elapsedTime = System.currentTimeMillis() - startTime;</span>
+<span class="fc" id="L56">            long sleepTime = frameTime - elapsedTime;</span>
 
             try {
-<span class="nc bnc" id="L59" title="All 2 branches missed.">                if (sleepTime &gt; 0) Thread.sleep(sleepTime);</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">                if (sleepTime &gt; 0) Thread.sleep(sleepTime);</span>
 <span class="nc" id="L60">            } catch (InterruptedException e) {</span>
 <span class="nc" id="L61">                System.out.println(&quot;ERROR: &quot; + e.getMessage());</span>
-<span class="nc" id="L62">            }</span>
-<span class="nc" id="L63">        }</span>
-<span class="nc" id="L64">        gui.closeScreen();</span>
-<span class="nc" id="L65">    }</span>
+<span class="fc" id="L62">            }</span>
+<span class="fc" id="L63">        }</span>
+<span class="fc" id="L64">        gui.closeScreen();</span>
+<span class="fc" id="L65">    }</span>
 
     public int getHighestScore() {
-<span class="nc" id="L68">        return highestScore;</span>
+<span class="fc" id="L68">        return highestScore;</span>
     }
 
     public int getHighestLevel() {
-<span class="nc" id="L72">        return highestLevel;</span>
+<span class="fc" id="L72">        return highestLevel;</span>
     }
 
     public void setHighestScore(int highestScore) {
-<span class="nc" id="L76">        this.highestScore = highestScore;</span>
-<span class="nc" id="L77">    }</span>
+<span class="fc" id="L76">        this.highestScore = highestScore;</span>
+<span class="fc" id="L77">    }</span>
 
     public void setHighestLevel(int highestLevel) {
-<span class="nc" id="L80">        this.highestLevel = highestLevel;</span>
-<span class="nc" id="L81">    }</span>
+<span class="fc" id="L80">        this.highestLevel = highestLevel;</span>
+<span class="fc" id="L81">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

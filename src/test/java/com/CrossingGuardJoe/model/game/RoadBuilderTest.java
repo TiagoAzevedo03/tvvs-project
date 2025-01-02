@@ -1,17 +1,19 @@
 package com.CrossingGuardJoe.model.game;
 
+import com.CrossingGuardJoe.model.game.elements.Car;
 import com.CrossingGuardJoe.model.game.elements.Kid;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
+import java.lang.reflect.Method;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RoadBuilderTest {
     private RoadBuilder roadBuilder;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         roadBuilder = new RoadBuilder();
     }
@@ -30,5 +32,20 @@ public class RoadBuilderTest {
         List<Kid> kids = roadBuilder.createKidsNextLevel(5);
         assertNotNull(kids);
         assertEquals(5, kids.size());
+    }
+
+    @Test
+    void testCreateCarsWhenCarYPositionExceedsMaxYDistance() throws Exception {
+        RoadBuilder roadBuilder = new RoadBuilder();
+        Method method = RoadBuilder.class.getDeclaredMethod("createCars");
+        method.setAccessible(true);
+        List<Car> cars = (List<Car>) method.invoke(roadBuilder);
+
+        Car car = cars.get(0);
+        car.getPosition().setY(600);
+
+        Thread.sleep(200);
+
+        assertTrue(car.getPosition().getY() < 0);
     }
 }

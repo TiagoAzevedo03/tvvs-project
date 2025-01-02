@@ -47,9 +47,9 @@ public class CustomizeMenuViewer extends Viewer&lt;CustomizeMenu&gt; implements 
 <span class="fc" id="L47">                gui.drawImage(optionPosition, option.image());</span>
 
                 // Draw the options text (white)
-<span class="pc bpc" id="L50" title="1 of 2 branches missed.">                if (j &gt; 0) {</span>
-<span class="nc" id="L51">                    gui.drawText(new Position(optionPosition.getX() - 1, optionPosition.getY() - 1),</span>
-<span class="nc" id="L52">                            option.name(), &quot;#FFFFFF&quot;);</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">                if (j &gt; 0) {</span>
+<span class="fc" id="L51">                    gui.drawText(new Position(optionPosition.getX() - 1, optionPosition.getY() - 1),</span>
+<span class="fc" id="L52">                            option.name(), &quot;#FFFFFF&quot;);</span>
                 }
 
                 // Draw the selection arrow (green)
@@ -101,7 +101,7 @@ public class CustomizeMenuViewer extends Viewer&lt;CustomizeMenu&gt; implements 
 
 <span class="fc bfc" id="L102" title="All 2 branches covered.">        if (getModel().isColorPaletteSelected()) {</span>
 <span class="fc bfc" id="L103" title="All 2 branches covered.">            for (int i = 0; i &lt; getModel().getColorPaletteMenu().getColorPalette().size(); i++) {</span>
-<span class="pc bpc" id="L104" title="1 of 2 branches missed.">                if (getModel().getColorPaletteMenu().isColorSelected(i)) {</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">                if (getModel().getColorPaletteMenu().isColorSelected(i)) {</span>
 <span class="fc" id="L105">                    gui.drawImage(new Position(15 * i + 55, 405), ToolImages.getArrowDownImage());</span>
                 }
             }
@@ -111,7 +111,7 @@ public class CustomizeMenuViewer extends Viewer&lt;CustomizeMenu&gt; implements 
     private void addColorMap(GUI gui) {
 <span class="fc" id="L112">        char oldColor = getModel().getOldColor();</span>
 <span class="fc" id="L113">        char newColor = getModel().getNewColor();</span>
-<span class="pc bpc" id="L114" title="1 of 2 branches missed.">        if (oldColor != '\uFFFF') {</span>
+<span class="fc bfc" id="L114" title="All 2 branches covered.">        if (oldColor != '\uFFFF') {</span>
 <span class="fc" id="L115">            gui.addColorMapping(oldColor, newColor);</span>
         }
 <span class="fc" id="L117">    }</span>

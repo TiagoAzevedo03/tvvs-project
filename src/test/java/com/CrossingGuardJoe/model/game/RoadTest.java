@@ -3,13 +3,13 @@ package com.CrossingGuardJoe.model.game;
 import com.CrossingGuardJoe.model.game.elements.Car;
 import com.CrossingGuardJoe.model.game.elements.Joe;
 import com.CrossingGuardJoe.model.game.elements.Kid;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
 
 public class RoadTest {
     private Road road;
@@ -17,7 +17,7 @@ public class RoadTest {
     private List<Kid> kids;
     private List<Car> cars;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         road = new Road();
         joe = new Joe(5, 10);
@@ -36,23 +36,6 @@ public class RoadTest {
         assertNull(road.getJoe());
         assertNull(road.getKids());
         assertNull(road.getCars());
-    }
-
-    @Test
-    public void testLevelUp() {
-        // Increment level from 1 to 5
-        for (int i = 1; i < 5; i++) {
-            road.levelUp();
-        }
-        assertEquals(5, road.getCurrentLevel());
-        assertFalse(road.isGameEnded());
-
-        // Increment level from 5 to 10
-        for (int i = 5; i < 10; i++) {
-            road.levelUp();
-        }
-        assertEquals(10, road.getCurrentLevel());
-        assertTrue(road.isGameEnded());
     }
 
     @Test
@@ -78,5 +61,35 @@ public class RoadTest {
         road.setKidsNextLevel(3);
         assertNotNull(road.getKids());
         assertEquals(3, road.getKids().size());
+    }
+
+    @Test
+    void testLevelUpIncrementsLevelBelowTen() {
+        road.levelUp();
+        assertEquals(2, road.getCurrentLevel());
+        assertFalse(road.isGameEnded());
+    }
+
+    @Test
+    void testLevelUpDoesNotExceedLevelTen() {
+       for (int i = 1; i < 10; i++) road.levelUp();
+       road.levelUp();
+       assertEquals(10, road.getCurrentLevel());
+    }
+
+    @Test
+    void testGameEndsAtLevelTen() {
+        for (int i = 1; i < 9; i++) road.levelUp();
+        road.levelUp();
+        assertEquals(10, road.getCurrentLevel());
+        assertTrue(road.isGameEnded());
+    }
+
+    @Test
+    void testGameDoesNotEndBelowLevelTen() {
+        for (int i = 1; i < 8; i++) road.levelUp();
+        road.levelUp();
+        assertEquals(9, road.getCurrentLevel());
+        assertFalse(road.isGameEnded());
     }
 }

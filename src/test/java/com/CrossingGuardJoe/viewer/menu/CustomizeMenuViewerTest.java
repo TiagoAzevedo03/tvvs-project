@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -207,6 +208,28 @@ class CustomizeMenuViewerTest {
     }
 
     @Test
+    void testDrawElementsOptionTextWhenJGreaterThanZero() {
+        Option option = mock(Option.class);
+        when(option.position()).thenReturn(new Position(50, 50));
+        when(option.name()).thenReturn("Option 1");
+
+        List<Option> levelOptions = Arrays.asList(mock(Option.class), option); // Ensure j > 0
+        when(customizeMenu.getMenuLevels()).thenReturn(Collections.singletonList(levelOptions));
+
+        ColorPaletteMenu colorPaletteMenu = mock(ColorPaletteMenu.class);
+        when(customizeMenu.getColorPaletteMenu()).thenReturn(colorPaletteMenu);
+        Color color = mock(Color.class);
+        when(color.getColorHexCode()).thenReturn("#FFFFFF");
+        when(colorPaletteMenu.getColorPalette()).thenReturn(Collections.singletonList(color));
+        when(colorPaletteMenu.isColorSelected(0)).thenReturn(true);
+        when(customizeMenu.isColorPaletteSelected()).thenReturn(true);
+
+        customizeMenuViewer.drawElements(gui);
+
+        verify(gui).drawText(new Position(49, 49), "Option 1", "#FFFFFF");
+    }
+
+    @Test
     void testDrawColorsPaletteColorSelected() throws Exception {
         ColorPaletteMenu colorPaletteMenu = mock(ColorPaletteMenu.class);
         when(customizeMenu.getColorPaletteMenu()).thenReturn(colorPaletteMenu);
@@ -221,6 +244,23 @@ class CustomizeMenuViewerTest {
     }
 
     @Test
+    void testDrawColorsPaletteColorPaletteSelectedButNoColorSelected() throws Exception {
+        ColorPaletteMenu colorPaletteMenu = mock(ColorPaletteMenu.class);
+        when(customizeMenu.getColorPaletteMenu()).thenReturn(colorPaletteMenu);
+        Color color = mock(Color.class);
+        when(color.getColorHexCode()).thenReturn("#FFFFFF");
+        when(colorPaletteMenu.getColorPalette()).thenReturn(Collections.singletonList(color));
+        when(colorPaletteMenu.isColorSelected(0)).thenReturn(false);
+        when(customizeMenu.isColorPaletteSelected()).thenReturn(true);
+
+        Method method = CustomizeMenuViewer.class.getDeclaredMethod("drawColorsPalette", GUI.class);
+        method.setAccessible(true);
+        method.invoke(customizeMenuViewer, gui);
+
+        verify(gui, never()).drawImage(new Position(55, 405), ToolImages.getArrowDownImage());
+    }
+
+    @Test
     void testAddColorMap() throws Exception {
         when(customizeMenu.getOldColor()).thenReturn('A');
         when(customizeMenu.getNewColor()).thenReturn('B');
@@ -230,5 +270,17 @@ class CustomizeMenuViewerTest {
         method.invoke(customizeMenuViewer, gui);
 
         verify(gui).addColorMapping('A', 'B');
+    }
+
+    @Test
+    void testAddColorMapOldColorFFFF() throws Exception {
+        when(customizeMenu.getOldColor()).thenReturn('\uFFFF');
+        when(customizeMenu.getNewColor()).thenReturn('B');
+
+        Method method = CustomizeMenuViewer.class.getDeclaredMethod("addColorMap", GUI.class);
+        method.setAccessible(true);
+        method.invoke(customizeMenuViewer, gui);
+
+        verify(gui, never()).addColorMapping(anyChar(), anyChar());
     }
 }

@@ -14,33 +14,33 @@ public class Road {
 <span class="fc" id="L14">    private boolean gameEnded = false;</span>
 
     public boolean isGameEnded() {
-<span class="nc" id="L17">        return this.gameEnded;</span>
+<span class="fc" id="L17">        return this.gameEnded;</span>
     }
 
-<span class="nc" id="L20">    public int getCurrentLevel() { return this.currentLevel; }</span>
+<span class="fc" id="L20">    public int getCurrentLevel() { return this.currentLevel; }</span>
 
     public void levelUp() {
-<span class="nc bnc" id="L23" title="All 2 branches missed.">        if (this.currentLevel &lt; 10) {</span>
-<span class="nc" id="L24">            currentLevel++;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        if (this.currentLevel &lt; 10) {</span>
+<span class="fc" id="L24">            currentLevel++;</span>
         }
 
-<span class="nc bnc" id="L27" title="All 2 branches missed.">        if (this.currentLevel == 10) {</span>
-<span class="nc" id="L28">            gameEnded = true;</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        if (this.currentLevel == 10) {</span>
+<span class="fc" id="L28">            gameEnded = true;</span>
         }
-<span class="nc" id="L30">    }</span>
+<span class="fc" id="L30">    }</span>
 
 <span class="fc" id="L32">    public Road() {</span>
 <span class="fc" id="L33">    }</span>
 
 <span class="fc" id="L35">    public Joe getJoe() { return joe; }</span>
-<span class="nc" id="L36">    public List&lt;Kid&gt; getKids() { return kids; }</span>
-<span class="nc" id="L37">    public List&lt;Car&gt; getCars() { return cars; }</span>
+<span class="fc" id="L36">    public List&lt;Kid&gt; getKids() { return kids; }</span>
+<span class="fc" id="L37">    public List&lt;Car&gt; getCars() { return cars; }</span>
 
 <span class="fc" id="L39">    public void setJoe(Joe joe) { this.joe = joe; }</span>
 <span class="fc" id="L40">    public void setKids(List&lt;Kid&gt; kids) { this.kids = kids;}</span>
 <span class="fc" id="L41">    public void setCars(List&lt;Car&gt; cars) { this.cars = cars; }</span>
     public void setKidsNextLevel(int numberKids) {
-<span class="nc" id="L43">        this.kids = new RoadBuilder().createKidsNextLevel(numberKids);</span>
-<span class="nc" id="L44">    }</span>
+<span class="fc" id="L43">        this.kids = new RoadBuilder().createKidsNextLevel(numberKids);</span>
+<span class="fc" id="L44">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

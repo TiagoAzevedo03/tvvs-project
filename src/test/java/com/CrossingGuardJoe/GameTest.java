@@ -1,22 +1,25 @@
 package com.CrossingGuardJoe;
 
+import com.CrossingGuardJoe.gui.GUI;
 import com.CrossingGuardJoe.model.menu.Menu;
 import com.CrossingGuardJoe.states.State;
 import com.CrossingGuardJoe.states.menu.MenuState;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.net.URISyntaxException;
 import java.awt.FontFormatException;
 
-import static org.junit.Assert.*;
-
-
 public class GameTest {
+
     private Game game;
 
-    @Before
+    @BeforeEach
     public void setUp() throws IOException, URISyntaxException, FontFormatException {
         game = new Game();
     }
@@ -40,6 +43,13 @@ public class GameTest {
     }
 
     @Test
+    public void testPopStateWhenStateStackIsEmpty() {
+        game.popState();
+        game.popState();
+        assertNull(game.getCurrentState());
+    }
+
+    @Test
     public void testHighestScore() {
         game.setHighestScore(100);
         assertEquals(100, game.getHighestScore());
@@ -50,4 +60,53 @@ public class GameTest {
         game.setHighestLevel(5);
         assertEquals(5, game.getHighestLevel());
     }
+
+    @Test
+    void testRun() throws Exception {
+        Game game = spy(new Game());
+        State state = mock(State.class);
+
+        doReturn(state).doReturn(state).doReturn(null).when(game).getCurrentState();
+        doNothing().when(state).step(any(Game.class), any(GUI.class), anyLong());
+
+        Method method = Game.class.getDeclaredMethod("run");
+        method.setAccessible(true);
+        method.invoke(game);
+
+        verify(state, atLeastOnce()).step(any(Game.class), any(GUI.class), anyLong());
+    }
+
+    @Test
+    void testRunWhenSleepTimeNotGreaterThanZero() throws Exception {
+        Game game = spy(new Game());
+        State state = mock(State.class);
+
+        doReturn(state).doReturn(state).doReturn(null).when(game).getCurrentState();
+        doNothing().when(state).step(any(Game.class), any(GUI.class), anyLong());
+
+        Method method = Game.class.getDeclaredMethod("run");
+        method.setAccessible(true);
+
+        class CustomSystem {
+            private final long[] times = {1000L, 1010L};
+            private int index = 0;
+
+            long currentTimeMillis() {
+                return times[index++];
+            }
+        }
+
+        CustomSystem customSystem = new CustomSystem();
+
+        long startTime = customSystem.currentTimeMillis();
+        long elapsedTime = customSystem.currentTimeMillis() - startTime;
+        long sleepTime = 1 - elapsedTime;
+
+        method.invoke(game);
+
+        if (sleepTime <= 0) {
+            verify(state, atLeastOnce()).step(any(Game.class), any(GUI.class), anyLong());
+        }
+    }
+
 }

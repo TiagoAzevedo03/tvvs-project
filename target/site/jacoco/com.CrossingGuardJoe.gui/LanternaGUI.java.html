@@ -44,36 +44,36 @@ public class LanternaGUI implements GUI {
 <span class="fc" id="L44">    }</span>
 
     public void createTerminal() throws IOException, URISyntaxException, FontFormatException {
-<span class="nc" id="L47">        AWTTerminalFontConfiguration fontConfig = loadSquareFont();</span>
+<span class="fc" id="L47">        AWTTerminalFontConfiguration fontConfig = loadSquareFont();</span>
 
-<span class="nc" id="L49">        TerminalSize terminalSize = new TerminalSize(width, height);</span>
-<span class="nc" id="L50">        DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory()</span>
-<span class="nc" id="L51">                .setInitialTerminalSize(terminalSize);</span>
-<span class="nc" id="L52">        terminalFactory.setForceAWTOverSwing(true);</span>
-<span class="nc" id="L53">        terminalFactory.setTerminalEmulatorTitle(&quot;Crossing Guard Joe&quot;);</span>
-<span class="nc" id="L54">        terminalFactory.setTerminalEmulatorFontConfiguration(fontConfig);</span>
-<span class="nc" id="L55">        Terminal terminal = terminalFactory.createTerminal();</span>
+<span class="fc" id="L49">        TerminalSize terminalSize = new TerminalSize(width, height);</span>
+<span class="fc" id="L50">        DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory()</span>
+<span class="fc" id="L51">                .setInitialTerminalSize(terminalSize);</span>
+<span class="fc" id="L52">        terminalFactory.setForceAWTOverSwing(true);</span>
+<span class="fc" id="L53">        terminalFactory.setTerminalEmulatorTitle(&quot;Crossing Guard Joe&quot;);</span>
+<span class="fc" id="L54">        terminalFactory.setTerminalEmulatorFontConfiguration(fontConfig);</span>
+<span class="fc" id="L55">        Terminal terminal = terminalFactory.createTerminal();</span>
 
-<span class="nc" id="L57">        screen = new TerminalScreen(terminal);</span>
-<span class="nc" id="L58">        screen.setCursorPosition(null);</span>
-<span class="nc" id="L59">        screen.startScreen();</span>
-<span class="nc" id="L60">        screen.doResizeIfNecessary();</span>
-<span class="nc" id="L61">        this.screen.startScreen();</span>
-<span class="nc" id="L62">        this.graphics = screen.newTextGraphics();</span>
-<span class="nc" id="L63">        setBackgroundColor(&quot;#7F7976&quot;);</span>
-<span class="nc" id="L64">        refreshScreen();</span>
-<span class="nc" id="L65">    }</span>
+<span class="fc" id="L57">        screen = new TerminalScreen(terminal);</span>
+<span class="fc" id="L58">        screen.setCursorPosition(null);</span>
+<span class="fc" id="L59">        screen.startScreen();</span>
+<span class="fc" id="L60">        screen.doResizeIfNecessary();</span>
+<span class="fc" id="L61">        this.screen.startScreen();</span>
+<span class="fc" id="L62">        this.graphics = screen.newTextGraphics();</span>
+<span class="fc" id="L63">        setBackgroundColor(&quot;#7F7976&quot;);</span>
+<span class="fc" id="L64">        refreshScreen();</span>
+<span class="fc" id="L65">    }</span>
 
     private AWTTerminalFontConfiguration loadSquareFont() throws URISyntaxException, FontFormatException, IOException {
-<span class="nc" id="L68">        URL resource = getClass().getClassLoader().getResource(&quot;fonts/VCR_OSD_MONO_1.001.ttf&quot;);</span>
-<span class="nc" id="L69">        File fontFile = new File(resource.toURI());</span>
-<span class="nc" id="L70">        Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);</span>
+<span class="fc" id="L68">        URL resource = getClass().getClassLoader().getResource(&quot;fonts/VCR_OSD_MONO_1.001.ttf&quot;);</span>
+<span class="fc" id="L69">        File fontFile = new File(resource.toURI());</span>
+<span class="fc" id="L70">        Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);</span>
 
-<span class="nc" id="L72">        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();</span>
-<span class="nc" id="L73">        ge.registerFont(font);</span>
+<span class="fc" id="L72">        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();</span>
+<span class="fc" id="L73">        ge.registerFont(font);</span>
 
-<span class="nc" id="L75">        Font loadedFont = font.deriveFont(Font.PLAIN, 2);</span>
-<span class="nc" id="L76">        return AWTTerminalFontConfiguration.newInstance(loadedFont);</span>
+<span class="fc" id="L75">        Font loadedFont = font.deriveFont(Font.PLAIN, 2);</span>
+<span class="fc" id="L76">        return AWTTerminalFontConfiguration.newInstance(loadedFont);</span>
     }
 
     @Override

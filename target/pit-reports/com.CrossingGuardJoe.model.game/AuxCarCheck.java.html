@@ -143,13 +143,13 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e797a39_9'>4</a>
 <span>
 
-1. isCarOverlapping : negated conditional &rarr; SURVIVED<br/>
+1. isCarOverlapping : changed conditional boundary &rarr; SURVIVED<br/>
 
-2. isCarOverlapping : changed conditional boundary &rarr; SURVIVED<br/>
+2. isCarOverlapping : replaced boolean return with true for com/CrossingGuardJoe/model/game/AuxCarCheck::isCarOverlapping &rarr; TIMED_OUT<br/>
 
-3. isCarOverlapping : replaced boolean return with true for com/CrossingGuardJoe/model/game/AuxCarCheck::isCarOverlapping &rarr; TIMED_OUT<br/>
+3. isCarOverlapping : Replaced integer subtraction with addition &rarr; KILLED<br/>
 
-4. isCarOverlapping : Replaced integer subtraction with addition &rarr; KILLED<br/>
+4. isCarOverlapping : negated conditional &rarr; KILLED<br/>
 
 </span>
 </span>
@@ -222,17 +222,17 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@4e797a39_14'/>
 14
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e797a39_14'>1</a>
 <span>
 
-1. isAnyCarOverlapping : negated conditional &rarr; SURVIVED<br/>
+1. isAnyCarOverlapping : negated conditional &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>            if (isCarOverlapping(newY, existingCar.getPosition().getY(), minDistance)) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            if (isCarOverlapping(newY, existingCar.getPosition().getY(), minDistance)) {</span></pre></td></tr>
 
 
 <tr>
@@ -343,18 +343,13 @@
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e797a39_9'/> 
 
 <p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isCarOverlapping<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for com/CrossingGuardJoe/model/game/AuxCarCheck::isCarOverlapping &rarr; TIMED_OUT</span>
-</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isCarOverlapping<br/><b>Killed by : </b>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsAnyCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</span>
-</div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isCarOverlapping<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.game.AuxCarCheck,-method=isCarOverlapping,-methodDesc=(III)Z],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.game.AuxCarCheck,-method=isCarOverlapping,-methodDesc=(III)Z],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.game.AuxCarCheck,-method=isCarOverlapping,-methodDesc=(III)Z],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsAnyCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</li> <li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</li> <li>com.CrossingGuardJoe.model.game.RoadBuilderTest.testCreateRoad(com.CrossingGuardJoe.model.game.RoadBuilderTest)</li> <li>com.CrossingGuardJoe.controller.menu.MenuControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.menu.MenuControllerTest]/[method:testNextActionSelectStartGame()]</li> 
-</ul>
-</div></div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isCarOverlapping<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isCarOverlapping<br/><b>Killed by : </b>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isCarOverlapping<br/><b>Killed by : </b>com.CrossingGuardJoe.model.game.RoadBuilderTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.game.RoadBuilderTest]/[method:testCreateCarsWhenCarYPositionExceedsMaxYDistance()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isCarOverlapping<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.game.AuxCarCheck,-method=isCarOverlapping,-methodDesc=(III)Z],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.game.AuxCarCheck,-method=isCarOverlapping,-methodDesc=(III)Z],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.game.AuxCarCheck,-method=isCarOverlapping,-methodDesc=(III)Z],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsAnyCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</li> <li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</li> <li>com.CrossingGuardJoe.model.game.RoadBuilderTest.testCreateRoad(com.CrossingGuardJoe.model.game.RoadBuilderTest)</li> <li>com.CrossingGuardJoe.controller.menu.MenuControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.menu.MenuControllerTest]/[method:testNextActionSelectStartGame()]</li> 
+<li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</li> <li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsAnyCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</li> <li>com.CrossingGuardJoe.model.game.RoadBuilderTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.game.RoadBuilderTest]/[method:testCreateRoad()]</li> <li>com.CrossingGuardJoe.controller.menu.MenuControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.menu.MenuControllerTest]/[method:testNextActionSelectStartGame()]</li> <li>com.CrossingGuardJoe.model.game.RoadBuilderTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.game.RoadBuilderTest]/[method:testCreateCarsWhenCarYPositionExceedsMaxYDistance()]</li> 
 </ul>
 </div></div> 
 </td>
@@ -367,13 +362,8 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e797a39_14'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isAnyCarOverlapping<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.game.AuxCarCheck,-method=isAnyCarOverlapping,-methodDesc=(ILjava/util/List;I)Z],-indexes=[23],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.game.AuxCarCheck,-method=isAnyCarOverlapping,-methodDesc=(ILjava/util/List;I)Z],-indexes=[23],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.game.AuxCarCheck,-method=isAnyCarOverlapping,-methodDesc=(ILjava/util/List;I)Z],-indexes=[23],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsAnyCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</li> <li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</li> <li>com.CrossingGuardJoe.model.game.RoadBuilderTest.testCreateRoad(com.CrossingGuardJoe.model.game.RoadBuilderTest)</li> <li>com.CrossingGuardJoe.controller.menu.MenuControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.menu.MenuControllerTest]/[method:testNextActionSelectStartGame()]</li> 
-</ul>
-</div></div> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isAnyCarOverlapping<br/><b>Killed by : </b>com.CrossingGuardJoe.model.game.RoadBuilderTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.game.RoadBuilderTest]/[method:testCreateCarsWhenCarYPositionExceedsMaxYDistance()]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
 </td>
 </tr>
 
@@ -384,7 +374,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e797a39_15'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isAnyCarOverlapping<br/><b>Killed by : </b>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsAnyCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</span></span> replaced boolean return with false for com/CrossingGuardJoe/model/game/AuxCarCheck::isAnyCarOverlapping &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isAnyCarOverlapping<br/><b>Killed by : </b>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest)</span></span> replaced boolean return with false for com/CrossingGuardJoe/model/game/AuxCarCheck::isAnyCarOverlapping &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -433,7 +423,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsAnyCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest) (0 ms)</li><li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest) (0 ms)</li><li>com.CrossingGuardJoe.model.game.RoadBuilderTest.testCreateRoad(com.CrossingGuardJoe.model.game.RoadBuilderTest) (0 ms)</li><li>com.CrossingGuardJoe.controller.menu.MenuControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.menu.MenuControllerTest]/[method:testNextActionSelectStartGame()] (16 ms)</li>
+<li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest) (0 ms)</li><li>com.CrossingGuardJoe.model.game.AuxCarCheckTest.testIsAnyCarOverlapping(com.CrossingGuardJoe.model.game.AuxCarCheckTest) (12 ms)</li><li>com.CrossingGuardJoe.model.game.RoadBuilderTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.game.RoadBuilderTest]/[method:testCreateRoad()] (0 ms)</li><li>com.CrossingGuardJoe.controller.menu.MenuControllerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.controller.menu.MenuControllerTest]/[method:testNextActionSelectStartGame()] (3 ms)</li><li>com.CrossingGuardJoe.model.game.RoadBuilderTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.game.RoadBuilderTest]/[method:testCreateCarsWhenCarYPositionExceedsMaxYDistance()] (202 ms)</li>
 </ul>
 
 <br/>

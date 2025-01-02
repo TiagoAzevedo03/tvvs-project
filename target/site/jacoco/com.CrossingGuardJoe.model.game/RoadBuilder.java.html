@@ -56,15 +56,15 @@ import java.util.Random;
             while (true) {
 <span class="fc" id="L57">                synchronized (cars) {</span>
 <span class="fc bfc" id="L58" title="All 2 branches covered.">                    for (Car car : cars) {</span>
-<span class="pc bpc" id="L59" title="1 of 2 branches missed.">                        if (car.getPosition().getY() &gt; MAX_Y_DISTANCE) {</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">                        if (car.getPosition().getY() &gt; MAX_Y_DISTANCE) {</span>
                             int newRandomY;
 
                             do {
-<span class="nc" id="L63">                                newRandomY = -rand.nextInt(RANDOM_BOUND) - rand.nextInt(RANDOM_BOUND);</span>
-<span class="nc bnc" id="L64" title="All 2 branches missed.">                            } while (AuxCarCheck.isAnyCarOverlapping(newRandomY, cars, DISTANCE_BETWEEN_CARS));</span>
+<span class="fc" id="L63">                                newRandomY = -rand.nextInt(RANDOM_BOUND) - rand.nextInt(RANDOM_BOUND);</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">                            } while (AuxCarCheck.isAnyCarOverlapping(newRandomY, cars, DISTANCE_BETWEEN_CARS));</span>
 
-<span class="nc" id="L66">                            car.getPosition().setY(newRandomY);</span>
-<span class="nc" id="L67">                            car.getPosition().setX(ROAD_LANES[rand.nextInt(ROAD_LANES.length)]);</span>
+<span class="fc" id="L66">                            car.getPosition().setY(newRandomY);</span>
+<span class="fc" id="L67">                            car.getPosition().setX(ROAD_LANES[rand.nextInt(ROAD_LANES.length)]);</span>
                         }
 <span class="fc" id="L69">                    }</span>
 <span class="fc" id="L70">                }</span>
@@ -85,7 +85,7 @@ import java.util.Random;
     }
 
     public List&lt;Kid&gt; createKidsNextLevel(int numberKids) {
-<span class="nc" id="L88">        return getKids(numberKids);</span>
+<span class="fc" id="L88">        return getKids(numberKids);</span>
     }
 
     private List&lt;Kid&gt; getKids(int numberKids) {
