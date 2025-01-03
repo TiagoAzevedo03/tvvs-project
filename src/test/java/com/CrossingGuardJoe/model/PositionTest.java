@@ -76,6 +76,10 @@ public class PositionTest {
     @Test
     void testHashCode() {
         Position samePosition = new Position(5, 10);
+        Position differentPosition = new Position(10, 20);
+
         assertEquals(position.hashCode(), samePosition.hashCode());
+
+        assertNotEquals(position.hashCode(), differentPosition.hashCode());
     }
 }

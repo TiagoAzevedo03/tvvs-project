@@ -1,6 +1,8 @@
 package com.CrossingGuardJoe.gui;
 
 import com.CrossingGuardJoe.model.Position;
+import com.CrossingGuardJoe.viewer.ColorCustomize;
+import com.CrossingGuardJoe.viewer.images.Font.FontImageFactory;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
@@ -155,5 +157,21 @@ class LanternaGUITest {
         lanternaGUI.drawLineCustomColor(x, y, imageLine, colorHexCode);
 
         verify(mockGraphics, never()).setCharacter(anyInt(), anyInt(), any());
+    }
+
+    @Test
+    void testDrawText() {
+        Position position = new Position(5, 5);
+        String text = "Hello";
+        String colorHexCode = "#FF0000";
+        String[] textImage = new FontImageFactory().getImageRepresentation(text);
+
+        LanternaGUI lanternaGUISpy = spy(lanternaGUI);
+        doNothing().when(lanternaGUISpy).drawImageCustomColor(any(Position.class), any(String[].class), anyString());
+
+        lanternaGUISpy.drawText(position, text, colorHexCode);
+
+        verify(lanternaGUISpy).drawImageCustomColor(new Position(position.getX() + 1, position.getY() + 1), textImage, "#000000");
+        verify(lanternaGUISpy).drawImageCustomColor(position, textImage, colorHexCode);
     }
 }

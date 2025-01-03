@@ -58,6 +58,37 @@ class FontImageFactoryTest {
         String[] result = fontImageFactory.getImageRepresentation(input);
         assertNotNull(result);
         assertEquals(16, result.length);
+
+        input = "AB";
+        result = fontImageFactory.getImageRepresentation(input);
+        assertNotNull(result);
+        assertEquals(16, result.length);
+
+        input = "A B";
+        result = fontImageFactory.getImageRepresentation(input);
+        assertNotNull(result);
+        assertEquals(16, result.length);
+
+        input = "";
+        result = fontImageFactory.getImageRepresentation(input);
+        assertNotNull(result);
+        assertEquals(16, result.length);
+
+        input = "A";
+        result = fontImageFactory.getImageRepresentation(input);
+        assertNotNull(result);
+        assertEquals(16, result.length);
+
+        input = "Z";
+        result = fontImageFactory.getImageRepresentation(input);
+        assertNotNull(result);
+        assertEquals(16, result.length);
+
+        String finalInput = "1";
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> fontImageFactory.getImageRepresentation(finalInput));
+
+        String finalInput2 = "123";
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> fontImageFactory.getImageRepresentation(finalInput2));
     }
 
     @Test
@@ -66,6 +97,29 @@ class FontImageFactoryTest {
         String[] result = fontImageFactory.getImageRepresentation(input);
         assertNotNull(result);
         assertEquals(16, result.length);
+
+        input = 123;
+        result = fontImageFactory.getImageRepresentation(input);
+        assertNotNull(result);
+        assertEquals(16, result.length);
+
+        input = 0;
+        result = fontImageFactory.getImageRepresentation(input);
+        assertNotNull(result);
+        assertEquals(16, result.length);
+
+        input = 1;
+        result = fontImageFactory.getImageRepresentation(input);
+        assertNotNull(result);
+        assertEquals(16, result.length);
+
+        input = 9;
+        result = fontImageFactory.getImageRepresentation(input);
+        assertNotNull(result);
+        assertEquals(16, result.length);
+
+        int finalInput = -1;
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> fontImageFactory.getImageRepresentation(finalInput));
     }
 
     @Test
@@ -83,6 +137,10 @@ class FontImageFactoryTest {
         method.setAccessible(true);
         int index = (int) method.invoke(fontImageFactory, input);
         assertEquals(0, index);
+
+        input = 'Z';
+        index = (int) method.invoke(fontImageFactory, input);
+        assertEquals(25, index);
     }
 
     @Test
@@ -91,6 +149,27 @@ class FontImageFactoryTest {
         Method method = FontImageFactory.class.getDeclaredMethod("getAlphabetIndex", char.class);
         method.setAccessible(true);
         int index = (int) method.invoke(fontImageFactory, input);
-        assertEquals('1' - 'A', index);
+        assertEquals(-16, index);
+
+        input = '9';
+        index = (int) method.invoke(fontImageFactory, input);
+        assertEquals(-8, index);
+    }
+
+    @Test
+    void testGetAlphabetIndexWithUnsupportedCharacter() throws Exception {
+        char input = '@';
+        Method method = FontImageFactory.class.getDeclaredMethod("getAlphabetIndex", char.class);
+        method.setAccessible(true);
+        int index = (int) method.invoke(fontImageFactory, input);
+        assertEquals(-1, index);
+
+        input = '#';
+        index = (int) method.invoke(fontImageFactory, input);
+        assertEquals(-30, index);
+
+        input = '!';
+        index = (int) method.invoke(fontImageFactory, input);
+        assertEquals(-32, index);
     }
 }

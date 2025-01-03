@@ -1,6 +1,8 @@
 package com.CrossingGuardJoe.controller.menu;
 
 import com.CrossingGuardJoe.Game;
+import com.CrossingGuardJoe.controller.Sounds;
+import com.CrossingGuardJoe.controller.SoundsController;
 import com.CrossingGuardJoe.gui.GUI;
 import com.CrossingGuardJoe.model.game.Road;
 import com.CrossingGuardJoe.model.game.elements.Joe;
@@ -8,6 +10,7 @@ import com.CrossingGuardJoe.model.menu.PauseMenu;
 import com.CrossingGuardJoe.states.menu.StatsMenuState;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockedStatic;
 
 import java.io.IOException;
 
@@ -28,42 +31,60 @@ class PauseMenuControllerTest {
 
     @Test
     void testNextActionUp() throws IOException {
-        pauseMenuController.nextAction(game, GUI.ACTION.UP, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(pauseMenu).navigateUp();
+            pauseMenuController.nextAction(game, GUI.ACTION.UP, System.currentTimeMillis());
+
+            verify(pauseMenu).navigateUp();
+            verify(soundsControllerMock).play(Sounds.SFX.SELECT);
+        }
     }
 
     @Test
     void testNextActionDown() throws IOException {
-        pauseMenuController.nextAction(game, GUI.ACTION.DOWN, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(pauseMenu).navigateDown();
+            pauseMenuController.nextAction(game, GUI.ACTION.DOWN, System.currentTimeMillis());
+
+            verify(pauseMenu).navigateDown();
+            verify(soundsControllerMock).play(Sounds.SFX.SELECT);
+        }
     }
 
     @Test
     void testNextActionSelectResume() throws IOException {
         when(pauseMenu.isSelectedResume()).thenReturn(true);
 
-        pauseMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(game).popState();
+            pauseMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+
+            verify(game).popState();
+            verify(soundsControllerMock).play(Sounds.SFX.ENTER);
+            verify(soundsControllerMock).play(Sounds.SFX.GAMEBGM);
+        }
     }
 
     @Test
     void testNextActionSelectExit() throws IOException {
         when(pauseMenu.isSelectedExit()).thenReturn(true);
 
-        pauseMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(game, times(2)).popState();
-    }
+            pauseMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
 
-    @Test
-    void testNextActionDefaultCase() throws IOException {
-        pauseMenuController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
-
-        verifyNoInteractions(pauseMenu);
-        verifyNoInteractions(game);
+            verify(game, times(2)).popState();
+            verify(soundsControllerMock).stop(Sounds.SFX.GAMEBGM);
+            verify(soundsControllerMock).play(Sounds.SFX.MENUBGM);
+        }
     }
 
     @Test
@@ -78,8 +99,22 @@ class PauseMenuControllerTest {
         when(mockCurrentGame.getCurrentLevel()).thenReturn(1);
         when(pauseMenu.getCurrentGame()).thenReturn(mockCurrentGame);
 
-        pauseMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(game).setState(any(StatsMenuState.class));
+            pauseMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+
+            verify(game).setState(any(StatsMenuState.class));
+            verify(soundsControllerMock).play(Sounds.SFX.ENTER);
+        }
+    }
+
+    @Test
+    void testNextActionDefaultCase() throws IOException {
+        pauseMenuController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
+
+        verifyNoInteractions(pauseMenu);
+        verifyNoInteractions(game);
     }
 }

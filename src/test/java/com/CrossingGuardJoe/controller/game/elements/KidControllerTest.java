@@ -16,10 +16,9 @@ import org.mockito.MockedStatic;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
+import static com.CrossingGuardJoe.controller.game.AuxCheckRange.isInRangeJoeKid;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -302,6 +301,19 @@ class KidControllerTest {
     }
 
     @Test
+    void testCheckCountToNextLevelKidDeadButNotBeyondMaxY() {
+        when(kid.getPass()).thenReturn(false);
+        when(kid.getCounted()).thenReturn(false);
+        when(kid.getDeathCounted()).thenReturn(true);
+        when(kid.getPosition()).thenReturn(new Position(0, 499));
+
+        kidController.checkCountToNextLevel();
+
+        verify(kid, never()).setCountToNextLevel();
+    }
+
+
+    @Test
     void testKidGetCountedFalse() {
         when(kid.getCounted()).thenReturn(true);
 
@@ -467,7 +479,7 @@ class KidControllerTest {
         when(joePosition.getX()).thenReturn(50);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(true);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(true);
 
             kidController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
 
@@ -489,7 +501,7 @@ class KidControllerTest {
         when(joePosition.getX()).thenReturn(50);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(true);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(true);
 
             kidController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
 
@@ -508,7 +520,7 @@ class KidControllerTest {
         when(kidPosition.getX()).thenReturn(90 + 1);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(false);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(false);
 
             kidController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
 
@@ -527,7 +539,7 @@ class KidControllerTest {
         when(kidPosition.getX()).thenReturn(90);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(false);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(false);
 
             kidController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
 
@@ -565,53 +577,6 @@ class KidControllerTest {
     }
 
     @Test
-    void testCheckLevelUp() throws Exception {
-        List<Kid> kids = new ArrayList<>();
-        kids.add(kid);
-        kids.add(kid2);
-
-        when(road.getKids()).thenReturn(kids);
-        Field countKidsToNextLevelField = KidController.class.getDeclaredField("countKidsToNextLevel");
-        countKidsToNextLevelField.setAccessible(true);
-        countKidsToNextLevelField.set(kidController, 2);
-
-        Method checkLevelUpMethod = KidController.class.getDeclaredMethod("checkLevelUp");
-        checkLevelUpMethod.setAccessible(true);
-        checkLevelUpMethod.invoke(kidController);
-
-        assertEquals(0, countKidsToNextLevelField.get(kidController));
-        verify(road).levelUp();
-        verify(soundsController).play(Sounds.SFX.LEVELUP);
-        verify(road).setKidsNextLevel(anyInt());
-        Field nextKidToMoveInQueueIndexField = KidController.class.getDeclaredField("nextKidToMoveInQueueIndex");
-        nextKidToMoveInQueueIndexField.setAccessible(true);
-        assertEquals(0, nextKidToMoveInQueueIndexField.get(kidController));
-    }
-
-    @Test
-    void testCheckLevelUpNotReady() throws Exception {
-        List<Kid> kids = new ArrayList<>();
-        kids.add(kid);
-        kids.add(kid2);
-
-        when(road.getKids()).thenReturn(kids);
-        Field countKidsToNextLevelField = KidController.class.getDeclaredField("countKidsToNextLevel");
-        countKidsToNextLevelField.setAccessible(true);
-        countKidsToNextLevelField.set(kidController, 1);
-
-        Method checkLevelUpMethod = KidController.class.getDeclaredMethod("checkLevelUp");
-        checkLevelUpMethod.setAccessible(true);
-        checkLevelUpMethod.invoke(kidController);
-
-        assertEquals(1, countKidsToNextLevelField.get(kidController));
-        verify(road, never()).levelUp();
-        verify(soundsController, never()).play(Sounds.SFX.LEVELUP);
-        verify(road, never()).setKidsNextLevel(anyInt());
-        Field nextKidToMoveInQueueIndexField = KidController.class.getDeclaredField("nextKidToMoveInQueueIndex");
-        nextKidToMoveInQueueIndexField.setAccessible(true);
-    }
-
-    @Test
     void testNextActionUpJoeInRangeAndWalking() {
         List<Kid> kids = new ArrayList<>();
         kids.add(kid);
@@ -627,7 +592,7 @@ class KidControllerTest {
         when(joePosition.getX()).thenReturn(50);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(true);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(true);
 
             kidController.nextAction(game, GUI.ACTION.UP, System.currentTimeMillis());
         }
@@ -649,7 +614,7 @@ class KidControllerTest {
         when(joePosition.getX()).thenReturn(50);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(true);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(true);
 
             kidController.nextAction(game, GUI.ACTION.UP, System.currentTimeMillis());
         }
@@ -671,7 +636,7 @@ class KidControllerTest {
         when(joePosition.getX()).thenReturn(50);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(false);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(false);
 
             kidController.nextAction(game, GUI.ACTION.UP, System.currentTimeMillis());
         }
@@ -694,7 +659,7 @@ class KidControllerTest {
         when(kidController.canContinueWalk(kid)).thenReturn(true);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(true);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(true);
 
             kidController.nextAction(game, GUI.ACTION.DOWN, System.currentTimeMillis());
 
@@ -720,7 +685,7 @@ class KidControllerTest {
         when(kidController.canContinueWalk(kid)).thenReturn(true);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(true);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(true);
 
             kidController.nextAction(game, GUI.ACTION.DOWN, System.currentTimeMillis());
 
@@ -747,7 +712,7 @@ class KidControllerTest {
         when(kidController.canContinueWalk(kid)).thenReturn(false);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(true);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(true);
 
             kidController.nextAction(game, GUI.ACTION.DOWN, System.currentTimeMillis());
 
@@ -774,7 +739,7 @@ class KidControllerTest {
         when(kidController.canContinueWalk(kid)).thenReturn(true);
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(false);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(false);
 
             kidController.nextAction(game, GUI.ACTION.DOWN, System.currentTimeMillis());
 
@@ -938,7 +903,7 @@ class KidControllerTest {
         long currentTime = System.currentTimeMillis();
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(true);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(true);
 
             kidController.nextAction(game, GUI.ACTION.NONE, currentTime);
 
@@ -963,10 +928,57 @@ class KidControllerTest {
         long currentTime = System.currentTimeMillis();
 
         try (MockedStatic<AuxCheckRange> utilities = mockStatic(AuxCheckRange.class)) {
-            utilities.when(() -> AuxCheckRange.isInRangeJoeKid(joe, kid)).thenReturn(false);
+            utilities.when(() -> isInRangeJoeKid(joe, kid)).thenReturn(false);
 
             kidController.nextAction(game, GUI.ACTION.NONE, currentTime);
         }
+    }
+
+    @Test
+    void testCheckLevelUp() throws Exception {
+        List<Kid> kids = new ArrayList<>();
+        kids.add(kid);
+        kids.add(kid2);
+
+        when(road.getKids()).thenReturn(kids);
+        Field countKidsToNextLevelField = KidController.class.getDeclaredField("countKidsToNextLevel");
+        countKidsToNextLevelField.setAccessible(true);
+        countKidsToNextLevelField.set(kidController, 2);
+
+        Method checkLevelUpMethod = KidController.class.getDeclaredMethod("checkLevelUp");
+        checkLevelUpMethod.setAccessible(true);
+        checkLevelUpMethod.invoke(kidController);
+
+        assertEquals(0, countKidsToNextLevelField.get(kidController));
+        verify(road).levelUp();
+        verify(soundsController).play(Sounds.SFX.LEVELUP);
+        verify(road).setKidsNextLevel(anyInt());
+        Field nextKidToMoveInQueueIndexField = KidController.class.getDeclaredField("nextKidToMoveInQueueIndex");
+        nextKidToMoveInQueueIndexField.setAccessible(true);
+        assertEquals(0, nextKidToMoveInQueueIndexField.get(kidController));
+    }
+
+    @Test
+    void testCheckLevelUpNotReady() throws Exception {
+        List<Kid> kids = new ArrayList<>();
+        kids.add(kid);
+        kids.add(kid2);
+
+        when(road.getKids()).thenReturn(kids);
+        Field countKidsToNextLevelField = KidController.class.getDeclaredField("countKidsToNextLevel");
+        countKidsToNextLevelField.setAccessible(true);
+        countKidsToNextLevelField.set(kidController, 1);
+
+        Method checkLevelUpMethod = KidController.class.getDeclaredMethod("checkLevelUp");
+        checkLevelUpMethod.setAccessible(true);
+        checkLevelUpMethod.invoke(kidController);
+
+        assertEquals(1, countKidsToNextLevelField.get(kidController));
+        verify(road, never()).levelUp();
+        verify(soundsController, never()).play(Sounds.SFX.LEVELUP);
+        verify(road, never()).setKidsNextLevel(anyInt());
+        Field nextKidToMoveInQueueIndexField = KidController.class.getDeclaredField("nextKidToMoveInQueueIndex");
+        nextKidToMoveInQueueIndexField.setAccessible(true);
     }
 
     @Test

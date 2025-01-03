@@ -1,6 +1,8 @@
 package com.CrossingGuardJoe.controller.game;
 
 import com.CrossingGuardJoe.Game;
+import com.CrossingGuardJoe.controller.Sounds;
+import com.CrossingGuardJoe.controller.SoundsController;
 import com.CrossingGuardJoe.controller.game.elements.CarController;
 import com.CrossingGuardJoe.controller.game.elements.JoeController;
 import com.CrossingGuardJoe.controller.game.elements.KidController;
@@ -12,6 +14,7 @@ import com.CrossingGuardJoe.states.menu.GameOverState;
 import com.CrossingGuardJoe.states.menu.PauseMenuState;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockedStatic;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -101,13 +104,19 @@ class RoadControllerTest {
         Joe joe = road.getJoe();
         when(joe.getHearts()).thenReturn(1);
 
-        roadController.nextAction(game, GUI.ACTION.ESC, currentTime);
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(joeController).nextAction(game, GUI.ACTION.ESC, currentTime);
-        verify(kidController).nextAction(game, GUI.ACTION.ESC, currentTime);
-        verify(carController).nextAction(game, GUI.ACTION.ESC, currentTime);
-        verify(joe).stopWalking();
-        verify(game).setState(any(PauseMenuState.class));
+            roadController.nextAction(game, GUI.ACTION.ESC, currentTime);
+
+            verify(joeController).nextAction(game, GUI.ACTION.ESC, currentTime);
+            verify(kidController).nextAction(game, GUI.ACTION.ESC, currentTime);
+            verify(carController).nextAction(game, GUI.ACTION.ESC, currentTime);
+            verify(joe).stopWalking();
+            verify(game).setState(any(PauseMenuState.class));
+            verify(soundsControllerMock).pause(Sounds.SFX.GAMEBGM);
+        }
     }
 
     @Test
@@ -116,28 +125,55 @@ class RoadControllerTest {
         Joe joe = road.getJoe();
         when(joe.getHearts()).thenReturn(0);
 
-        roadController.nextAction(game, GUI.ACTION.NONE, currentTime);
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(joeController).nextAction(game, GUI.ACTION.NONE, currentTime);
-        verify(kidController).nextAction(game, GUI.ACTION.NONE, currentTime);
-        verify(carController).nextAction(game, GUI.ACTION.NONE, currentTime);
-        verify(game).popState();
-        verify(game).setState(any(GameOverState.class));
+            roadController.nextAction(game, GUI.ACTION.NONE, currentTime);
+
+            verify(joeController).nextAction(game, GUI.ACTION.NONE, currentTime);
+            verify(kidController).nextAction(game, GUI.ACTION.NONE, currentTime);
+            verify(carController).nextAction(game, GUI.ACTION.NONE, currentTime);
+            verify(game).popState();
+            verify(game).setState(any(GameOverState.class));
+            verify(soundsControllerMock).stop(Sounds.SFX.GAMEBGM);
+            verify(soundsControllerMock).stop(Sounds.SFX.CARBREAK);
+            verify(soundsControllerMock).play(Sounds.SFX.GAMEOVER);
+        }
     }
 
     @Test
     void testNextActionUpdateHighestScoreAndLevel() throws IOException {
         long currentTime = System.currentTimeMillis();
         Joe joe = road.getJoe();
+
         when(joe.getScore()).thenReturn(200);
         when(game.getHighestScore()).thenReturn(100);
         when(road.getCurrentLevel()).thenReturn(5);
         when(game.getHighestLevel()).thenReturn(3);
-
         roadController.nextAction(game, GUI.ACTION.NONE, currentTime);
-
         verify(game).setHighestScore(200);
         verify(game).setHighestLevel(5);
+
+        reset(game);
+
+        when(joe.getScore()).thenReturn(100);
+        when(game.getHighestScore()).thenReturn(100);
+        when(road.getCurrentLevel()).thenReturn(3);
+        when(game.getHighestLevel()).thenReturn(3);
+        roadController.nextAction(game, GUI.ACTION.NONE, currentTime);
+        verify(game, never()).setHighestScore(anyInt());
+        verify(game, never()).setHighestLevel(anyInt());
+
+        reset(game);
+
+        when(joe.getScore()).thenReturn(50);
+        when(game.getHighestScore()).thenReturn(100);
+        when(road.getCurrentLevel()).thenReturn(2);
+        when(game.getHighestLevel()).thenReturn(3);
+        roadController.nextAction(game, GUI.ACTION.NONE, currentTime);
+        verify(game, never()).setHighestScore(anyInt());
+        verify(game, never()).setHighestLevel(anyInt());
     }
 
     @Test
@@ -145,9 +181,16 @@ class RoadControllerTest {
         long currentTime = System.currentTimeMillis();
         when(road.isGameEnded()).thenReturn(true);
 
-        roadController.nextAction(game, GUI.ACTION.NONE, currentTime);
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(game, times(2)).popState();
-        verify(game, times(2)).setState(any(GameOverState.class));
+            roadController.nextAction(game, GUI.ACTION.NONE, currentTime);
+
+            verify(game, times(2)).popState();
+            verify(game, times(2)).setState(any(GameOverState.class));
+            verify(soundsControllerMock, times(2)).stop(Sounds.SFX.GAMEBGM);
+            verify(soundsControllerMock).play(Sounds.SFX.VICTORYBGM);
+        }
     }
 }

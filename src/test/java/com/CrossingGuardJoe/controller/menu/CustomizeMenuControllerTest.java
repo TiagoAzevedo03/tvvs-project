@@ -1,12 +1,15 @@
 package com.CrossingGuardJoe.controller.menu;
 
 import com.CrossingGuardJoe.Game;
+import com.CrossingGuardJoe.controller.Sounds;
+import com.CrossingGuardJoe.controller.SoundsController;
 import com.CrossingGuardJoe.gui.GUI;
 import com.CrossingGuardJoe.model.menu.ColorPaletteMenu;
 import com.CrossingGuardJoe.model.menu.CustomizeMenu;
 import com.CrossingGuardJoe.viewer.Color;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockedStatic;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -37,45 +40,76 @@ class CustomizeMenuControllerTest {
     void testNextActionLeft() throws IOException {
         when(customizeMenu.isColorPaletteSelected()).thenReturn(false);
 
-        customizeMenuController.nextAction(game, GUI.ACTION.LEFT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(customizeMenu).navigateLeft();
+            customizeMenuController.nextAction(game, GUI.ACTION.LEFT, System.currentTimeMillis());
+
+            verify(customizeMenu).navigateLeft();
+            verify(soundsControllerMock).play(Sounds.SFX.SELECT);
+        }
     }
 
     @Test
     void testNextActionRight() throws IOException {
         when(customizeMenu.isColorPaletteSelected()).thenReturn(false);
 
-        customizeMenuController.nextAction(game, GUI.ACTION.RIGHT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(customizeMenu).navigateRight();
+            customizeMenuController.nextAction(game, GUI.ACTION.RIGHT, System.currentTimeMillis());
+
+            verify(customizeMenu).navigateRight();
+            verify(soundsControllerMock).play(Sounds.SFX.SELECT);
+        }
     }
 
     @Test
     void testNextActionUp() throws IOException {
         when(customizeMenu.isColorPaletteSelected()).thenReturn(false);
 
-        customizeMenuController.nextAction(game, GUI.ACTION.UP, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(customizeMenu).navigateUp();
+            customizeMenuController.nextAction(game, GUI.ACTION.UP, System.currentTimeMillis());
+
+            verify(customizeMenu).navigateUp();
+            verify(soundsControllerMock).play(Sounds.SFX.SELECT);
+        }
     }
 
     @Test
     void testNextActionDown() throws IOException {
         when(customizeMenu.isColorPaletteSelected()).thenReturn(false);
 
-        customizeMenuController.nextAction(game, GUI.ACTION.DOWN, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(customizeMenu).navigateDown();
+            customizeMenuController.nextAction(game, GUI.ACTION.DOWN, System.currentTimeMillis());
+
+            verify(customizeMenu).navigateDown();
+            verify(soundsControllerMock).play(Sounds.SFX.SELECT);
+        }
     }
 
     @Test
     void testNextActionEsc() throws IOException {
         when(customizeMenu.isColorPaletteSelected()).thenReturn(false);
 
-        customizeMenuController.nextAction(game, GUI.ACTION.ESC, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(game).popState();
+            customizeMenuController.nextAction(game, GUI.ACTION.ESC, System.currentTimeMillis());
+
+            verify(game).popState();
+            verify(soundsControllerMock).stop(Sounds.SFX.CUSTOMIZEBGM);
+            verify(soundsControllerMock).play(Sounds.SFX.MENUBGM);
+        }
     }
 
     @Test
@@ -83,36 +117,59 @@ class CustomizeMenuControllerTest {
         when(customizeMenu.isColorPaletteSelected()).thenReturn(false);
         when(customizeMenu.getSelectedColorChar()).thenReturn('R');
 
-        customizeMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(customizeMenu).setColorPaletteSelected(true);
+            customizeMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+
+            verify(customizeMenu).setColorPaletteSelected(true);
+            verify(soundsControllerMock).play(Sounds.SFX.ENTER);
+        }
     }
 
     @Test
     void testNextActionColorPaletteLeft() throws IOException {
         when(customizeMenu.isColorPaletteSelected()).thenReturn(true);
 
-        customizeMenuController.nextAction(game, GUI.ACTION.LEFT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(customizeMenu.getColorPaletteMenu()).navigateLeft();
+            customizeMenuController.nextAction(game, GUI.ACTION.LEFT, System.currentTimeMillis());
+
+            verify(customizeMenu.getColorPaletteMenu()).navigateLeft();
+            verify(soundsControllerMock).play(Sounds.SFX.SELECT);
+        }
     }
 
     @Test
     void testNextActionColorPaletteRight() throws IOException {
         when(customizeMenu.isColorPaletteSelected()).thenReturn(true);
 
-        customizeMenuController.nextAction(game, GUI.ACTION.RIGHT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(customizeMenu.getColorPaletteMenu()).navigateRight();
+            customizeMenuController.nextAction(game, GUI.ACTION.RIGHT, System.currentTimeMillis());
+
+            verify(customizeMenu.getColorPaletteMenu()).navigateRight();
+            verify(soundsControllerMock).play(Sounds.SFX.SELECT);
+        }
     }
 
     @Test
     void testNextActionColorPaletteEsc() throws IOException {
         when(customizeMenu.isColorPaletteSelected()).thenReturn(true);
 
-        customizeMenuController.nextAction(game, GUI.ACTION.ESC, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(customizeMenu).setColorPaletteSelected(false);
+            customizeMenuController.nextAction(game, GUI.ACTION.ESC, System.currentTimeMillis());
+
+            verify(customizeMenu).setColorPaletteSelected(false);
+        }
     }
 
     @Test
@@ -121,9 +178,15 @@ class CustomizeMenuControllerTest {
         ColorPaletteMenu colorPaletteMenu = customizeMenu.getColorPaletteMenu();
         when(colorPaletteMenu.getSelectedColorIndex()).thenReturn(0);
 
-        customizeMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(customizeMenu).setColorPaletteSelected(false);
+            customizeMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+
+            verify(customizeMenu).setColorPaletteSelected(false);
+            verify(soundsControllerMock).play(Sounds.SFX.ENTER);
+        }
     }
 
     @Test

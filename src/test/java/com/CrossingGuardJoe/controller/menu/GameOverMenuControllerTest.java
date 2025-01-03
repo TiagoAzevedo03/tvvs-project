@@ -1,6 +1,8 @@
 package com.CrossingGuardJoe.controller.menu;
 
 import com.CrossingGuardJoe.Game;
+import com.CrossingGuardJoe.controller.Sounds;
+import com.CrossingGuardJoe.controller.SoundsController;
 import com.CrossingGuardJoe.gui.GUI;
 import com.CrossingGuardJoe.model.game.Road;
 import com.CrossingGuardJoe.model.game.elements.Joe;
@@ -8,6 +10,7 @@ import com.CrossingGuardJoe.model.menu.GameOverMenu;
 import com.CrossingGuardJoe.states.menu.StatsMenuState;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockedStatic;
 
 import java.io.IOException;
 
@@ -28,33 +31,44 @@ class GameOverMenuControllerTest {
 
     @Test
     void testNextActionUp() throws IOException {
-        gameOverMenuController.nextAction(game, GUI.ACTION.UP, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(gameOverMenu).navigateUp();
+            gameOverMenuController.nextAction(game, GUI.ACTION.UP, System.currentTimeMillis());
+
+            verify(gameOverMenu).navigateUp();
+            verify(soundsControllerMock).play(Sounds.SFX.SELECT);
+        }
     }
 
     @Test
     void testNextActionDown() throws IOException {
-        gameOverMenuController.nextAction(game, GUI.ACTION.DOWN, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(gameOverMenu).navigateDown();
+            gameOverMenuController.nextAction(game, GUI.ACTION.DOWN, System.currentTimeMillis());
+
+            verify(gameOverMenu).navigateDown();
+            verify(soundsControllerMock).play(Sounds.SFX.SELECT);
+        }
     }
 
     @Test
     void testNextActionSelectExit() throws IOException {
         when(gameOverMenu.isSelectedExit()).thenReturn(true);
 
-        gameOverMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(game).popState();
-    }
+            gameOverMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
 
-    @Test
-    void testNextActionDefaultCase() throws IOException {
-        gameOverMenuController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
-
-        verifyNoInteractions(gameOverMenu);
-        verifyNoInteractions(game);
+            verify(game).popState();
+            verify(soundsControllerMock).stop(Sounds.SFX.VICTORYBGM);
+            verify(soundsControllerMock).play(Sounds.SFX.MENUBGM);
+        }
     }
 
     @Test
@@ -69,8 +83,22 @@ class GameOverMenuControllerTest {
         when(mockCurrentGame.getCurrentLevel()).thenReturn(1);
         when(gameOverMenu.getCurrentGame()).thenReturn(mockCurrentGame);
 
-        gameOverMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+        SoundsController soundsControllerMock = mock(SoundsController.class);
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(game).setState(any(StatsMenuState.class));
+            gameOverMenuController.nextAction(game, GUI.ACTION.SELECT, System.currentTimeMillis());
+
+            verify(game).setState(any(StatsMenuState.class));
+            verify(soundsControllerMock).play(Sounds.SFX.ENTER);
+        }
+    }
+
+    @Test
+    void testNextActionDefaultCase() throws IOException {
+        gameOverMenuController.nextAction(game, GUI.ACTION.NONE, System.currentTimeMillis());
+
+        verifyNoInteractions(gameOverMenu);
+        verifyNoInteractions(game);
     }
 }

@@ -202,7 +202,7 @@ public class KidController extends GameController {
     public void checkCountToNextLevel() {
 <span class="fc bfc" id="L203" title="All 2 branches covered.">        for (Kid kid : getModel().getKids()) {</span>
 <span class="fc bfc" id="L204" title="All 2 branches covered.">            if (!kid.getCounted()) {</span>
-<span class="pc bpc" id="L205" title="1 of 6 branches missed.">                if (kid.getPass() || (kid.getDeathCounted() &amp;&amp; kid.getPosition().getY() &gt;= MAX_Y_DISTANCE)) {</span>
+<span class="fc bfc" id="L205" title="All 6 branches covered.">                if (kid.getPass() || (kid.getDeathCounted() &amp;&amp; kid.getPosition().getY() &gt;= MAX_Y_DISTANCE)) {</span>
 <span class="fc" id="L206">                    countKidsToNextLevel++;</span>
 <span class="fc" id="L207">                    kid.setCountToNextLevel();</span>
                 }
