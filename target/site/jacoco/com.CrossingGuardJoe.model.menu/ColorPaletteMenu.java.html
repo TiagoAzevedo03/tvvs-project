@@ -23,9 +23,9 @@ public class ColorPaletteMenu implements MenuNavigator{
 
     @Override
     public void navigateLeft() {
-<span class="nc" id="L26">        SoundsController.getInstance().play(Sounds.SFX.SELECT);</span>
-<span class="nc" id="L27">        selectedColorIndex = (selectedColorIndex - 1 + colorPalette.size()) % colorPalette.size();</span>
-<span class="nc" id="L28">    }</span>
+<span class="fc" id="L26">        SoundsController.getInstance().play(Sounds.SFX.SELECT);</span>
+<span class="fc" id="L27">        selectedColorIndex = (selectedColorIndex - 1 + colorPalette.size()) % colorPalette.size();</span>
+<span class="fc" id="L28">    }</span>
 
     @Override
     public void navigateRight() {

@@ -43,7 +43,39 @@ class CustomizeMenuViewerTest {
     }
 
     @Test
-    void testDrawElements() {
+    void testDrawSelectionBox() throws Exception {
+        Method drawSelectionBoxMethod = CustomizeMenuViewer.class.getDeclaredMethod("drawSelectionBox", GUI.class);
+        drawSelectionBoxMethod.setAccessible(true);
+
+        drawSelectionBoxMethod.invoke(customizeMenuViewer, gui);
+
+        verify(gui).drawImage(new Position(40, 70), Shape.RectangleFilledGenerator(235, 300, 'K', 2, '$'));
+        verify(gui).drawImage(new Position(195, 70), Shape.RectangleFilledGenerator(235, 300, 'K', 2, '$'));
+        verify(gui).drawImage(new Position(350, 70), Shape.RectangleFilledGenerator(235, 300, 'K', 2, '$'));
+    }
+
+    @Test
+    void testDrawElementsColorSquare() throws Exception {
+        List<Option> definedColors = Arrays.asList(
+                new Option("Red", new Position(10, 10), Shape.RectangleFilledGenerator(10, 10, 'R', 1, ' ')),
+                new Option("Green", new Position(20, 20), Shape.RectangleFilledGenerator(10, 10, 'G', 1, ' ')),
+                new Option("Blue", new Position(30, 30), Shape.RectangleFilledGenerator(10, 10, 'B', 1, ' '))
+        );
+
+        when(customizeMenu.getDefinedColors()).thenReturn(definedColors);
+
+        Method drawElementsColorSquareMethod = CustomizeMenuViewer.class.getDeclaredMethod("drawElementsColorSquare", GUI.class);
+        drawElementsColorSquareMethod.setAccessible(true);
+
+        drawElementsColorSquareMethod.invoke(customizeMenuViewer, gui);
+
+        for (Option colorSquare : definedColors) {
+            verify(gui).drawImage(colorSquare.position(), colorSquare.image());
+        }
+    }
+
+    @Test
+    void testDrawElements() throws Exception {
         Option option1 = mock(Option.class);
         when(option1.position()).thenReturn(new Position(50, 50));
         when(option1.image()).thenReturn(new String[]{"image1"});
@@ -68,6 +100,10 @@ class CustomizeMenuViewerTest {
         verify(gui).drawText(new Position(180, 28), "CUSTOMIZE YOUR GAME", "#FFFFFF");
         verify(gui).drawImage(new Position(4, 4), ToolImages.getKeyEscImage());
 
+        verify(gui).drawImage(new Position(40, 70), Shape.RectangleFilledGenerator(235, 300, 'K', 2, '$'));
+        verify(gui).drawImage(new Position(195, 70), Shape.RectangleFilledGenerator(235, 300, 'K', 2, '$'));
+        verify(gui).drawImage(new Position(350, 70), Shape.RectangleFilledGenerator(235, 300, 'K', 2, '$'));
+
         verify(gui).drawImage(new Position(40, 70), Shape.RectangleFilledGenerator(235, 300, ' ', 2, 'G'));
 
         verify(gui).drawImage(new Position(50, 50), new String[]{"image1"});
@@ -91,6 +127,23 @@ class CustomizeMenuViewerTest {
         when(customizeMenu.isSelectedCarsCustomize()).thenReturn(true);
 
         customizeMenuViewer.drawElements(gui);
+
+        List<Option> definedColors = Arrays.asList(
+                new Option("Red", new Position(10, 10), Shape.RectangleFilledGenerator(10, 10, 'R', 1, ' ')),
+                new Option("Green", new Position(20, 20), Shape.RectangleFilledGenerator(10, 10, 'G', 1, ' ')),
+                new Option("Blue", new Position(30, 30), Shape.RectangleFilledGenerator(10, 10, 'B', 1, ' '))
+        );
+
+        when(customizeMenu.getDefinedColors()).thenReturn(definedColors);
+
+        Method drawElementsColorSquareMethod = CustomizeMenuViewer.class.getDeclaredMethod("drawElementsColorSquare", GUI.class);
+        drawElementsColorSquareMethod.setAccessible(true);
+
+        drawElementsColorSquareMethod.invoke(customizeMenuViewer, gui);
+
+        for (Option colorSquare : definedColors) {
+            verify(gui).drawImage(colorSquare.position(), colorSquare.image());
+        }
 
         verify(gui).drawImage(new Position(350, 70), Shape.RectangleFilledGenerator(235, 300, ' ', 2, 'G'));
     }
@@ -193,21 +246,6 @@ class CustomizeMenuViewerTest {
     }
 
     @Test
-    void testDrawElementsColorSquare() throws Exception {
-        Option colorSquare = mock(Option.class);
-        when(colorSquare.position()).thenReturn(new Position(50, 50));
-        when(colorSquare.image()).thenReturn(new String[]{"colorImage"});
-
-        when(customizeMenu.getDefinedColors()).thenReturn(Collections.singletonList(colorSquare));
-
-        Method method = CustomizeMenuViewer.class.getDeclaredMethod("drawElementsColorSquare", GUI.class);
-        method.setAccessible(true);
-        method.invoke(customizeMenuViewer, gui);
-
-        verify(gui).drawImage(new Position(50, 50), new String[]{"colorImage"});
-    }
-
-    @Test
     void testDrawElementsOptionTextWhenJGreaterThanZero() {
         Option option = mock(Option.class);
         when(option.position()).thenReturn(new Position(50, 50));
@@ -241,6 +279,9 @@ class CustomizeMenuViewerTest {
         Method method = CustomizeMenuViewer.class.getDeclaredMethod("drawColorsPalette", GUI.class);
         method.setAccessible(true);
         method.invoke(customizeMenuViewer, gui);
+
+        verify(gui).setColorHexaCode("#FFFFFF");
+        verify(gui).drawImage(any(Position.class), any());
     }
 
     @Test

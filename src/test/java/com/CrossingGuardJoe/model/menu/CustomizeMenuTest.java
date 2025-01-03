@@ -18,17 +18,27 @@ class CustomizeMenuTest {
 
     @Test
     void testNavigateLeft() {
+        assertTrue(customizeMenu.isSelectedJoeCustomize());
+
         customizeMenu.navigateRight();
+        assertTrue(customizeMenu.isSelectedKidsCustomize());
         customizeMenu.navigateLeft();
         assertTrue(customizeMenu.isSelectedJoeCustomize());
+
+        customizeMenu.navigateLeft();
+        assertFalse(customizeMenu.isSelectedCarsCustomize());
     }
 
     @Test
     void testNavigateRight() {
+        assertTrue(customizeMenu.isSelectedJoeCustomize());
+
         customizeMenu.navigateRight();
         assertTrue(customizeMenu.isSelectedKidsCustomize());
         customizeMenu.navigateRight();
         assertTrue(customizeMenu.isSelectedCarsCustomize());
+        customizeMenu.navigateRight();
+        assertFalse(customizeMenu.isSelectedJoeCustomize());
     }
 
     @Test
@@ -41,6 +51,18 @@ class CustomizeMenuTest {
 
         customizeMenu.navigateUp();
         assertFalse(customizeMenu.isSelectedJoeCap());
+    }
+
+    @Test
+    void testNavigateDown() {
+        assertTrue(customizeMenu.isSelectedJoeCustomize());
+
+        customizeMenu.navigateDown();
+        assertFalse(customizeMenu.isSelectedKidsCustomize());
+        customizeMenu.navigateDown();
+        assertFalse(customizeMenu.isSelectedCarsCustomize());
+        customizeMenu.navigateDown();
+        assertTrue(customizeMenu.isSelectedJoeCustomize());
     }
 
     @Test
@@ -139,5 +161,18 @@ class CustomizeMenuTest {
         assertTrue(customizeMenu.isSelectedCarsCustomize());
         assertFalse(customizeMenu.isSelectedJoeCustomize());
         assertFalse(customizeMenu.isSelectedKidsCustomize());
+    }
+
+    @Test
+    void testGetColorPaletteMenu() {
+        ColorPaletteMenu colorPaletteMenu = customizeMenu.getColorPaletteMenu();
+        assertNotNull(colorPaletteMenu);
+    }
+
+    @Test
+    void testConstructorInitialState() {
+        assertTrue(customizeMenu.isSelectedJoeCustomize());
+        assertFalse(customizeMenu.isSelectedKidsCustomize());
+        assertFalse(customizeMenu.isSelectedCarsCustomize());
     }
 }

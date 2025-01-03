@@ -19,7 +19,7 @@ class PauseMenuViewerTest {
     void setUp() {
         pauseMenu = mock(PauseMenu.class);
         gui = mock(GUI.class);
-        pauseMenuViewer = new PauseMenuViewer(pauseMenu);
+        pauseMenuViewer = spy(new PauseMenuViewer(pauseMenu));
     }
 
     @Test
@@ -35,6 +35,12 @@ class PauseMenuViewerTest {
 
         verify(gui).drawText(new Position(100, 100), "Option", "#FFFFFF");
         verify(gui).drawImage(new Position(85, 100), ToolImages.getArrowRightImage());
+    }
+
+    @Test
+    void testDrawElementsCallsDrawTitle() {
+        pauseMenuViewer.drawElements(gui);
+        verify(pauseMenuViewer, times(1)).drawTitle(gui);
     }
 
     @Test

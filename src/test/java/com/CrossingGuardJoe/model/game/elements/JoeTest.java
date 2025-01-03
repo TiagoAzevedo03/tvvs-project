@@ -139,4 +139,15 @@ public class JoeTest {
 
         verify(joe, never()).addScore(-2);
     }
+
+    @Test
+    void testIsFirstHalfOfMovement() {
+        assertTrue(joe.isFirstHalfOfMovement());
+
+        joe.setFirstHalfOfMovement(false);
+        assertFalse(joe.isFirstHalfOfMovement());
+
+        joe.setFirstHalfOfMovement(true);
+        assertTrue(joe.isFirstHalfOfMovement());
+    }
 }

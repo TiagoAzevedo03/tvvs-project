@@ -25,9 +25,14 @@ public class GameOverMenuTest {
     }
 
     @Test
-    public void testNavigateUp() {
+    void testNavigateUp() {
+        assertEquals(0, gameOverMenu.getOptionSelected());
+
         gameOverMenu.navigateUp();
         assertEquals(1, gameOverMenu.getOptionSelected());
+
+        gameOverMenu.navigateUp();
+        assertEquals(0, gameOverMenu.getOptionSelected());
     }
 
     @Test
@@ -61,6 +66,12 @@ public class GameOverMenuTest {
     @Test
     public void testIsWin() {
         assertTrue(gameOverMenu.isWin());
+    }
+
+    @Test
+    void testIsWinWhenFalse() {
+        gameOverMenu = new GameOverMenu(false, road);
+        assertFalse(gameOverMenu.isWin());
     }
 
     @Test

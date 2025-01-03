@@ -22,7 +22,13 @@ class GameOverViewerTest {
     void setUp() {
         gameOverMenu = mock(GameOverMenu.class);
         gui = mock(GUI.class);
-        gameOverViewer = new GameOverViewer(gameOverMenu);
+        gameOverViewer = spy(new GameOverViewer(gameOverMenu));
+
+        Road currentGame = mock(Road.class);
+        Joe joe = mock(Joe.class);
+
+        when(gameOverMenu.getCurrentGame()).thenReturn(currentGame);
+        when(currentGame.getJoe()).thenReturn(joe);
     }
 
     @Test
@@ -99,6 +105,12 @@ class GameOverViewerTest {
 
         verify(gui).drawText(new Position(50, 50), "Option 1", "#FFFFFF");
         verify(gui).drawImage(new Position(35, 50), ToolImages.getArrowRightImage());
+    }
+
+    @Test
+    void testDrawElementsCallsDrawTitle() {
+        gameOverViewer.drawElements(gui);
+        verify(gameOverViewer, times(1)).drawTitle(gui);
     }
 
     @Test

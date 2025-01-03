@@ -22,7 +22,22 @@ public class AuxCarCheckTest {
 
     @Test
     public void testIsCarOverlapping() {
+        cars.add(new Car(0, 10));
+        cars.add(new Car(0, 20));
+        cars.add(new Car(0, 30));
+
         assertTrue(AuxCarCheck.isAnyCarOverlapping(15, cars, 10));
+
+        assertTrue(AuxCarCheck.isAnyCarOverlapping(20, cars, 10));
+
+        assertTrue(AuxCarCheck.isAnyCarOverlapping(35, cars, 10));
+
+        cars.add(new Car(0, -10));
+        assertTrue(AuxCarCheck.isAnyCarOverlapping(-5, cars, 10));
+
+        assertTrue(AuxCarCheck.isAnyCarOverlapping(-10, cars, 10));
+
+        assertFalse(AuxCarCheck.isAnyCarOverlapping(-20, cars, 10));
     }
 
     @Test

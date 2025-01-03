@@ -1030,9 +1030,9 @@
 
 2. drawRoadLines : Replaced integer subtraction with addition &rarr; SURVIVED<br/>
 
-3. drawRoadLines : negated conditional &rarr; SURVIVED<br/>
+3. drawRoadLines : changed conditional boundary &rarr; SURVIVED<br/>
 
-4. drawRoadLines : changed conditional boundary &rarr; SURVIVED<br/>
+4. drawRoadLines : negated conditional &rarr; KILLED<br/>
 
 </span>
 </span>
@@ -1045,19 +1045,19 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@615bd28b_66'/>
 66
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@615bd28b_66'>2</a>
 <span>
 
-1. drawRoadLines : Replaced integer addition with subtraction &rarr; SURVIVED<br/>
+1. drawRoadLines : Replaced integer addition with subtraction &rarr; KILLED<br/>
 
-2. drawRoadLines : removed call to com/CrossingGuardJoe/gui/GUI::fillRectangle &rarr; SURVIVED<br/>
+2. drawRoadLines : removed call to com/CrossingGuardJoe/gui/GUI::fillRectangle &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>            gui.fillRectangle(new Position(iniX + i, 368), 16, 50);</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>            gui.fillRectangle(new Position(iniX + i, 368), 16, 50);</span></pre></td></tr>
 
 
 <tr>
@@ -1499,19 +1499,19 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@615bd28b_93'/>
 93
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@615bd28b_93'>2</a>
 <span>
 
-1. drawHUD : changed conditional boundary &rarr; SURVIVED<br/>
+1. drawHUD : negated conditional &rarr; TIMED_OUT<br/>
 
-2. drawHUD : negated conditional &rarr; KILLED<br/>
+2. drawHUD : changed conditional boundary &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        for (int i = 0; i &#60; getModel().getJoe().getHearts(); i++) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>        for (int i = 0; i &#60; getModel().getJoe().getHearts(); i++) {</span></pre></td></tr>
 
 
 <tr>
@@ -1871,25 +1871,20 @@
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[49],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[49],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[49],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()]</li> 
+<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()]</li> 
 </ul>
 </div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawRoadLines<br/><b>Killed by : </b>none</span></span> Replaced integer subtraction with addition &rarr; SURVIVED</span>
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()]</li> 
+<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()]</li> 
 </ul>
-</div></div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawRoadLines<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[52],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[52],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[52],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()]</li> 
-</ul>
-</div></div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>drawRoadLines<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+</div></div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>drawRoadLines<br/><b>Killed by : </b>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>drawRoadLines<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
 <a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[52],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[52],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
 <div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[52],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
 <ul>
-<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()]</li> 
+<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()]</li> 
 </ul>
 </div></div> 
 </td>
@@ -1902,19 +1897,9 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@615bd28b_66'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawRoadLines<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[60],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[60],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[60],-mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()]</li> 
-</ul>
-</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawRoadLines<br/><b>Killed by : </b>none</span></span> removed call to com/CrossingGuardJoe/gui/GUI::fillRectangle &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[65],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[65],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawRoadLines,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[65],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()]</li> 
-</ul>
-</div></div> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawRoadLines<br/><b>Killed by : </b>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawRoadLines<br/><b>Killed by : </b>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()]</span></span> removed call to com/CrossingGuardJoe/gui/GUI::fillRectangle &rarr; KILLED</span>
+</div> 
 </td>
 </tr>
 
@@ -2049,7 +2034,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@615bd28b_88'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawHUD<br/><b>Killed by : </b>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUD()]</span></span> removed call to com/CrossingGuardJoe/gui/GUI::drawImage &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawHUD<br/><b>Killed by : </b>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUDWithZeroHearts()]</span></span> removed call to com/CrossingGuardJoe/gui/GUI::drawImage &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -2061,7 +2046,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@615bd28b_90'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawHUD<br/><b>Killed by : </b>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUD()]</span></span> removed call to com/CrossingGuardJoe/gui/GUI::drawText &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawHUD<br/><b>Killed by : </b>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUDWithZeroHearts()]</span></span> removed call to com/CrossingGuardJoe/gui/GUI::drawText &rarr; KILLED</span>
 </div> 
 </td>
 </tr>
@@ -2073,13 +2058,8 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@615bd28b_93'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawHUD<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawHUD,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[43],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawHUD,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[43],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.viewer.game.GameViewer,-method=drawHUD,-methodDesc=(Lcom/CrossingGuardJoe/gui/GUI;)V],-indexes=[43],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUD()]</li> <li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()]</li> 
-</ul>
-</div></div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawHUD<br/><b>Killed by : </b>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUD()]</span></span> negated conditional &rarr; KILLED</span>
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>drawHUD<br/><b>Killed by : </b>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUDWithZeroHearts()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>drawHUD<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</span>
 </div> 
 </td>
 </tr>
@@ -2152,7 +2132,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()] (3 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()] (2 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()] (2 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()] (2 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadItems()] (1 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUD()] (1 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawScore()] (1 ms)</li>
+<li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawElements()] (4 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines2()] (2 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoad()] (4 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadLines()] (5 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawRoadItems()] (1 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUDWithZeroHearts()] (1 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUD()] (2 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawHUDWithMaxHearts()] (3 ms)</li><li>com.CrossingGuardJoe.viewer.game.GameViewerTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.viewer.game.GameViewerTest]/[method:testDrawScore()] (1 ms)</li>
 </ul>
 
 <br/>

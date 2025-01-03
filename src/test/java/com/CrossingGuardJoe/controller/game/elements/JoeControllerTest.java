@@ -1,5 +1,7 @@
 package com.CrossingGuardJoe.controller.game.elements;
 
+import com.CrossingGuardJoe.controller.Sounds;
+import com.CrossingGuardJoe.controller.SoundsController;
 import com.CrossingGuardJoe.controller.game.AuxCheckRange;
 import com.CrossingGuardJoe.gui.GUI;
 import com.CrossingGuardJoe.model.Position;
@@ -27,7 +29,7 @@ class JoeControllerTest {
     void setUp() {
         Road road = mock(Road.class);
         joe = mock(Joe.class);
-        joeController = new JoeController(road);
+        joeController = spy(new JoeController(road));
 
         when(road.getJoe()).thenReturn(joe);
     }
@@ -59,29 +61,47 @@ class JoeControllerTest {
     }
 
     @Test
-    void testMoveJoeLeftHit() {
+    void testMoveJoeLeftHit() throws Exception {
+        Method moveJoeLeftHitMethod = JoeController.class.getDeclaredMethod("moveJoeLeftHit");
+        moveJoeLeftHitMethod.setAccessible(true);
+
         Position initialPosition = new Position(60, 10);
         Position expectedPosition = new Position(50, 10);
 
         when(joe.getPosition()).thenReturn(initialPosition);
 
-        joeController.moveJoeLeftHit();
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            SoundsController soundsControllerMock = mock(SoundsController.class);
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(joe).setPosition(expectedPosition);
-        verify(joe).countHitPoints();
+            moveJoeLeftHitMethod.invoke(joeController);
+
+            verify(joe).setPosition(expectedPosition);
+            verify(joe).countHitPoints();
+            verify(soundsControllerMock).play(Sounds.SFX.JOEHIT);
+        }
     }
 
     @Test
-    void testMoveJoeRightHit() {
+    void testMoveJoeRightHit() throws Exception {
+        Method moveJoeRightHitMethod = JoeController.class.getDeclaredMethod("moveJoeRightHit");
+        moveJoeRightHitMethod.setAccessible(true);
+
         Position initialPosition = new Position(60, 10);
         Position expectedPosition = new Position(70, 10);
 
         when(joe.getPosition()).thenReturn(initialPosition);
 
-        joeController.moveJoeRightHit();
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            SoundsController soundsControllerMock = mock(SoundsController.class);
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        verify(joe).setPosition(expectedPosition);
-        verify(joe).countHitPoints();
+            moveJoeRightHitMethod.invoke(joeController);
+
+            verify(joe).setPosition(expectedPosition);
+            verify(joe).countHitPoints();
+            verify(soundsControllerMock).play(Sounds.SFX.JOEHIT);
+        }
     }
 
     @Test
@@ -135,14 +155,15 @@ class JoeControllerTest {
         Method canGoThroughMethod = JoeController.class.getDeclaredMethod("canGoThrough", Position.class);
         canGoThroughMethod.setAccessible(true);
 
-        Position positionWithinRange = new Position(100, 10);
-        Position positionOutOfRange = new Position(500, 10);
+        Position position1 = new Position(50, 0);
+        Position position2 = new Position(414, 0);
+        Position position3 = new Position(49, 0);
+        Position position4 = new Position(415, 0);
 
-        boolean resultWithinRange = (boolean) canGoThroughMethod.invoke(joeController, positionWithinRange);
-        boolean resultOutOfRange = (boolean) canGoThroughMethod.invoke(joeController, positionOutOfRange);
-
-        assertTrue(resultWithinRange);
-        assertFalse(resultOutOfRange);
+        assertTrue((boolean) canGoThroughMethod.invoke(joeController, position1));
+        assertTrue((boolean) canGoThroughMethod.invoke(joeController, position2));
+        assertFalse((boolean) canGoThroughMethod.invoke(joeController, position3));
+        assertFalse((boolean) canGoThroughMethod.invoke(joeController, position4));
     }
 
     @Test
@@ -265,6 +286,25 @@ class JoeControllerTest {
             verify(joe, never()).isHitRight();
             verify(joeController, never()).moveJoeLeftHit();
             verify(joeController, never()).moveJoeRightHit();
+        }
+    }
+
+    @Test
+    void testNextActionPlayRandomSound() {
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            joeController.nextAction(null, GUI.ACTION.DOWN, 0L);
+            mockedStatic.verify(() -> SoundsController.playRandom(Sounds.SFX.JOEPASS1, Sounds.SFX.JOEPASS2), times(1));
+        }
+    }
+
+    @Test
+    void testNextActionPlaySound() {
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            SoundsController soundsControllerMock = mock(SoundsController.class);
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
+
+            joeController.nextAction(null, GUI.ACTION.UP, 0L);
+            verify(soundsControllerMock).play(Sounds.SFX.JOESTOP);
         }
     }
 }

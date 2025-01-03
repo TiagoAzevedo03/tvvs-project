@@ -8,6 +8,8 @@ import com.CrossingGuardJoe.viewer.images.generator.Shape;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Method;
+
 import static org.mockito.Mockito.*;
 
 class InstructionsMenuViewerTest {
@@ -126,6 +128,18 @@ class InstructionsMenuViewerTest {
         verify(gui).drawImage(new Position(208, 234), HUDImages.getHPImage());
         verify(gui).drawImage(new Position(233, 234), HUDImages.getHPImage());
         verify(gui).drawImage(new Position(258, 234), HUDImages.getHPImage());
+    }
+
+    @Test
+    void testDrawPageFour() throws Exception {
+        Method drawPageFourMethod = InstructionsMenuViewer.class.getDeclaredMethod("drawPageFour", GUI.class);
+        drawPageFourMethod.setAccessible(true);
+
+        drawPageFourMethod.invoke(instructionsMenuViewer, gui);
+
+        for (int i = 0; i < 3; i++) {
+            verify(gui, times(2)).drawText(any(Position.class), anyString(), anyString());
+        }
     }
 
     @Test

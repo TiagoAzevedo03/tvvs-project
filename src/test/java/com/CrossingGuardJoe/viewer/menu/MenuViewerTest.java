@@ -20,7 +20,7 @@ class MenuViewerTest {
     void setUp() {
         menu = mock(Menu.class);
         gui = mock(GUI.class);
-        menuViewer = new MenuViewer(menu);
+        menuViewer = spy(new MenuViewer(menu));
     }
 
     @Test
@@ -36,6 +36,12 @@ class MenuViewerTest {
 
         verify(gui).drawText(new Position(100, 100), "Option", "#FFFFFF");
         verify(gui).drawImage(new Position(85, 100), ToolImages.getArrowRightImage());
+    }
+
+    @Test
+    void testDrawElementsCallsDrawTitle() {
+        menuViewer.drawElements(gui);
+        verify(menuViewer, times(1)).drawTitle(gui);
     }
 
     @Test

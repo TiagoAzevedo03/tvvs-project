@@ -4,6 +4,8 @@ import com.CrossingGuardJoe.model.game.Road;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.lang.reflect.Field;
+
 import static org.junit.jupiter.api.Assertions.*;
 public class PauseMenuTest {
     private PauseMenu pauseMenu;
@@ -13,6 +15,28 @@ public class PauseMenuTest {
     public void setUp() {
         road = new Road();
         pauseMenu = new PauseMenu(road);
+    }
+
+    @Test
+    void testNavigateUp() throws Exception {
+        Field field = PauseMenu.class.getDeclaredField("optionSelected");
+        field.setAccessible(true);
+        assertEquals(0, field.getInt(pauseMenu));
+
+        pauseMenu.navigateUp();
+        field = PauseMenu.class.getDeclaredField("optionSelected");
+        field.setAccessible(true);
+        assertEquals(2, field.getInt(pauseMenu));
+
+        pauseMenu.navigateUp();
+        field = PauseMenu.class.getDeclaredField("optionSelected");
+        field.setAccessible(true);
+        assertEquals(1, field.getInt(pauseMenu));
+
+        pauseMenu.navigateUp();
+        field = PauseMenu.class.getDeclaredField("optionSelected");
+        field.setAccessible(true);
+        assertEquals(0, field.getInt(pauseMenu));
     }
 
     @Test

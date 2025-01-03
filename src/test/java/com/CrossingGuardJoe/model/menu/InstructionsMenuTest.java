@@ -4,6 +4,7 @@ import com.CrossingGuardJoe.controller.Sounds;
 import com.CrossingGuardJoe.controller.SoundsController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.mockito.MockedStatic;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -37,8 +38,14 @@ public class InstructionsMenuTest {
 
     @Test
     public void testNavigateRight() {
-        instructionsMenu.navigateRight();
-        assertEquals(2, instructionsMenu.getCurrentPage());
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            SoundsController soundsControllerMock = mock(SoundsController.class);
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
+
+            instructionsMenu.navigateRight();
+
+            verify(soundsControllerMock).play(Sounds.SFX.FLIPPAGE);
+        }
     }
 
     @Test
@@ -53,10 +60,16 @@ public class InstructionsMenuTest {
 
     @Test
     public void testNavigateLeft() {
-        instructionsMenu.navigateRight();
-        assertEquals(2, instructionsMenu.getCurrentPage());
+        try (MockedStatic<SoundsController> mockedStatic = mockStatic(SoundsController.class)) {
+            SoundsController soundsControllerMock = mock(SoundsController.class);
+            mockedStatic.when(SoundsController::getInstance).thenReturn(soundsControllerMock);
 
-        instructionsMenu.navigateLeft();
-        assertEquals(1, instructionsMenu.getCurrentPage());
+            instructionsMenu.navigateRight();
+            assertEquals(2, instructionsMenu.getCurrentPage());
+
+            instructionsMenu.navigateLeft();
+            assertEquals(1, instructionsMenu.getCurrentPage());
+            verify(soundsControllerMock, times(2)).play(Sounds.SFX.FLIPPAGE);
+        }
     }
 }

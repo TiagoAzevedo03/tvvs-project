@@ -54,11 +54,19 @@ public class MenuTest {
     @Test
     public void testIsSelectedStartGame() {
         assertTrue(menu.isSelectedStartGame());
+        menu.navigateDown();
+        assertFalse(menu.isSelectedStartGame());
+        menu.navigateUp();
+        assertTrue(menu.isSelectedStartGame());
     }
 
     @Test
     public void testIsSelectedInstructions() {
         menu.navigateDown();
+        assertTrue(menu.isSelectedInstructions());
+        menu.navigateDown();
+        assertFalse(menu.isSelectedInstructions());
+        menu.navigateUp();
         assertTrue(menu.isSelectedInstructions());
     }
 
@@ -67,12 +75,20 @@ public class MenuTest {
         menu.navigateDown();
         menu.navigateDown();
         assertTrue(menu.isSelectedCustomize());
+        menu.navigateDown();
+        assertFalse(menu.isSelectedCustomize());
+        menu.navigateUp();
+        assertTrue(menu.isSelectedCustomize());
     }
 
     @Test
     public void testIsSelectedExit() {
         menu.navigateDown();
         menu.navigateDown();
+        menu.navigateDown();
+        assertTrue(menu.isSelectedExit());
+        menu.navigateUp();
+        assertFalse(menu.isSelectedExit());
         menu.navigateDown();
         assertTrue(menu.isSelectedExit());
     }

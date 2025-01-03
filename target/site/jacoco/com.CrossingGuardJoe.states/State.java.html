@@ -27,9 +27,9 @@ public abstract class State&lt;T&gt; {
     }
 
     public void step(Game game, GUI gui, long time) throws IOException {
-<span class="nc" id="L30">        GUI.ACTION keyaction = gui.getNextAction();</span>
-<span class="nc" id="L31">        controller.nextAction(game, keyaction, time);</span>
-<span class="nc" id="L32">        viewer.draw(gui);</span>
-<span class="nc" id="L33">    }</span>
+<span class="fc" id="L30">        GUI.ACTION keyaction = gui.getNextAction();</span>
+<span class="fc" id="L31">        controller.nextAction(game, keyaction, time);</span>
+<span class="fc" id="L32">        viewer.draw(gui);</span>
+<span class="fc" id="L33">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

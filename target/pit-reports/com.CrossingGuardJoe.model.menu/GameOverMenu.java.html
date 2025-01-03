@@ -801,19 +801,19 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@568cbf8d_51'/>
 51
 </td>
-<td class='survived'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@568cbf8d_51'>2</a>
 <span>
 
-1. isWin : replaced boolean return with true for com/CrossingGuardJoe/model/menu/GameOverMenu::isWin &rarr; SURVIVED<br/>
+1. isWin : replaced boolean return with false for com/CrossingGuardJoe/model/menu/GameOverMenu::isWin &rarr; KILLED<br/>
 
-2. isWin : replaced boolean return with false for com/CrossingGuardJoe/model/menu/GameOverMenu::isWin &rarr; KILLED<br/>
+2. isWin : replaced boolean return with true for com/CrossingGuardJoe/model/menu/GameOverMenu::isWin &rarr; KILLED<br/>
 
 </span>
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        return isWin;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        return isWin;</span></pre></td></tr>
 
 
 <tr>
@@ -1169,13 +1169,8 @@
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@568cbf8d_51'/> 
 
 <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isWin<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsWin()]</span></span> replaced boolean return with false for com/CrossingGuardJoe/model/menu/GameOverMenu::isWin &rarr; KILLED</span>
-</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isWin<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for com/CrossingGuardJoe/model/menu/GameOverMenu::isWin &rarr; SURVIVED</span>
-<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.menu.GameOverMenu,-method=isWin,-methodDesc=()Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.menu.GameOverMenu,-method=isWin,-methodDesc=()Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
-<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.CrossingGuardJoe.model.menu.GameOverMenu,-method=isWin,-methodDesc=()Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]" style="display:none;">Covered by tests:
-<ul>
-<li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsWin()]</li> 
-</ul>
-</div></div> 
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isWin<br/><b>Killed by : </b>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsWinWhenFalse()]</span></span> replaced boolean return with true for com/CrossingGuardJoe/model/menu/GameOverMenu::isWin &rarr; KILLED</span>
+</div> 
 </td>
 </tr>
 
@@ -1235,7 +1230,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsWin()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testGetNumberOptions()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testInitialState()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testNavigateUp()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testGetOption()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsSelectedExit()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsSelectedStats()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsSelectedOption()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testGetOptionSelected()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testNavigateDown()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testGetCurrentGame()] (0 ms)</li>
+<li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsWin()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsWinWhenFalse()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testGetNumberOptions()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testInitialState()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testNavigateUp()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testGetOption()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsSelectedExit()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsSelectedStats()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testIsSelectedOption()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testGetOptionSelected()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testNavigateDown()] (0 ms)</li><li>com.CrossingGuardJoe.model.menu.GameOverMenuTest.[engine:junit-jupiter]/[class:com.CrossingGuardJoe.model.menu.GameOverMenuTest]/[method:testGetCurrentGame()] (1 ms)</li>
 </ul>
 
 <br/>

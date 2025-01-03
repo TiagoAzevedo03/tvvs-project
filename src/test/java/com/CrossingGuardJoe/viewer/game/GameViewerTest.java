@@ -49,7 +49,17 @@ class GameViewerTest {
     @Test
     void testDrawRoadLines() {
         gameViewer.drawRoadLines(gui);
-        verify(gui, atLeastOnce()).fillRectangle(any(Position.class), anyInt(), anyInt());
+
+        int ROAD_START_Y = 38;
+        int iniX = 167;
+        for (int i = 0; i < 834 - iniX - 15; i += 24) {
+            verify(gui).fillRectangle(new Position(iniX + i, 368), 16, 50);
+        }
+
+        verify(gui).fillRectangle(new Position(0, ROAD_START_Y), 150, 500 - ROAD_START_Y);
+        verify(gui).fillRectangle(new Position(850, ROAD_START_Y), 150, 500 - ROAD_START_Y);
+        verify(gui).fillRectangle(new Position(326, ROAD_START_Y), 4, 302);
+        verify(gui).fillRectangle(new Position(150, ROAD_START_Y), 2, 500 - ROAD_START_Y);
     }
 
     @Test
@@ -93,6 +103,42 @@ class GameViewerTest {
 
         int heartIniX = 246;
         for (int i = 0; i < 3; i++) {
+            verify(gui).drawImage(new Position(heartIniX, 4), HUDImages.getHPImage());
+            heartIniX += 25;
+        }
+    }
+
+    @Test
+    void testDrawHUDWithZeroHearts() throws Exception {
+        when(road.getJoe()).thenReturn(joe);
+        when(joe.getHearts()).thenReturn(0);
+        when(joe.getScore()).thenReturn(100);
+
+        Method drawHUD = GameViewer.class.getDeclaredMethod("drawHUD", GUI.class);
+        drawHUD.setAccessible(true);
+        drawHUD.invoke(gameViewer, gui);
+
+        verify(gui).drawImage(new Position(0, 0), HUDImages.getGameHudImage());
+        verify(gui).drawText(new Position(164, 10), 100, "#FFFFFF");
+
+        verify(gui, never()).drawImage(new Position(246, 4), HUDImages.getHPImage());
+    }
+
+    @Test
+    void testDrawHUDWithMaxHearts() throws Exception {
+        when(road.getJoe()).thenReturn(joe);
+        when(joe.getHearts()).thenReturn(10);
+        when(joe.getScore()).thenReturn(100);
+
+        Method drawHUD = GameViewer.class.getDeclaredMethod("drawHUD", GUI.class);
+        drawHUD.setAccessible(true);
+        drawHUD.invoke(gameViewer, gui);
+
+        verify(gui).drawImage(new Position(0, 0), HUDImages.getGameHudImage());
+        verify(gui).drawText(new Position(164, 10), 100, "#FFFFFF");
+
+        int heartIniX = 246;
+        for (int i = 0; i < 10; i++) {
             verify(gui).drawImage(new Position(heartIniX, 4), HUDImages.getHPImage());
             heartIniX += 25;
         }

@@ -31,6 +31,7 @@ com\CrossingGuardJoe\viewer\images\defined\RoadItemsImagesTest.class
 com\CrossingGuardJoe\model\menu\CustomizeMenuTest.class
 com\CrossingGuardJoe\states\menu\CustomizeMenuStateTest.class
 com\CrossingGuardJoe\controller\menu\InstructionsMenuControllerTest.class
+com\CrossingGuardJoe\states\StateTest.class
 com\CrossingGuardJoe\model\game\elements\CarTest.class
 com\CrossingGuardJoe\states\menu\InstructionsMenuStateTest.class
 com\CrossingGuardJoe\states\menu\MenuStateTest.class
@@ -42,6 +43,7 @@ com\CrossingGuardJoe\gui\LanternaGUITest.class
 com\CrossingGuardJoe\model\game\elements\ElementTest.class
 com\CrossingGuardJoe\states\GameStateTest.class
 com\CrossingGuardJoe\model\menu\InstructionsMenuTest.class
+com\CrossingGuardJoe\states\StateTest$1.class
 com\CrossingGuardJoe\controller\game\AuxCheckRangeTest.class
 com\CrossingGuardJoe\model\game\elements\KidTest.class
 com\CrossingGuardJoe\controller\SoundsControllerTest.class
