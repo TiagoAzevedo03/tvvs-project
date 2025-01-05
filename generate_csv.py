@@ -3,8 +3,8 @@ from pathlib import Path
 
 def generate_test_pairs_csv(project_root, project_name="CrossingGuardJoe"):
     # Define source and test directories
-    src_dir = os.path.join(project_root, "src", "main", "java", project_name)
-    test_dir = os.path.join(project_root, "src", "test", "java", project_name)
+    src_dir = os.path.join(project_root, "src", "main", "java", "com", project_name)
+    test_dir = os.path.join(project_root, "src", "test", "java", "com", project_name)
 
     # Store results
     pairs = []
@@ -29,7 +29,7 @@ def generate_test_pairs_csv(project_root, project_name="CrossingGuardJoe"):
                     pairs.append((project_name, src_file_abs, test_file_abs))
 
     # Write to CSV file
-    output_file = "tsdetector-input.csv"
+    output_file = "generate_files.csv"
     with open(output_file, "w") as f:
         for project, src, test in pairs:
             f.write(f"{project},{src},{test}\n")
@@ -39,5 +39,5 @@ def generate_test_pairs_csv(project_root, project_name="CrossingGuardJoe"):
 # Usage example:
 if __name__ == "__main__":
     # Replace this with your project root directory
-    project_root = "/C:/Users/Utilizador/Desktop/FEUP/MESW/project-crossing-guard-joe"
+    project_root = r"C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe"
     generate_test_pairs_csv(project_root)
