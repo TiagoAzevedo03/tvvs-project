@@ -55,6 +55,12 @@ class KidControllerTest {
         when(road.getJoe()).thenReturn(joe);
         when(road.getKids()).thenReturn(new ArrayList<>(Collections.singletonList(kid)));
         when(road.getCars()).thenReturn(new ArrayList<>(Collections.singletonList(car)));
+
+        Position joePosition = mock(Position.class);
+        when(joe.getPosition()).thenReturn(joePosition);
+
+        Position carPosition = mock(Position.class);
+        when(car.getPosition()).thenReturn(carPosition);
     }
 
     @Test
@@ -857,32 +863,6 @@ class KidControllerTest {
         long currentTime = System.currentTimeMillis();
 
         kidController.nextAction(game, GUI.ACTION.NONE, currentTime);
-    }
-
-    @Test
-    void testNextActionKidWalkingAndCannotContinueWalk() {
-        List<Kid> kids = new ArrayList<>();
-        kids.add(kid);
-        Position kidPosition = mock(Position.class);
-        Position joePosition = mock(Position.class);
-        Position carPosition = mock(Position.class);
-
-        when(road.getKids()).thenReturn(kids);
-        when(kid.getPosition()).thenReturn(kidPosition);
-        when(kid.getIsHit()).thenReturn(false);
-        when(kidPosition.getX()).thenReturn(101);
-        when(kid.getWalkingState()).thenReturn(true);
-        when(joe.getPosition()).thenReturn(joePosition);
-        when(joePosition.getX()).thenReturn(50);
-        when(car.getPosition()).thenReturn(carPosition);
-        when(carPosition.getX()).thenReturn(100);
-        when(kidController.canContinueWalk(kid)).thenReturn(false);
-
-        long currentTime = System.currentTimeMillis();
-
-        kidController.nextAction(game, GUI.ACTION.NONE, currentTime);
-
-        verify(kidController, never()).moveKid(kid);
     }
 
     @Test

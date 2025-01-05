@@ -1,7 +1,7 @@
 package com.CrossingGuardJoe.gui;
 
 import com.CrossingGuardJoe.model.Position;
-import com.CrossingGuardJoe.viewer.ColorCustomize;
+import com.CrossingGuardJoe.viewer.Color;
 import com.CrossingGuardJoe.viewer.images.Font.FontImageFactory;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
@@ -10,6 +10,7 @@ import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.screen.Screen;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockedStatic;
 
 import java.io.IOException;
 
@@ -174,4 +175,20 @@ class LanternaGUITest {
         verify(lanternaGUISpy).drawImageCustomColor(new Position(position.getX() + 1, position.getY() + 1), textImage, "#000000");
         verify(lanternaGUISpy).drawImageCustomColor(position, textImage, colorHexCode);
     }
+
+    @Test
+    void testSetColorNotNull() {
+        char character = 'A';
+        Color mockColor = mock(Color.class);
+        when(mockColor.getColorHexCode()).thenReturn("#123456");
+
+        try (MockedStatic<Color> ignored = mockStatic(Color.class)) {
+            when(Color.getColor(character)).thenReturn(mockColor);
+
+            lanternaGUI.setColor(character);
+
+            verify(mockGraphics, times(1)).setBackgroundColor(TextColor.Factory.fromString("#123456"));
+        }
+    }
+
 }

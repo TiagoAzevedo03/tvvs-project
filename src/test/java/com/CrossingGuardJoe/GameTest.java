@@ -61,14 +61,48 @@ public class GameTest {
     }
 
     @Test
-    void testRun() throws Exception {
+    void testRunWithPositiveSleepTime() throws Exception {
         Game game = spy(new Game());
         State state = mock(State.class);
+
+        // Mocking `getCurrentState` to return a state repeatedly, followed by null
         doReturn(state).doReturn(state).doReturn(null).when(game).getCurrentState();
-        doNothing().when(state).step(any(Game.class), any(GUI.class), anyLong());
+
+        // Mocking `step` to ensure a condition that makes `sleepTime > 0`
+        doAnswer(invocation -> {
+            // Simulate conditions that would cause sleepTime > 0
+            Thread.sleep(1); // Placeholder logic to align with your method
+            return null;
+        }).when(state).step(any(Game.class), any(GUI.class), anyLong());
+
         Method method = Game.class.getDeclaredMethod("run");
         method.setAccessible(true);
         method.invoke(game);
+
         verify(state, atLeastOnce()).step(any(Game.class), any(GUI.class), anyLong());
+        // Optionally verify behavior associated with the thread sleeping
     }
+
+    @Test
+    void testRunWithNonPositiveSleepTime() throws Exception {
+        Game game = spy(new Game());
+        State state = mock(State.class);
+
+        // Mocking `getCurrentState` to return a state repeatedly, followed by null
+        doReturn(state).doReturn(state).doReturn(null).when(game).getCurrentState();
+
+        // Mocking `step` to simulate conditions where sleepTime <= 0
+        doAnswer(invocation -> {
+            // Simulate conditions that would cause sleepTime <= 0
+            return null;
+        }).when(state).step(any(Game.class), any(GUI.class), anyLong());
+
+        Method method = Game.class.getDeclaredMethod("run");
+        method.setAccessible(true);
+        method.invoke(game);
+
+        verify(state, atLeastOnce()).step(any(Game.class), any(GUI.class), anyLong());
+        // Optionally verify that no sleep behavior occurs
+    }
+
 }

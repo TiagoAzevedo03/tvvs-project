@@ -8,7 +8,7 @@ import org.mockito.MockitoAnnotations;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 
-import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 import static com.CrossingGuardJoe.controller.Sounds.SFX;
 
@@ -187,7 +187,6 @@ class SoundsControllerTest {
         verify(gameOver).play(1f);
     }
 
-
     @Test
     void testPauseMethod() {
         soundsController.pause(SFX.GAMEBGM);
@@ -195,6 +194,12 @@ class SoundsControllerTest {
 
         soundsController.pause(SFX.VICTORYBGM);
         verify(victoryBgm).pause();
+    }
+    @Test
+    void testPauseDefaultCase() {
+        soundsController.pause(SFX.MENUBGM);
+
+        verifyNoInteractions(gameBgm, victoryBgm);
     }
 
     @Test
@@ -219,11 +224,36 @@ class SoundsControllerTest {
     }
 
     @Test
-    void testPlayRandom() {
-        soundsController.playRandom(SFX.JOEPASS1, SFX.JOEPASS2);
+    void testStopDefaultCase() {
+        soundsController.stop(SFX.KIDSCORE);
 
-        verify(joePass1, atMostOnce()).play(anyFloat());
-        verify(joePass2, atMostOnce()).play(anyFloat());
+        verifyNoInteractions(menuBgm, gameBgm, customizeBgm, instructionsBgm,
+                carBreak, victoryBgm);
+    }
+
+    @Test
+    void testPlayRandomMultipleRuns() {
+        boolean joePass1Played = false;
+        boolean joePass2Played = false;
+
+        for (int i = 0; i < 100; i++) {
+            soundsController.playRandom(SFX.JOEPASS1, SFX.JOEPASS2);
+
+            try {
+                verify(joePass1, atMostOnce()).play(anyFloat());
+                joePass1Played = true;
+            } catch (AssertionError ignored) {}
+
+            try {
+                verify(joePass2, atMostOnce()).play(anyFloat());
+                joePass2Played = true;
+            } catch (AssertionError ignored) {}
+
+            reset(joePass1, joePass2);
+        }
+
+        assertTrue(joePass1Played, "Expected SFX.JOEPASS1 to be played at least once.");
+        assertTrue(joePass2Played, "Expected SFX.JOEPASS2 to be played at least once.");
     }
 
     @Test

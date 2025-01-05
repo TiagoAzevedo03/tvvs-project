@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.049" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.031" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PT"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Utilizador\AppData\Local\Temp\surefire9255368975543805603\surefirebooter-20250103174839794_3.jar C:\Users\Utilizador\AppData\Local\Temp\surefire9255368975543805603 2025-01-03T17-48-39_584-jvmRun1 surefire-20250103174839794_1tmp surefire_0-20250103174839794_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Utilizador\AppData\Local\Temp\surefire8044460710444173606\surefirebooter-20250105221819953_3.jar C:\Users\Utilizador\AppData\Local\Temp\surefire8044460710444173606 2025-01-05T22-18-19_795-jvmRun1 surefire-20250105221819953_1tmp surefire_0-20250105221819953_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\target\test-classes;C:\Users\Utilizador\Desktop\FEUP\MESW\project-crossing-guard-joe\target\classes;C:\Users\Utilizador\.m2\repository\com\googlecode\lanterna\lanterna\3.1.1\lanterna-3.1.1.jar;C:\Users\Utilizador\.m2\repository\net\jqwik\jqwik\1.9.1\jqwik-1.9.1.jar;C:\Users\Utilizador\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Utilizador\.m2\repository\net\jqwik\jqwik-api\1.9.1\jqwik-api-1.9.1.jar;C:\Users\Utilizador\.m2\repository\net\jqwik\jqwik-web\1.9.1\jqwik-web-1.9.1.jar;C:\Users\Utilizador\.m2\repository\net\jqwik\jqwik-time\1.9.1\jqwik-time-1.9.1.jar;C:\Users\Utilizador\.m2\repository\net\jqwik\jqwik-engine\1.9.1\jqwik-engine-1.9.1.jar;C:\Users\Utilizador\.m2\repository\org\assertj\assertj-core\3.26.3\assertj-core-3.26.3.jar;C:\Users\Utilizador\.m2\repository\net\bytebuddy\byte-buddy\1.14.18\byte-buddy-1.14.18.jar;C:\Users\Utilizador\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.2\junit-jupiter-api-5.11.2.jar;C:\Users\Utilizador\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Utilizador\.m2\repository\org\junit\platform\junit-platform-commons\1.11.2\junit-platform-commons-1.11.2.jar;C:\Users\Utilizador\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.2\junit-jupiter-params-5.11.2.jar;C:\Users\Utilizador\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.2\junit-jupiter-engine-5.11.2.jar;C:\Users\Utilizador\.m2\repository\org\junit\platform\junit-platform-engine\1.11.2\junit-platform-engine-1.11.2.jar;C:\Users\Utilizador\.m2\repository\org\junit\platform\junit-platform-runner\1.11.2\junit-platform-runner-1.11.2.jar;C:\Users\Utilizador\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Utilizador\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Utilizador\.m2\repository\org\junit\platform\junit-platform-suite-api\1.11.2\junit-platform-suite-api-1.11.2.jar;C:\Users\Utilizador\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.11.2\junit-platform-suite-commons-1.11.2.jar;C:\Users\Utilizador\.m2\repository\org\junit\platform\junit-platform-launcher\1.11.2\junit-platform-launcher-1.11.2.jar;C:\Users\Utilizador\.m2\repository\org\mockito\mockito-core\5.14.1\mockito-core-5.14.1.jar;C:\Users\Utilizador\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.3\byte-buddy-agent-1.15.3.jar;C:\Users\Utilizador\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Utilizador\.m2\repository\org\mockito\mockito-junit-jupiter\5.14.1\mockito-junit-jupiter-5.14.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Utilizador\AppData\Local\Temp\surefire9255368975543805603\surefirebooter-20250103174839794_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Utilizador\AppData\Local\Temp\surefire8044460710444173606\surefirebooter-20250105221819953_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS"/>
@@ -61,19 +61,19 @@
     <property name="java.class.version" value="65.0"/>
   </properties>
   <testcase name="testIsSelectedKidsCustomize" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.002"/>
-  <testcase name="testColorPaletteSelection" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.002"/>
+  <testcase name="testColorPaletteSelection" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.001"/>
   <testcase name="testIsSelectedJoeCap" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.002"/>
-  <testcase name="testIsSelectedOption" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.003"/>
-  <testcase name="testIsSelectedCarsCustomize" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.003"/>
+  <testcase name="testIsSelectedOption" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.001"/>
+  <testcase name="testIsSelectedCarsCustomize" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.001"/>
   <testcase name="testGetColorPaletteMenu" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.002"/>
-  <testcase name="testDefinedColors" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.003"/>
-  <testcase name="testNavigateDown" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.003"/>
-  <testcase name="testNavigateLeft" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.003"/>
+  <testcase name="testDefinedColors" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.001"/>
+  <testcase name="testNavigateDown" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.001"/>
+  <testcase name="testNavigateLeft" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.001"/>
   <testcase name="testGetSelectedColorChar" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.002"/>
-  <testcase name="testIsSelectedJoeCustomize" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.002"/>
-  <testcase name="testConstructorInitialState" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.002"/>
-  <testcase name="testGetMenuLevels" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.002"/>
+  <testcase name="testIsSelectedJoeCustomize" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.004"/>
+  <testcase name="testConstructorInitialState" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.001"/>
+  <testcase name="testGetMenuLevels" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.001"/>
   <testcase name="testNavigateUpAndDown" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.002"/>
-  <testcase name="testSetColorChange" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.003"/>
-  <testcase name="testNavigateRight" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.002"/>
+  <testcase name="testSetColorChange" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.001"/>
+  <testcase name="testNavigateRight" classname="com.CrossingGuardJoe.model.menu.CustomizeMenuTest" time="0.001"/>
 </testsuite>

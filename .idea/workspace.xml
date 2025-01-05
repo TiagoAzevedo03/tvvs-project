@@ -5,10 +5,215 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2eae8487-adaa-4e0f-929d-df7770de4660" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_21.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsdetector-input.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tsdetector-input.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsdetector-output.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tsdetector-output.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossingGuardJoe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CrossingGuardJoe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CrossingGuardJoe/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CrossingGuardJoe/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CrossingGuardJoe/controller/SoundsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CrossingGuardJoe/controller/SoundsControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CrossingGuardJoe/controller/game/elements/KidControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CrossingGuardJoe/controller/game/elements/KidControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CrossingGuardJoe/gui/LanternaGUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CrossingGuardJoe/gui/LanternaGUITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game.elements/CarController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game.elements/JoeController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game.elements/JoeController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game.elements/KidController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game.elements/KidController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game.elements/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game/AuxCheckRange.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game/AuxCheckRange.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game/GameController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game/RoadController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.game/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.menu/CustomizeMenuController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.menu/GameOverMenuController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.menu/InstructionsMenuController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.menu/MenuController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.menu/PauseMenuController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.menu/StatsMenuController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller.menu/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller/Controller.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.controller/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.gui/LanternaGUI.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.gui/LanternaGUI.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.gui/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.game.elements/Element.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.game.elements/Joe.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.game.elements/Kid.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.game.elements/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.game/AuxCarCheck.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.game/Road.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.game/RoadBuilder.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.game/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.menu/ColorPaletteMenu.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.menu/CustomizeMenu.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.menu/CustomizeMenu.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.menu/GameOverMenu.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.menu/InstructionsMenu.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.menu/Menu.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.menu/PauseMenu.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.menu/StatsMenu.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model.menu/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model/Position.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.model/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.states.menu/CustomizeMenuState.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.states.menu/GameOverState.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.states.menu/InstructionsMenuState.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.states.menu/MenuState.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.states.menu/PauseMenuState.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.states.menu/StatsMenuState.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.states.menu/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.states/GameState.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.states/State.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.states/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.game.elements/CarView.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.game.elements/JoeView.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.game.elements/KidView.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.game.elements/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.game/GameViewer.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.game/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.Font/FontImageFactory.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.Font/FontImageFactory.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.Font/FontImages.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.Font/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.defined/CarImage.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.defined/HUDImages.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.defined/JoeImages.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.defined/KidImages.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.defined/LogoImages.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.defined/RoadItemsImages.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.defined/ToolImages.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.defined/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.generator/Shape.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.images.generator/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.menu/CustomizeMenuViewer.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.menu/CustomizeMenuViewer.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.menu/GameOverViewer.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.menu/InstructionsMenuViewer.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.menu/InstructionsMenuViewer.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.menu/MenuViewer.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.menu/PauseMenuViewer.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.menu/StatsMenuViewer.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer.menu/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer/Color.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer/ColorCustomize.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer/Viewer.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/com.CrossingGuardJoe.viewer/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pit-reports/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.controller/SoundsController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.controller/SoundsController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.controller/SoundsController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.controller/SoundsController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.controller/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.controller/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.controller/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.controller/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.gui/LanternaGUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.gui/LanternaGUI.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.gui/LanternaGUI.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.gui/LanternaGUI.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.gui/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.gui/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.gui/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe.gui/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe/Game.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe/Game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe/Game.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe/Game.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.CrossingGuardJoe/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.GameTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.GameTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.ControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.ControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.SoundsControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.SoundsControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.game.AuxCheckRangeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.game.AuxCheckRangeTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.game.RoadControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.game.RoadControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.game.elements.CarControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.game.elements.CarControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.game.elements.JoeControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.game.elements.JoeControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.game.elements.KidControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.game.elements.KidControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.CustomizeMenuControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.CustomizeMenuControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.GameOverMenuControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.GameOverMenuControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.InstructionsMenuControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.InstructionsMenuControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.MenuControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.MenuControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.PauseMenuControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.PauseMenuControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.StatsMenuControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.controller.menu.StatsMenuControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.gui.LanternaGUITest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.gui.LanternaGUITest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.PositionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.PositionTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.game.RoadBuilderTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.game.RoadBuilderTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.game.RoadTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.game.RoadTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.game.elements.JoeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.game.elements.JoeTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.ColorPaletteMenuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.ColorPaletteMenuTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.CustomizeMenuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.CustomizeMenuTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.GameOverMenuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.GameOverMenuTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.InstructionsMenuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.InstructionsMenuTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.MenuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.MenuTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.PauseMenuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.model.menu.PauseMenuTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.StateTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.StateTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.CustomizeMenuStateTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.CustomizeMenuStateTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.GameOverStateTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.GameOverStateTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.InstructionsMenuStateTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.InstructionsMenuStateTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.MenuStateTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.MenuStateTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.PauseMenuStateTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.PauseMenuStateTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.StatsMenuStateTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.states.menu.StatsMenuStateTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.ColorCustomizeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.ColorCustomizeTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.ColorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.ColorTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.ViewerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.ViewerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.game.GameViewerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.game.GameViewerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.game.elements.CarViewTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.game.elements.CarViewTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.game.elements.JoeViewTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.game.elements.JoeViewTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.game.elements.KidViewTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.game.elements.KidViewTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.Font.FontImageFactoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.Font.FontImageFactoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.Font.FontImagesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.Font.FontImagesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.CarImageTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.CarImageTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.HUDImagesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.HUDImagesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.JoeImagesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.JoeImagesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.KidImagesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.KidImagesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.LogoImagesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.LogoImagesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.RoadItemsImagesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.RoadItemsImagesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.ToolImagesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.defined.ToolImagesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.generator.ShapeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.images.generator.ShapeTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.CustomizeMenuViewerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.CustomizeMenuViewerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.GameOverViewerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.GameOverViewerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.InstructionsMenuViewerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.InstructionsMenuViewerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.MenuViewerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.MenuViewerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.PauseMenuViewerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.PauseMenuViewerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.StatsMenuViewerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.CrossingGuardJoe.viewer.menu.StatsMenuViewerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.GameTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.GameTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.SoundsControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.SoundsControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.game.AuxCheckRangeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.game.AuxCheckRangeTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.game.RoadControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.game.RoadControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.game.elements.CarControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.game.elements.CarControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.game.elements.JoeControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.game.elements.JoeControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.game.elements.KidControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.game.elements.KidControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.CustomizeMenuControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.CustomizeMenuControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.GameOverMenuControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.GameOverMenuControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.InstructionsMenuControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.InstructionsMenuControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.MenuControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.MenuControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.PauseMenuControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.PauseMenuControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.StatsMenuControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.controller.menu.StatsMenuControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.gui.LanternaGUITest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.gui.LanternaGUITest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.PositionTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.PositionTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.game.RoadBuilderTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.game.RoadBuilderTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.game.RoadTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.game.RoadTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.game.elements.JoeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.game.elements.JoeTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.ColorPaletteMenuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.ColorPaletteMenuTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.CustomizeMenuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.CustomizeMenuTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.GameOverMenuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.GameOverMenuTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.InstructionsMenuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.InstructionsMenuTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.MenuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.MenuTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.PauseMenuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.model.menu.PauseMenuTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.states.menu.CustomizeMenuStateTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.states.menu.CustomizeMenuStateTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.states.menu.GameOverStateTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.states.menu.GameOverStateTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.states.menu.InstructionsMenuStateTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.states.menu.InstructionsMenuStateTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.states.menu.MenuStateTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.states.menu.MenuStateTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.states.menu.StatsMenuStateTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.states.menu.StatsMenuStateTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.ColorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.ColorTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.ViewerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.ViewerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.game.GameViewerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.game.GameViewerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.game.elements.CarViewTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.game.elements.CarViewTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.game.elements.JoeViewTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.game.elements.JoeViewTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.game.elements.KidViewTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.game.elements.KidViewTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.images.Font.FontImagesTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.images.Font.FontImagesTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.images.defined.JoeImagesTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.images.defined.JoeImagesTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.images.defined.RoadItemsImagesTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.images.defined.RoadItemsImagesTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.images.defined.ToolImagesTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.images.defined.ToolImagesTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.images.generator.ShapeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.images.generator.ShapeTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.menu.CustomizeMenuViewerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.menu.CustomizeMenuViewerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.menu.GameOverViewerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.menu.GameOverViewerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.menu.InstructionsMenuViewerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.menu.InstructionsMenuViewerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.menu.MenuViewerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.menu.MenuViewerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.menu.PauseMenuViewerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.CrossingGuardJoe.viewer.menu.PauseMenuViewerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/CrossingGuardJoe/GameTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/CrossingGuardJoe/GameTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/CrossingGuardJoe/controller/SoundsControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/CrossingGuardJoe/controller/SoundsControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/CrossingGuardJoe/controller/game/elements/KidControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/CrossingGuardJoe/controller/game/elements/KidControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/CrossingGuardJoe/gui/LanternaGUITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/CrossingGuardJoe/gui/LanternaGUITest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,53 +272,47 @@
       <recent name="com.CrossingGuardJoe.model.game.elements" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JoeControllerTest">
-    <configuration name="CustomizeMenuViewerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.KidControllerTest">
+    <configuration name="All in CrossingGuardJoe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CrossingGuardJoe" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CrossingGuardJoe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.CrossingGuardJoe.viewer.menu.*" />
+          <option name="PATTERN" value="com.CrossingGuardJoe.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.CrossingGuardJoe.viewer.menu" />
-      <option name="MAIN_CLASS_NAME" value="com.CrossingGuardJoe.viewer.menu.CustomizeMenuViewerTest" />
+      <option name="PACKAGE_NAME" value="com.CrossingGuardJoe" />
+      <option name="MAIN_CLASS_NAME" value="com.CrossingGuardJoe.GameTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameOverViewerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.testRunWithPositiveSleepTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CrossingGuardJoe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.CrossingGuardJoe.viewer.menu.*" />
+          <option name="PATTERN" value="com.CrossingGuardJoe.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.CrossingGuardJoe.viewer.menu" />
-      <option name="MAIN_CLASS_NAME" value="com.CrossingGuardJoe.viewer.menu.GameOverViewerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.CrossingGuardJoe" />
+      <option name="MAIN_CLASS_NAME" value="com.CrossingGuardJoe.GameTest" />
+      <option name="METHOD_NAME" value="testRunWithPositiveSleepTime" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InstructionsMenuViewerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CrossingGuardJoe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.CrossingGuardJoe.viewer.menu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.CrossingGuardJoe.viewer.menu" />
-      <option name="MAIN_CLASS_NAME" value="com.CrossingGuardJoe.viewer.menu.InstructionsMenuViewerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JoeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KidControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CrossingGuardJoe" />
       <extension name="coverage">
         <pattern>
@@ -122,22 +321,22 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.CrossingGuardJoe.controller.game.elements" />
-      <option name="MAIN_CLASS_NAME" value="com.CrossingGuardJoe.controller.game.elements.JoeControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.CrossingGuardJoe.controller.game.elements.KidControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PauseMenuViewerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SoundsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CrossingGuardJoe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.CrossingGuardJoe.viewer.menu.*" />
+          <option name="PATTERN" value="com.CrossingGuardJoe.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.CrossingGuardJoe.viewer.menu" />
-      <option name="MAIN_CLASS_NAME" value="com.CrossingGuardJoe.viewer.menu.PauseMenuViewerTest" />
+      <option name="PACKAGE_NAME" value="com.CrossingGuardJoe.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.CrossingGuardJoe.controller.SoundsControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,19 +356,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CustomizeMenuViewerTest" />
-      <item itemvalue="JUnit.GameOverViewerTest" />
-      <item itemvalue="JUnit.InstructionsMenuViewerTest" />
-      <item itemvalue="JUnit.PauseMenuViewerTest" />
-      <item itemvalue="JUnit.JoeControllerTest" />
+      <item itemvalue="JUnit.All in CrossingGuardJoe" />
+      <item itemvalue="JUnit.GameTest" />
+      <item itemvalue="JUnit.GameTest.testRunWithPositiveSleepTime" />
+      <item itemvalue="JUnit.KidControllerTest" />
+      <item itemvalue="JUnit.SoundsControllerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JoeControllerTest" />
-        <item itemvalue="JUnit.CustomizeMenuViewerTest" />
-        <item itemvalue="JUnit.GameOverViewerTest" />
-        <item itemvalue="JUnit.InstructionsMenuViewerTest" />
-        <item itemvalue="JUnit.PauseMenuViewerTest" />
+        <item itemvalue="JUnit.KidControllerTest" />
+        <item itemvalue="JUnit.SoundsControllerTest" />
+        <item itemvalue="JUnit.GameTest" />
+        <item itemvalue="JUnit.GameTest.testRunWithPositiveSleepTime" />
+        <item itemvalue="JUnit.All in CrossingGuardJoe" />
       </list>
     </recent_temporary>
   </component>
